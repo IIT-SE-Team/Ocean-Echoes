@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+/* ===== Theme Variables ===== */
+
+
+
+[data-theme="light"] {
+  --bg-primary: #FBFFF4;
+  --text-primary: #1C1C1C;
+  --border-color: #e0e0e0;
+  --blue : #245282
+}
+
+[data-theme="dark"] {
+    --bg-primary: #11121a;
+    --text-primary: #FBFFF4;
+    --border-color: #333344;
+    --blue : #245282
+}
+
+/* ===== Reset & Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Poppins, 'Segoe UI', sans-serif;
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--bg-primary);
+  line-height: 1.5;
+}
+
+main {
+  padding: min(5em, 7%);
+}
+
+main p {
+  margin-top: 0.35em;
+}
+
+
+
+/* ===== Common Components ===== */
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 25px / 25px;
+  background-color: var(--blue);
+  color: #FBFFF4;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 2px solid var(--blue);
+}
+
+.btn-secondary:hover {
+  background-color: var(--hover-color);
+}
+
+.btn-large {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+}
+
+.btn-small {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--blue);
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.2);
+}
+
+.textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23333' d='M8 12L2 6h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 16px;
+  padding-right: 2rem;
+  background-color: var(--bg-primary);
+}
+
+::-webkit-scrollbar {
+    width: 10px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #0a002e;
+    border-radius: 10px;
+    border: 4px solid white;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background:  #1a73e8;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #0d47a1, #2e7d32);
+  }
+

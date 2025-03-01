@@ -1,104 +1,131 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Style Showcase</title>
+  <title>Ocean Echoes</title>
   <link rel="stylesheet" href="css/global-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/navBar.css">
+  <link rel="stylesheet" href="css/home-page.css">
   <script src="js/homePage.js" defer></script>
   <script src="js/navbar.js" defer></script>
 
 </head>
+
 <body>
 
-  <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navbar">
-    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9"><path d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z"/></svg>
-  </button>
 
-  <nav id="navbar">
-    <ul>
-      <li>
-        <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
-          <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9"><path d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z"/></svg>
-        </button>
-      </li>
-      <li><a aria-current="page" href="home.html">Home</a></li>
-      <li><a href="feedback.html">Feedback</a></li>
-      <li><a href="team.html">Team</a></li>
-      <li><a href="volunteer.html">Volunteer</a></li>
-      <li><a href="profile.html">User</a></li>
-      <li><div class="theme"><button
-        type="button"
-        data-theme-toggle
-        aria-label="Change theme"
-        onclick="toggleTheme()"
-      >Theme</button></div></li>
-    </ul>
-  </nav>
-  
-  <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
-
-  <main id="main" class="container">
-
-    <div class="demo-section">
-      <h2>Buttons</h2>
-      <div class="feature-container">
-        <button class="btn m-2">Default Button</button>
-        <button class="btn btn-secondary m-2">Secondary Button</button>
-        <button class="btn btn-large m-2">Large Button</button>
-        <button class="btn btn-small m-2">Small Button</button>
+  <div>
+    <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false"
+      aria-controls="navbar">
+      <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
+        <path
+          d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z" />
+      </svg>
+    </button>
+    <nav id="navbar">
+      <ul>
+        <li>
+          <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
+            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
+              <path
+                d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z" />
+            </svg>
+          </button>
+        </li>
+        <li><a aria-current="page" href="home.html">Home</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="profile.html">User</a></li>
+        <li>
+          <div class="theme"><button type="button" data-theme-toggle aria-label="Change theme"
+              onclick="toggleTheme()">Theme</button></div>
+        </li>
+      </ul>
+    </nav>
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+  </div>
+  <div class="hero">
+    <video autoplay loop muted src="assets/video/17838421-uhd_3840_2160_60fps.mp4" class=".hero-video"></video>
+    <h1 class="headline">
+      <div class="ocean-text">
+        <span >Life</span>
+        <span >🌊</span>
+        <span>Below</span>
+        <span>Water</span>
       </div>
-    </div>
+      <div class="headline-btn">
+        <a href="#mission-content" class="btn">Explore</a>
+      </div>
+    </h1>
 
-    <div>
-      <h2>Inputs Elements</h2>
-      <form>
-        <div class="form-group">
-          <label class="form-label" for="name">Name</label>
-          <input type="text" id="name" class="input" placeholder="Your name">
-        </div>
-        <div class="form-group">
-          <label class="label" for="email">Email</label>
-          <input type="email" id="email" class="input" placeholder="Your email">
-        </div>
-        <div class="form-group">
-          <label class="label" for="country">Country</label>
-          <select id="country" class="input select">
-            <option value="us">United States</option>
-            <option value="ca">Canada</option>
-            <option value="uk">United Kingdom</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="message">Message</label>
-          <textarea id="message" class="input textarea" placeholder="Your message"></textarea>
-        </div>
-        <button type="submit" class="btn">Submit</button>
-      </form>
-    </div>
+  </div>
+  <main id="main">
+    <div  id="mission-content"></div>
+    <!-- Mission Section -->
+    <section class="mission">
+      <div class="container">
+        <h2>Our Ocean Mission</h2>
+        <p class="mission-text">
+          The oceans cover more than 70% of our planet's surface and are home to an incredible diversity of life.
+          Yet today, our oceans face unprecedented threats from pollution, overfishing, habitat destruction, and climate
+          change.
+          At Ocean Echoes, we're dedicated to SDG 14: Life Below Water - conserving and sustainably using the oceans,
+          seas and marine resources for sustainable development.
+        </p>
+      </div>
+    </section>
 
+    <!-- Ocean Issues Cards -->
+    <section class="ocean-issues">
+      <div class="container">
+        <h2>Critical Ocean Challenges</h2>
+        <div class="issue-cards">
+          <div class="issue-card">
+            <div class="card-icon">🐟</div>
+            <h3>Overfishing</h3>
+            <p>33% of the world's fish stocks are being harvested at unsustainable levels. We work to promote
+              sustainable fishing practices and support marine protected areas.</p>
+          </div>
 
-    
+          <div class="issue-card">
+            <div class="card-icon">🏝️</div>
+            <h3>Coral Bleaching</h3>
+            <p>Over 50% of the world's coral reefs have died in the last 30 years due to climate change. We're working
+              to protect remaining reefs and restore damaged ecosystems.</p>
+          </div>
+
+          <div class="issue-card">
+            <div class="card-icon">🥤</div>
+            <h3>Plastic Pollution</h3>
+            <p>Each year, 8 million metric tons of plastic enter our oceans, harming marine life and ecosystems. Join
+              our efforts to reduce single-use plastics and clean up coastlines.</p>
+          </div>
+
+          <div class="issue-card">
+            <div class="card-icon">🌡️</div>
+            <h3>Ocean Acidification</h3>
+            <p>The ocean absorbs 30% of CO₂ emissions, causing acidification that threatens marine ecosystems. We
+              support climate action to protect ocean chemistry and biodiversity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <script>
-    // Simple theme toggler for demo purposes
-    function toggleTheme() {
-      const html = document.documentElement;
-      const currentTheme = html.getAttribute('data-theme');
-      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-      html.setAttribute('data-theme', newTheme);
-    }
-    
-    // Navbar functionality
-    function openSidebar() {
-      document.getElementById('navbar').classList.add('show');
-    }
-    
-    function closeSidebar() {
-      document.getElementById('navbar').classList.remove('show');
-    }
-  </script>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wave"></div>
+    <div class="container">
+      <p>&copy; 2023 OceanLife. All rights reserved.</p>
+    </div>
+  </footer>
+
 </body>
+
 </html>

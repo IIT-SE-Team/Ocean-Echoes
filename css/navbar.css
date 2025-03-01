@@ -1,7 +1,10 @@
 /* Navbar styles that use the global variables */
 nav {
-  background-color: var(--primary-color);
-  border-bottom: 1px solid var(--border-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--bg-primary);
+  z-index: 1;
 }
 
 nav ul {
@@ -69,11 +72,12 @@ nav a.selected {
 
 
 @media screen and (max-width: 700px) {
-  #open-sidebar-button, 
+
+  #open-sidebar-button,
   #close-sidebar-button {
     display: block;
   }
-  
+
   nav {
     position: fixed;
     top: 0;
@@ -85,25 +89,25 @@ nav a.selected {
     transition: right 300ms ease-in-out;
     background-color: var(--primary-color);
   }
-  
+
   nav.show {
     right: 0;
   }
-  
-  nav.show ~ #overlay {
+
+  nav.show~#overlay {
     display: block;
   }
-  
+
   nav ul {
     width: 100%;
     flex-direction: column;
   }
-  
+
   nav a {
     width: 100%;
     padding-left: 2.5em;
   }
-  
+
   nav a.active-link {
     border-bottom: none;
     background-color: var(--hover-color);

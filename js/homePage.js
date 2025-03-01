@@ -34,3 +34,29 @@ button.addEventListener("click", () => {
 
     currentThemeSetting = newTheme;
 });
+
+window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    const navLinks = document.querySelectorAll('#navbar a'); 
+  
+    if (window.scrollY > 700) {
+      navbar.style.background = ''; // Change background when scrolled past 700px
+      navLinks.forEach(link => {
+        link.style.color = ''; // Change font color to black
+      });
+    } else {
+      navbar.style.background = 'transparent'; // Revert to default background (from stylesheet)
+      navLinks.forEach(link => {
+        link.style.color = '#FBFFF4'; // Revert to default font color (from stylesheet)
+      });
+    }
+  });
+
+  window.addEventListener('DOMContentLoaded', () =>{
+    document.querySelectorAll('#navbar a').forEach(link => {link.style.color = '#FBFFF4';}); 
+  document.getElementById('navbar').style.background ='transparent';
+    
+  })
+
+
+

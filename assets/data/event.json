@@ -1,0 +1,62 @@
+[
+    {
+        "title": "High-Level Political Forum on Sustainable Development",
+        "date": "2023-07-10",
+        "location": "New York, USA",
+        "description": "The High-Level Political Forum (HLPF) is the United Nations central platform for follow-up and review of the 2030 Agenda for Sustainable Development and the Sustainable Development Goals (SDGs)."
+    },
+    {
+        "title": "Climate Action Summit 2023",
+        "date": "2023-09-20",
+        "location": "Geneva, Switzerland",
+        "description": "The Climate Action Summit brings together global leaders to accelerate action on climate change and achieve the goals of the Paris Agreement."
+    },
+    {
+        "title": "Global Forum on Gender Equality",
+        "date": "2023-11-15",
+        "location": "Paris, France",
+        "description": "This forum focuses on advancing gender equality and empowering women and girls worldwide, in line with SDG 5."
+    },
+    {
+        "title": "World Health Assembly: Universal Health Coverage",
+        "date": "2023-05-22",
+        "location": "Geneva, Switzerland",
+        "description": "The World Health Assembly discusses global health challenges and strategies to achieve universal health coverage, a key component of SDG 3."
+    },
+    {
+        "title": "Ocean Conference 2023",
+        "date": "2023-06-05",
+        "location": "Lisbon, Portugal",
+        "description": "The Ocean Conference aims to promote the conservation and sustainable use of oceans, seas, and marine resources, in line with SDG 14."
+    },
+    {
+        "title": "Education for All Summit",
+        "date": "2023-12-01",
+        "location": "Nairobi, Kenya",
+        "description": "This summit focuses on achieving inclusive and equitable quality education for all, as outlined in SDG 4."
+    },
+    {
+        "title": "Global Food Security Forum",
+        "date": "2023-08-15",
+        "location": "Rome, Italy",
+        "description": "The forum addresses global food security challenges and strategies to achieve zero hunger, in line with SDG 2."
+    },
+    {
+        "title": "Renewable Energy Conference",
+        "date": "2023-10-10",
+        "location": "Berlin, Germany",
+        "description": "This conference focuses on accelerating the transition to renewable energy sources to achieve SDG 7 (Affordable and Clean Energy)."
+    },
+    {
+        "title": "Global Partnership for Sustainable Development",
+        "date": "2023-04-18",
+        "location": "Bangkok, Thailand",
+        "description": "The conference aims to strengthen global partnerships to achieve the Sustainable Development Goals (SDG 17)."
+    },
+    {
+        "title": "Innovation for Sustainable Cities",
+        "date": "2023-11-30",
+        "location": "Singapore",
+        "description": "This event explores innovative solutions for making cities inclusive, safe, resilient, and sustainable, in line with SDG 11."
+    }
+]

@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback Form</title>
-    <link rel="stylesheet" href="feedback.css">
+    <link rel="stylesheet" href="css/feedback.css">
 </head>
 <body>
 
@@ -38,10 +38,71 @@
             </div>
         </div>
 
+        <!-- Feedback Section -->
+        <div class="form-section">
+            <h4 class="section-title">Feedback</h4>
+            <div class="form-group">
+                <label for="category">Feedback Category</label>
+                <select id="category" class="form-input" required>
+                    <option value="">Select a category</option>
+                    <option value="service">Service</option>
+                    <option value="product">Product</option>
+                    <option value="website">Website</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments</label>
+                <textarea id="comments" class="form-textarea" placeholder="Write your feedback here..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="rating">Rate Our Efforts to Protect the Ocean</label>
+                <div class="rating-container">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Preferences -->
+        <div class="form-section">
+            <h4 class="section-title">Additional Preferences</h4>
+            <div class="form-group">
+                <label>Would you recommend us?</label>
+                <input type="radio" name="recommend" value="yes"> Yes
+                <input type="radio" name="recommend" value="no"> No
+            </div>
+            <div class="form-group">
+                <label>Preferred Contact Method</label>
+                <input type="checkbox" name="contact" value="email"> Email
+                <input type="checkbox" name="contact" value="phone"> Phone
+            </div>
+            <div class="form-group">
+                <label for="feedbackDate">Preferred Feedback Date</label>
+                <input type="datetime-local" id="feedbackDate" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="fileUpload">Upload an Attachment</label>
+                <input type="file" id="fileUpload" class="form-input">
+            </div>
+        </div>
+
         <!-- Submit Button -->
         <button type="submit" class="submit-btn">Submit</button>
     </form>
 </section>
+
+<script>
+    const stars = document.querySelectorAll('.star');
+    stars.forEach(star => {
+        star.addEventListener('click', function() {
+            stars.forEach(s => s.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+</script>
 
 </body>
 </html>

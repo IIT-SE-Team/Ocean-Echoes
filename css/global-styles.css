@@ -1,14 +1,17 @@
+/* global-styles.css */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-/* ===== Theme Variables ===== */
+
 
 
 
 [data-theme="light"] {
-  --bg-primary: #FBFFF4;
+  --bg-primary: #f7fdfd;
   --text-primary: #1C1C1C;
   --border-color: #e0e0e0;
   --blue: #245282;
   --blue-hover: #3979bd;
+  --white:#FBFFF4;
 }
 
 [data-theme="dark"] {
@@ -17,6 +20,7 @@
   --border-color: #333344;
   --blue: #245282;
   --blue-hover: #3979bd;
+  --white : #11121a;
 
 }
 
@@ -41,6 +45,25 @@ body {
 
 main {
   padding: min(2em, 7%);
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centerX{
+  display: flex;
+  justify-content: center;
+}
+.centerY{
+  display: flex;
+  align-items: center;
+}
+
+.scroll-container{
+  height: 100vh;
+  overflow-y: auto;
 }
 
 
@@ -105,4 +128,13 @@ main {
 ::-webkit-scrollbar-thumb {
   background: #1a73e8;
   border-radius: 10px;
+}
+
+footer {
+  width: 100%;
+  position: relative;
+  background: var(--blue);
+  color: var(--text-primary);
+  text-align: center;
+  padding: 40px 0 20px;
 }

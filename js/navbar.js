@@ -1,3 +1,62 @@
+// navbar.js
+
+function calculateSettingAsThemeString({ localStorageTheme }) {
+  if (localStorageTheme !== null) {
+    return localStorageTheme;
+  }
+  
+  return "light";
+}
+
+const localStorageTheme = localStorage.getItem("theme");
+
+const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme});
+
+const button = document.querySelector("[data-theme-toggle]");
+
+button.addEventListener("click", () => {
+  const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
+
+  console.log({newTheme});
+  
+  button.innerText = newTheme;
+
+
+  button.setAttribute("aria-label", newTheme);
+
+  document.querySelector("html").setAttribute("data-theme", newTheme);
+  
+  localStorage.setItem("theme", newTheme);
+  
+  currentThemeSetting = newTheme;
+});
+
+window.addEventListener('scroll', () => {
+  const navbar = document.getElementById('navbar');
+  const navLinks = document.querySelectorAll('#navbar a');
+  
+  if (window.scrollY > 700) {
+    navbar.style.background = ''; 
+    navLinks.forEach(link => {
+      link.style.color = ''; 
+    });
+  } else {
+    navbar.style.background = 'transparent'; 
+    navLinks.forEach(link => {
+      link.style.color = '#FBFFF4'; 
+    });
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('#navbar a').forEach(link => { link.style.color = '#FBFFF4'; });
+  document.getElementById('navbar').style.background = 'transparent';
+  document.querySelector("html").setAttribute("data-theme", localStorageTheme);
+})
+
+
 const openButton = document.getElementById('open-sidebar-button')
 const navbar = document.getElementById('navbar')
 

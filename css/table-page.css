@@ -1,0 +1,217 @@
+/* Table-specific styles - these will complement the global style.css */
+
+.table-section {
+    padding: 2rem 0;
+}
+
+.table-section h2 {
+    color: #0066a6;
+    margin-bottom: 1rem;
+}
+
+.table-section p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Main marine data table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 0.95rem;
+}
+
+caption {
+    padding: 1rem;
+    font-weight: bold;
+    background-color: #0066a6;
+    color: white;
+    text-align: center;
+}
+
+th {
+    background-color: #005485;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    position: relative;
+}
+
+th.with-icon, th.with-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f8fc;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tbody tr:hover {
+    background-color: #e1f1fa;
+    transition: background-color 0.3s ease;
+}
+
+tfoot {
+    background-color: #f2f8fc;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Table headers with icons */
+.table-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.table-logo {
+    width: 32px;
+    height: 32px;
+}
+
+/* Status indicators */
+.status {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.status.excellent {
+    background-color: #1a936f;
+    color: white;
+}
+
+.status.good {
+    background-color: #88d498;
+    color: #333;
+}
+
+.status.moderate {
+    background-color: #ffd166;
+    color: #333;
+}
+
+.status.poor {
+    background-color: #ef8354;
+    color: white;
+}
+
+.status.critical {
+    background-color: #d62828;
+    color: white;
+}
+
+/* Second table specific styles */
+.initiatives-table th {
+    background-color: #00796b;
+}
+
+.initiatives-table caption {
+    background-color: #00796b;
+}
+
+.center-cell {
+    text-align: center;
+}
+
+.habitat-header {
+    text-align: center;
+}
+
+.icon {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.impact-cell {
+    font-weight: bold;
+    text-align: center;
+}
+
+.impact-cell.very-high {
+    color: #1a936f;
+}
+
+.impact-cell.high {
+    color: #4d9078;
+}
+
+.impact-cell.medium {
+    color: #f2c14e;
+}
+
+.impact-cell.low {
+    color: #ef8354;
+}
+
+/* Interactive elements */
+.initiative-link {
+    color: #0066a6;
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+}
+
+.initiative-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #0066a6;
+    transition: width 0.3s ease;
+}
+
+.initiative-link:hover::after {
+    width: 100%;
+}
+
+/* Tooltip styles */
+[title] {
+    position: relative;
+    cursor: help;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    th, td {
+        padding: 10px 8px;
+    }
+    
+    .table-icon, .icon {
+        display: none;
+    }
+    
+    th.with-icon, th.with-logo {
+        display: block;
+    }
+    
+    .status {
+        padding: 4px 6px;
+        font-size: 0.75rem;
+    }
+}

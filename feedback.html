@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback Form</title>
+    <link rel="stylesheet" href="css/global-styles.css">
     <link rel="stylesheet" href="css/feedback.css">
 </head>
 <body>
 
 <section class="feedback-container">
-    <header class="feedback-header">Feedback</header>
+    <header class="feedback-header">Feedback Form</header>
+    
     <form class="feedback-form" id="feedbackForm" enctype="multipart/form-data">
 
-        <!-- Personal Information Section -->
-        <div class="form-section">
-            <h4 class="section-title">Personal Information</h4>
+        <!-- 1️⃣ Personal Information Section -->
+        <fieldset class="form-section">
+            <legend>Personal Information</legend>
 
             <div class="form-group">
                 <label for="fullName">Full Name</label>
@@ -23,7 +26,7 @@
             <div class="form-row">
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" class="form-input" placeholder="Enter email address" required>
+                    <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
                 </div>
 
                 <div class="form-group">
@@ -32,77 +35,74 @@
                 </div>
             </div>
 
-            <div class="form-group address-group">
-                <label for="address">Address</label>
-                <textarea id="address" class="form-textarea" placeholder="Enter your street address" required></textarea>
-            </div>
-        </div>
-
-        <!-- Feedback Section -->
-        <div class="form-section">
-            <h4 class="section-title">Feedback</h4>
             <div class="form-group">
-                <label for="category">Feedback Category</label>
-                <select id="category" class="form-input" required>
-                    <option value="">Select a category</option>
-                    <option value="service">Service</option>
-                    <option value="product">Product</option>
-                    <option value="website">Website</option>
+                <label for="address">Address</label>
+                <textarea id="address" class="form-textarea" placeholder="Enter your address" required></textarea>
+            </div>
+        </fieldset>
+
+        <!-- 2️⃣ Feedback Details Section -->
+        <fieldset class="form-section">
+            <legend>Feedback Details</legend>
+
+            <div class="form-group">
+                <label for="message">Comment or Message</label>
+                <textarea id="message" class="form-textarea" placeholder="Enter your feedback" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="feedback-type">Type of Feedback</label>
+                <select id="feedback-type" class="form-input" required>
+                    <option value="">Select an option</option>
+                    <option value="bug">Report a Bug</option>
+                    <option value="feature">Feature Request</option>
+                    <option value="general">General Inquiry</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="comments">Comments</label>
-                <textarea id="comments" class="form-textarea" placeholder="Write your feedback here..." required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="rating">Rate Our Efforts to Protect the Ocean</label>
-                <div class="rating-container">
-                    <span class="star" data-value="1">&#9733;</span>
-                    <span class="star" data-value="2">&#9733;</span>
-                    <span class="star" data-value="3">&#9733;</span>
-                    <span class="star" data-value="4">&#9733;</span>
-                    <span class="star" data-value="5">&#9733;</span>
-                </div>
-            </div>
-        </div>
 
-        <!-- Additional Preferences -->
-        <div class="form-section">
-            <h4 class="section-title">Additional Preferences</h4>
             <div class="form-group">
                 <label>Would you recommend us?</label>
-                <input type="radio" name="recommend" value="yes"> Yes
-                <input type="radio" name="recommend" value="no"> No
+                <label><input type="radio" name="recommend" value="yes" required> Yes</label>
+                <label><input type="radio" name="recommend" value="no"> No</label>
             </div>
-            <div class="form-group">
-                <label>Preferred Contact Method</label>
-                <input type="checkbox" name="contact" value="email"> Email
-                <input type="checkbox" name="contact" value="phone"> Phone
-            </div>
-            <div class="form-group">
-                <label for="feedbackDate">Preferred Feedback Date</label>
-                <input type="datetime-local" id="feedbackDate" class="form-input">
-            </div>
-            <div class="form-group">
-                <label for="fileUpload">Upload an Attachment</label>
-                <input type="file" id="fileUpload" class="form-input">
-            </div>
-        </div>
+        </fieldset>
 
-        <!-- Submit Button -->
+        <!-- 3️⃣ Additional Inputs -->
+        <fieldset class="form-section">
+            <legend>Additional Details</legend>
+
+            <div class="form-group">
+                <label for="feedback-date">Preferred Contact Date</label>
+                <input type="datetime-local" id="feedback-date" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+                <label for="attachment">Upload a Screenshot (optional)</label>
+                <input type="file" id="attachment" class="form-input" accept=".jpg, .png, .pdf">
+            </div>
+
+            <div class="form-group">
+                <legend>Rate Your Experience</legend>
+                <div class="rating">
+                    <input value="5" name="rate" id="star5" type="radio">
+                    <label title="Excellent" for="star5"></label>
+                    <input value="4" name="rate" id="star4" type="radio">
+                    <label title="Good" for="star4"></label>
+                    <input value="3" name="rate" id="star3" type="radio" checked>
+                    <label title="Average" for="star3"></label>
+                    <input value="2" name="rate" id="star2" type="radio">
+                    <label title="Poor" for="star2"></label>
+                    <input value="1" name="rate" id="star1" type="radio">
+                    <label title="Terrible" for="star1"></label>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- 4️⃣ Submit Button -->
         <button type="submit" class="submit-btn">Submit</button>
+
     </form>
 </section>
-
-<script>
-    const stars = document.querySelectorAll('.star');
-    stars.forEach(star => {
-        star.addEventListener('click', function() {
-            stars.forEach(s => s.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
-</script>
 
 </body>
 </html>

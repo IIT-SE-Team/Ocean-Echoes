@@ -1,4 +1,3 @@
-/* Import Google font - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 * {
@@ -13,66 +12,69 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0;
-    margin: 0;
     background-color: #f8f9fa;
 }
 
 /* Feedback Container */
 .feedback-container {
-    position: relative;
     max-width: 700px;
     width: 100%;
-    margin: 80px 0;
-    background: rgba(255, 255, 255, 0.9);
+    margin: 50px 20px;
+    background: #fff;
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6px);
 }
 
 /* Header */
 .feedback-header {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #333;
     font-weight: 600;
     text-align: center;
     margin-bottom: 15px;
 }
 
-/* Form Styling */
+/* Form Section Styling */
+.form-section {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+legend {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Form Inputs */
 .feedback-form .form-group {
-    width: 100%;
     margin-top: 15px;
 }
 
 .form-group label {
     display: block;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     margin-bottom: 5px;
-    color: #555;
+    color: #333;
 }
 
-.feedback-form .form-input, 
-.feedback-form .form-textarea {
+.form-input, .form-textarea {
     width: 100%;
-    height: 45px;
-    font-size: 16px;
-    color: #333;
-    border: 1px solid #ddd;
-    border-radius: 6px;
     padding: 10px;
-    outline: none;
-    transition: border 0.2s ease-in-out;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .form-textarea {
-    height: 100px;
+    height: 80px;
     resize: none;
 }
 
-/* Form Row - Two Columns */
+/* Form Row */
 .form-row {
     display: flex;
     gap: 15px;
@@ -82,36 +84,83 @@ body {
     flex: 1;
 }
 
-/* Input Focus Effect */
-.feedback-form .form-input:focus,
-.feedback-form .form-textarea:focus {
-    border-color: #3498db;
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+/* Validation Styling */
+.form-input:invalid {
+    border: 1px solid red;
+    background: #ffe6e6;
+}
+
+.form-input:valid {
+    border: 1px solid green;
 }
 
 /* Submit Button */
 .submit-btn {
     width: 100%;
-    height: 50px;
-    font-size: 1rem;
-    font-weight: 500;
-    margin-top: 25px;
-    border: none;
-    cursor: pointer;
+    padding: 12px;
     background: #3498db;
     color: #fff;
-    border-radius: 6px;
-    transition: all 0.3s ease;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 .submit-btn:hover {
     background: #2980b9;
 }
 
-/* Responsive Styles */
+/* ⭐ Custom 5-Star Rating System */
+.rating {
+    direction: rtl; /* Reverse direction so stars align properly */
+    unicode-bidi: bidi-override;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    font-size: 35px;
+    color: #666;
+    transition: color 0.3s ease-in-out;
+}
+
+.rating label:before {
+    content: '★';
+}
+
+/* Hover Effects */
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: #ff9e0b;
+}
+
+/* Click Selection */
+.rating > input:checked ~ label {
+    color: #ffa723;
+}
+
+/* Click + Hover Effects */
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #e58e09;
+}
+
+
+/* Responsive */
 @media screen and (max-width: 500px) {
     .form-row {
         flex-direction: column;
         gap: 10px;
     }
 }
+
+

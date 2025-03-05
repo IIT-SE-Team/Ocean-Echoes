@@ -1,69 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/global-styles.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/volunteer-page.css">
+    <link rel="stylesheet" href="css/global-styles.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/volunteer-page.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="js/navbar.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false"
-          aria-controls="navbar">
-          <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
-            <path
-              d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z" />
-          </svg>
-        </button>
-        <nav id="navbar">
-          <ul>
-            <li>
-              <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
-                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
-                  <path
-                    d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z" />
-                </svg>
+      <button
+        id="open-sidebar-button"
+        onclick="openSidebar()"
+        aria-label="open sidebar"
+        aria-expanded="false"
+        aria-controls="navbar"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="40px"
+          viewBox="0 -960 960 960"
+          width="40px"
+          fill="#c9c9c9"
+        >
+          <path
+            d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z"
+          />
+        </svg>
+      </button>
+      <nav id="navbar">
+        <ul>
+          <li>
+            <button
+              id="close-sidebar-button"
+              onclick="closeSidebar()"
+              aria-label="close sidebar"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="40px"
+                viewBox="0 -960 960 960"
+                width="40px"
+                fill="#c9c9c9"
+              >
+                <path
+                  d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z"
+                />
+              </svg>
+            </button>
+          </li>
+          <li><a aria-current="page" href="home.html">Home</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="profile.html">User</a></li>
+          <li>
+            <div class="theme">
+              <button
+                type="button"
+                data-theme-toggle
+                aria-label="Change theme"
+                onclick="toggleTheme()"
+              >
+                Theme
               </button>
-            </li>
-            <li><a aria-current="page" href="home.html">Home</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="volunteer.html">Volunteer</a></li>
-            <li><a href="profile.html">User</a></li>
-            <li>
-              <div class="theme"><button type="button" data-theme-toggle aria-label="Change theme"
-                  onclick="toggleTheme()">Theme</button></div>
-            </li>
-          </ul>
-        </nav>
-        <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
-      </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+    </div>
 
+    <section id="page-content">
       <div class="topic-container">
         <div class="topic">
-            <h1>Volunteer</h1>
-            <p>Volunteer to help us clean the ocean</p>
+          <h1>Volunteer</h1>
+          <p>Volunteer to help us clean the ocean</p>
+          <ul>
+            <li><a href="#event-section">Event</a></li>
+            <li><a href="#review-section">Reviews</a></li>
+            <li><a href="#apply-section">Apply for Volunteer</a></li>
+          </ul>
         </div>
         <div class="img-content">
-            <article class="contatiner">
-                <figure class="image">
-                    <img src="https://images.pexels.com/photos/2422265/pexels-photo-2422265.jpeg" alt="">
-                </figure>
-                <figure class="image">
-                    <img src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d" alt="">
-                </figure>
-                <figure class="image">
-                    <img src="https://images.pexels.com/photos/6646877/pexels-photo-6646877.jpeg" alt="">
-                </figure>
-                <figure class="image">
-                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca" alt="">
-                </figure>
-            </article>
+          <article class="container">
+            <figure class="image">
+              <img
+                src="https://images.pexels.com/photos/2422265/pexels-photo-2422265.jpeg"
+                alt=""
+              />
+            </figure>
+            <figure class="image">
+              <img
+                src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d"
+                alt=""
+              />
+            </figure>
+            <figure class="image">
+              <img
+                src="https://images.pexels.com/photos/6646877/pexels-photo-6646877.jpeg"
+                alt=""
+              />
+            </figure>
+            <figure class="image">
+              <img
+                src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca"
+                alt=""
+              />
+            </figure>
+          </article>
         </div>
       </div>
-    
-</body>
+    </section>
+
+    <section id="event-section">
+      <div class="event-top-container" style="display: flex">
+        <div style="width: 50%" class="left-side">
+          <h2>Volunteer Program</h2>
+          <p>
+            Volunteering for SDG 14 (Life Below Water) involves actively
+            participating in marine conservation efforts, such as beach
+            cleanups, coral reef restoration, sea turtle protection, and
+            promoting sustainable fishing practices. By becoming a volunteer,
+            you can help protect ocean ecosystems, reduce pollution, and
+            contribute to the sustainable use of marine resources, ensuring a
+            healthier planet for future generations.
+          </p>
+        </div>
+        <div class="right-side">
+          <div
+            style="
+              width: 400px;
+              height: 400px;
+              background-color: blue;
+              border-radius: 0 0 50% 50%;
+              position: relative;
+              overflow: hidden;
+            "
+          >
+            <img
+              src="assets/img/Sandun_Sudara_Volunteering_for_SDG_14_(Life_Below_Water)_involve_d75f6c31-2532-4f74-aa4b-79dba7a4c5b4.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="event-bottom-container">
+        <h1>Events</h1>
+        <div class="card-cantainer">
+          <div class="card">
+            <div class="content">
+              <h3>Beach Cleanup</h3>
+              <p>
+                Help clean up plastic waste from beaches and protect marine life.
+              </p>
+              <div class="date-time">
+                <i class="fa fa-calendar"></i> <span>March 10, 2025</span>
+                <i class="fa fa-clock"></i> <span>10:00 AM - 2:00 PM</span>
+              </div>
+            </div>
+            <div
+              class="hover-image"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca');
+              "
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="review-section" class="review-container">
+      <h2>Reviews</h2>
+    </section>
+
+    <section id="apply-section" class="apply-container">
+      <h2>Apply for Volunteer</h2>
+    </section>
+  </body>
 </html>

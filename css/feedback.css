@@ -15,6 +15,13 @@ body {
     background-color: #f8f9fa;
 }
 
+
+.char-count-container {
+    text-align: right;
+    font-size: 0.8rem; /* Smaller size */
+    color: #777; /* Subtle color */
+}
+
 /* Feedback Container */
 .feedback-container {
     max-width: 700px;
@@ -84,11 +91,6 @@ legend {
     flex: 1;
 }
 
-/* Validation Styling */
-.form-input:invalid {
-    border: 1px solid red;
-    background: #ffe6e6;
-}
 
 .form-input:valid {
     border: 1px solid green;
@@ -160,6 +162,14 @@ legend {
     .form-row {
         flex-direction: column;
         gap: 10px;
+    }
+
+    .char-count-container {
+        font-size: 0.8rem; /* Make it even smaller */
+    }
+
+    #charCount::after {
+        content: attr(data-short); /* Show only "0/500" */
     }
 }
 

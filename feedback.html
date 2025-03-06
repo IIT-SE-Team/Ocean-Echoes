@@ -9,6 +9,12 @@
 </head>
 <body>
 
+    
+<div class="alert" id="alert">
+    <span class="btn-close"  id="btn-alert-close">&times;</span> 
+    <div class="alertContext" id="alertContext">TESTING </div> 
+</div>
+
 <section class="feedback-container">
     <header class="feedback-header">Feedback Form</header>
     
@@ -21,12 +27,14 @@
             <div class="form-group">
                 <label for="fullName">Full Name</label>
                 <input type="text" id="fullName" class="form-input" placeholder="Enter your full name" required>
+                
             </div>
 
             <div class="form-row">
                 <div class="form-group">
                     <label for="email">Email Address</label>
                     <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+
                 </div>
 
                 <div class="form-group">
@@ -47,8 +55,12 @@
 
             <div class="form-group">
                 <label for="message">Comment or Message</label>
-                <textarea id="message" class="form-textarea" placeholder="Enter your feedback" required></textarea>
+                <textarea id="message" class="form-textarea" placeholder="Enter your feedback" maxlength="500" required></textarea>
+                <div class="char-count-container">
+                    <span id="charCount">0 / 500</span>
+                </div>
             </div>
+            
 
             <div class="form-group">
                 <label for="feedback-type">Type of Feedback</label>
@@ -99,10 +111,10 @@
         </fieldset>
 
         <!-- 4️⃣ Submit Button -->
-        <button type="submit" class="submit-btn">Submit</button>
+        <button type="submit" class="submit-btn" id="submit-btn">Submit</button>
 
     </form>
 </section>
-
+<script src="js/feedback.js"></script>
 </body>
 </html>

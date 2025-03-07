@@ -15,13 +15,6 @@ body {
     background-color: #f8f9fa;
 }
 
-
-.char-count-container {
-    text-align: right;
-    font-size: 0.8rem; /* Smaller size */
-    color: #777; /* Subtle color */
-}
-
 /* Feedback Container */
 .feedback-container {
     max-width: 700px;
@@ -51,10 +44,7 @@ body {
     background: #f9f9f9;
 }
 
-legend {
-    font-size: 1.2rem;
-    font-weight: 500;
-}
+
 
 /* Form Inputs */
 .feedback-form .form-group {
@@ -77,8 +67,25 @@ legend {
 }
 
 .form-textarea {
-    height: 80px;
+    height: 75px;
     resize: none;
+}
+#message {
+    height: 150px; 
+}
+
+.file-type-info {
+    display: flex;
+    justify-content: flex-end; /* Aligns text to the right */
+    font-size: 0.8rem; /* Smaller size */
+    color: #777; /* Subtle gray color */
+    margin-top: 5px; /* Adds a little spacing */
+}
+
+.char-count-container {
+    text-align: right;
+    font-size: 0.8rem; /* Smaller size */
+    color: #777; /* Subtle color */
 }
 
 /* Form Row */
@@ -128,7 +135,7 @@ legend {
 .rating label {
     cursor: pointer;
     font-size: 35px;
-    color: #666;
+    color: #5e5d5d;
     transition: color 0.3s ease-in-out;
 }
 

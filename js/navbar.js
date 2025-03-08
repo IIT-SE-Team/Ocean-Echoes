@@ -1,40 +1,33 @@
-const openButton = document.getElementById('open-sidebar-button')
-const navbar = document.getElementById('navbar')
-
-const media = window.matchMedia("(width < 700px)")
-
-media.addEventListener('change', (e) => updateNavbar(e))
-
-function updateNavbar(e) {
-    const isMobile = e.matches
-    console.log(isMobile)
-    if (isMobile) {
-        navbar.setAttribute('inert', '')
-    }
-    else {
-        // desktop device
-        navbar.removeAttribute('inert')
-    }
-}
-
-function openSidebar() {
-    navbar.classList.add('show')
-    openButton.setAttribute('aria-expanded', 'true')
-    navbar.removeAttribute('inert')
-}
-
-function closeSidebar() {
-    navbar.classList.remove('show')
-    openButton.setAttribute('aria-expanded', 'false')
-    navbar.setAttribute('inert', '')
-}
+// navbar.js
 
 
-updateNavbar(media)
+window.addEventListener('scroll', () => {
+  const header = document.getElementById('header');
+  const navLinks = document.querySelectorAll('#navbar a');
+  
+  if (window.scrollY > 700) {
+    header.style.background = '#b3d6e9'; 
+    navLinks.forEach(link => {
+      link.style.color = ''; 
+    });
+  } else {
+    header.style.background = 'transparent'; 
+    navLinks.forEach(link => {
+      link.style.color = '#FBFFF4'; 
+    });
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  // document.querySelectorAll('#navbar a').forEach(link => { link.style.color = '#FBFFF4'; });
+  document.getElementById('header').style.background = 'transparent';
+})
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll("#navbar ul li a");
-    const currentUrl = window.location.pathname.split("/").pop(); // Get current page filename
+    const currentUrl = window.location.pathname.split("/").pop(); 
 
     navLinks.forEach(link => {
       if (link.getAttribute("href") === currentUrl) {

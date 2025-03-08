@@ -19,9 +19,8 @@ window.addEventListener('scroll', () => {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('#navbar a').forEach(link => { link.style.color = '#FBFFF4'; });
-  document.getElementById('navbar').style.background = 'transparent';
-  document.querySelector("html").setAttribute("data-theme", localStorageTheme);
+  // document.querySelectorAll('#navbar a').forEach(link => { link.style.color = '#FBFFF4'; });
+  document.getElementById('header').style.background = 'transparent';
 })
 
 

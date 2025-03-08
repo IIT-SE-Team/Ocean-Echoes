@@ -1,10 +1,7 @@
 /* home-page.css */
 
-html {
-  /* scroll-snap-type: y proximity; */
-  scroll-behavior: smooth;
-}
 
+/* ============ Title Styles ======== */
 
 .headline {
   color: #FBFFF4;
@@ -27,6 +24,18 @@ html {
   width: 100%;
 }
 
+
+
+
+/*============= Hero Section Styles ==========*/
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: calc(100vh - 80px);
+  gap: 4rem;
+}
+
 .hero {
   position: relative;
   height: 100vh;
@@ -44,22 +53,8 @@ html {
 
 
 
-/* Hero Section Styles */
-.hero-container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: calc(100vh - 80px);
-  gap: 4rem;
-}
 
-#mission-content {
-  height: 50px;
-}
-
-
-
-/* Mission Section */
+/*============ Mission Section ==========*/
 .mission {
   padding: 4rem 0;
   border: 1px solid var(--blue-400);
@@ -84,7 +79,7 @@ html {
   color: #333;
 }
 
-/* Ocean Issues Cards */
+/* =========== Ocean Issues Cards =======*/
 .ocean-issues {
   padding: 4rem 0;
 }
@@ -130,6 +125,9 @@ html {
   color: #555;
   line-height: 1.6;
 }
+
+
+/*===== Content Page Carousel =====*/
 
 .carousel {
   display: flex;

@@ -1,4 +1,4 @@
-<!--Home-page.html-->
+<!-- Home-page.html -->
 
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
@@ -7,19 +7,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ocean Echoes</title>
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/global-styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="css/navBar.css">
   <link rel="stylesheet" href="css/home-page.css">
+  
+  <!-- Scripts -->
   <script src="js/homePage.js" defer></script>
   <script src="js/navbar.js" defer></script>
   <script src="js/globalFunctions.js" defer></script>
-
 </head>
 
 <body>
-
-
+  <!-- Header Section -->
   <header id="header">
     <img src="/assets/img/logo.png" alt="logo" id="logo">
     <nav id="navbar">
@@ -29,15 +31,13 @@
         <li><a href="team.html">Team</a></li>
         <li><a href="volunteer.html">Volunteer</a></li>
         <li><a href="profile.html">User</a></li>
-        <!-- <li>
-          <div class="theme"><button type="button" data-theme-toggle aria-label="Change theme">Theme</button></div>
-        </li> -->
       </ul>
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <div class="hero">
-    <video autoplay loop muted src="assets/video/17838421-uhd_3840_2160_60fps.mp4" class=".hero-video"></video>
+    <video autoplay loop muted src="assets/video/17838421-uhd_3840_2160_60fps.mp4" class="hero-video"></video>
     <h1 class="headline">
       <div class="ocean-text">
         <span>Life</span>
@@ -53,55 +53,48 @@
 
   <main id="main">
     <div id="mission-content"></div>
+    
     <!-- Mission Section -->
     <section class="mission">
       <div class="container">
         <h2>Our Ocean Mission</h2>
         <p class="mission-text">
-          The oceans cover more than 70% of our planet's surface and are home to an incredible diversity of life.
-          Yet today, our oceans face unprecedented threats from pollution, overfishing, habitat destruction, and climate
-          change.
-          At Ocean Echoes, we're dedicated to SDG 14: Life Below Water - conserving and sustainably using the oceans,
-          seas and marine resources for sustainable development.
+          The oceans cover more than 70% of our planet's surface and are home to an incredible diversity of life...
         </p>
       </div>
     </section>
 
-    <!-- Ocean Issues Cards -->
+    <!-- Ocean Issues Section -->
     <section class="ocean-issues">
       <div class="container">
         <h2>Critical Ocean Challenges</h2>
         <div class="issue-cards">
+          <!-- Issue Cards -->
           <div class="issue-card">
             <div class="card-icon">🐟</div>
             <h3>Overfishing</h3>
-            <p>33% of the world's fish stocks are being harvested at unsustainable levels. We work to promote
-              sustainable fishing practices and support marine protected areas.</p>
+            <p>33% of the world's fish stocks are being harvested at unsustainable levels...</p>
           </div>
-
           <div class="issue-card">
             <div class="card-icon">🏝️</div>
             <h3>Coral Bleaching</h3>
-            <p>Over 50% of the world's coral reefs have died in the last 30 years due to climate change. We're working
-              to protect remaining reefs and restore damaged ecosystems.</p>
+            <p>Over 50% of the world's coral reefs have died in the last 30 years...</p>
           </div>
-
           <div class="issue-card">
             <div class="card-icon">🥤</div>
             <h3>Plastic Pollution</h3>
-            <p>Each year, 8 million metric tons of plastic enter our oceans, harming marine life and ecosystems. Join
-              our efforts to reduce single-use plastics and clean up coastlines.</p>
+            <p>Each year, 8 million metric tons of plastic enter our oceans...</p>
           </div>
-
           <div class="issue-card">
             <div class="card-icon">🌡️</div>
             <h3>Ocean Acidification</h3>
-            <p>The ocean absorbs 30% of CO₂ emissions, causing acidification that threatens marine ecosystems. We
-              support climate action to protect ocean chemistry and biodiversity.</p>
+            <p>The ocean absorbs 30% of CO₂ emissions...</p>
           </div>
         </div>
       </div>
     </section>
+    
+    <!-- Image Carousel Section -->
     <div class="centerX">
       <div class="carousel">
         <div class="card-container">
@@ -120,8 +113,7 @@
               <div class="icon">2</div>
               <div class="description">
                 <h4>Digital Technology</h4>
-                <p>Gets better every day -
-                  stay tuned</p>
+                <p>Gets better every day - stay tuned</p>
               </div>
             </div>
           </label>
@@ -141,8 +133,7 @@
               <div class="icon">4</div>
               <div class="description">
                 <h4>New technologies</h4>
-                <p>Space engineering becomes
-                  more and more advanced</p>
+                <p>Space engineering becomes more advanced</p>
               </div>
             </div>
           </label>
@@ -151,23 +142,19 @@
           <button id="carousel-prev-btn"><i class="fas fa-chevron-left"></i></button>
           <button id="carousel-next-btn"><i class="fas fa-chevron-right"></i></button>
         </div>
-
       </div>
     </div>
+    
+    <!-- Back to Top Button -->
     <button id="backToTop" onclick="scrollToTop()">⬆</button>
-
   </main>
 
-
-
-  <!-- Footer -->
+  <!-- Footer Section -->
   <footer>
     <div class="container">
       <p>&copy; 2023 OceanLife. All rights reserved.</p>
-      <a href="/page-editor/pageEditor_ST2.html">@page-editor</a>
+      <a href="/page-editor/pageEditor_ST2.html" class="a">@page-editor</a>
     </div>
   </footer>
-
 </body>
-
 </html>

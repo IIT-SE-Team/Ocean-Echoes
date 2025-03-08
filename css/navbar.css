@@ -37,9 +37,17 @@ nav a::after {
 }
 
 nav a:hover::after {
-  width: 60%;
+  width: 50%;
 }
 
+.selected {
+  color: var(--blue-500);
+  font-weight: 600;
+}
 
-
+.selected::after {
+  width: 50%;
+  background-color: var(--blue-500);
+  height: 6px;
+}
 

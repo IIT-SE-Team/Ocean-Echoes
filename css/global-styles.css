@@ -249,29 +249,29 @@ header{
   padding: 10px;
 }
 
-a {
+.a {
   text-decoration: none;
   color: #00476d;
   position: relative;
   display: inline-block;
 }
 
-a::after {
+.a::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: -2px;
   width: 0;
-  height: 2px;
+  height: 1px;
   background-color: #00476d;
   transition: width 0.3s ease-in-out;
 }
 
-a:hover {
+.a:hover {
   color: #001824;
 }
 
-a:hover::after {
+.a:hover::after {
   width: 100%;
 }
 

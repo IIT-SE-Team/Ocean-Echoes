@@ -1,12 +1,14 @@
 // navbar.js
 
+const currentUrl = window.location.pathname.split("/").pop(); 
+
 
 window.addEventListener('scroll', () => {
-  const header = document.getElementById('header');
+  const header = document.getElementById('main-header');
   const navLinks = document.querySelectorAll('#navbar a');
   
   if (window.scrollY > 700) {
-    header.style.background = '#b3d6e9'; 
+    header.style.background = '#005f92'; 
     navLinks.forEach(link => {
       link.style.color = ''; 
     });
@@ -19,15 +21,14 @@ window.addEventListener('scroll', () => {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-  // document.querySelectorAll('#navbar a').forEach(link => { link.style.color = '#FBFFF4'; });
-  document.getElementById('header').style.background = 'transparent';
+  document.querySelectorAll('#navbar a').forEach(link => { link.style.color = '#FBFFF4'; });
+  document.getElementById('main-header').style.background = 'transparent';
 })
 
 
 
 document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll("#navbar ul li a");
-    const currentUrl = window.location.pathname.split("/").pop(); 
 
     navLinks.forEach(link => {
       if (link.getAttribute("href") === currentUrl) {

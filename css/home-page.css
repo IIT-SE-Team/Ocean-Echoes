@@ -42,7 +42,6 @@ html {
   object-fit: cover;
 }
 
-/* Footer */
 
 
 /* Hero Section Styles */
@@ -63,8 +62,7 @@ html {
 /* Mission Section */
 .mission {
   padding: 4rem 0;
-  background-color: var(--bg-primary);
-  border: 1px solid var(--blue);
+  border: 1px solid var(--blue-400);
   border-radius: 2rem;
   margin-top: 2rem;
   scroll-snap-align: start;
@@ -269,23 +267,3 @@ input:checked+label .description {
 
 
 
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-
-  .mission h2,
-  .ocean-issues h2,
-  .impact-stats h2,
-  .get-involved h2 {
-    font-size: 2rem;
-  }
-
-  .mission-text,
-  .involved-text {
-    font-size: 1.1rem;
-  }
-
-  .stat-item h3 {
-    font-size: 2.5rem;
-  }
-}

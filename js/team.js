@@ -6,4 +6,7 @@ document.querySelectorAll(".team-member").forEach(member => {
     member.addEventListener("mouseout", () => {
         member.classList.remove("expanded");
     });
+
+
 });
+

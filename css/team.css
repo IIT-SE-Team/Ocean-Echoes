@@ -1,0 +1,105 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Team Container */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 200px;
+    padding: 20px;
+}
+
+/* Team Member Card */
+.team-member {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    width: 260px;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, width 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* Border Glow Effect */
+.team-member::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 15px;
+    border: 4px solid transparent;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.team-member:hover {
+    z-index: 3;
+    width: 280px;
+}
+
+.team-member:hover::before {
+    border-color: #0044cc;
+    box-shadow: 0 0 15px rgba(0, 68, 204, 0.8);
+}
+
+/* Team Member Image */
+.team-img {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Team Member Info */
+h3 {
+    margin-top: 10px;
+}
+
+/* Details Section */
+.details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, padding 0.3s ease-in-out;
+    background: #f0f0f0;
+    padding: 0 10px;
+}
+
+/* Show Details When Hovered */
+.team-member:hover .details {
+    max-height: 200px;
+    opacity: 1;
+    padding: 10px;
+}
+
+/* Details List */
+.details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.details ul li {
+    background: #e0e0e0;
+    margin: 5px 0;
+    padding: 7px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Subtle hover effect on list items */
+.details ul li:hover {
+    background: #ccc;
+}

@@ -1,7 +1,7 @@
 <!-- Home-page.html -->
 
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -23,12 +23,14 @@
     <img src="/assets/img/logo.png" alt="logo" id="logo">
     <nav id="navbar">
       <ul>
-        <li><a aria-current="page" href="home.html">Home</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="volunteer.html">Volunteer</a></li>
-        <li><a href="profile.html">User</a></li>
-        <li><a href="table.html">Marine Data</a></li>
+
+        <li><a aria-current="page" href="/home.html">Home</a></li>
+        <li><a href="/feedback.html">Feedback</a></li>
+        <li><a href="/team.html">Team</a></li>
+        <li><a href="/volunteer.html">Volunteer</a></li>
+        <li><a href="/userprofile.html">User Profile</a></li>
+        <li><a href="/sitemap.html">Site Map</a></li>
+        <li><a href="/table.html">Marine Data</a></li>
       </ul>
     </nav>
   </header>
@@ -36,16 +38,15 @@
   <!-- Hero Section -->
   <div class="hero">
     <video autoplay loop muted src="assets/video/17838421-uhd_3840_2160_60fps.mp4" class="hero-video"></video>
-    <h1 class="headline">
-      <div class="ocean-text">
-        <span>Life</span>
-        <span>Below</span>
-        <span>Water</span>
-      </div>
+    <div class="headline">
+      <h1 class="ocean-text">
+        Life Below Water
+      </h1>
+
       <div class="headline-btn">
         <a href="#mission-content" class="btn">Explore</a>
       </div>
-    </h1>
+    </div>
   </div>
 
   <main id="main">
@@ -97,39 +98,40 @@
         <div class="card-container">
           <input type="radio" name="slide" id="c1" checked>
           <label for="c1" class="card">
-            <div class="row">
-              <div class="icon">1</div>
-              <div class="description">
+            <span class="row">
+              <span class="icon">1</span>
+              <span class="description">
                 <a href="/content-page/content_ST1.html">Student 1</a>
-              </div>
-            </div>
+              </span>
+            </span>
           </label>
+
           <input type="radio" name="slide" id="c2">
           <label for="c2" class="card">
-            <div class="row">
-              <div class="icon">2</div>
-              <div class="description">
+            <span class="row">
+              <span class="icon">2</span>
+              <span class="description">
                 <a href="/content-page/content_ST2.html">Impact of Tourism on Marine Life</a>
-              </div>
-            </div>
+              </span>
+            </span>
           </label>
           <input type="radio" name="slide" id="c3">
           <label for="c3" class="card">
-            <div class="row">
-              <div class="icon">3</div>
-              <div class="description">
+            <span class="row">
+              <span class="icon">3</span>
+              <span class="description">
                 <a href="/content-page/content_ST3.html">Student 3</a>
-              </div>
-            </div>
+              </span>
+            </span>
           </label>
           <input type="radio" name="slide" id="c4">
           <label for="c4" class="card">
-            <div class="row">
-              <div class="icon">4</div>
-              <div class="description">
+            <span class="row">
+              <span class="icon">4</span>
+              <span class="description">
                 <a href="/content-page/content_ST4.html">Student 4</a>
-              </div>
-            </div>
+              </span>
+            </span>
           </label>
         </div>
         <div class="nav-arrows">
@@ -140,19 +142,22 @@
     </div>
 
     <!-- Back to Top Button -->
-    <button id="backToTop" onclick="scrollToTop()">⬆</button>
+    <button id="backToTop" onclick="scrollToTop()">
+      <i class="fas fa-arrow-up"></i>
+
+    </button>
   </main>
 
   <!-- Footer Section -->
   <footer>
     <div class="container">
-      <p>&copy; 2023 OceanLife. All rights reserved.</p>
+      <p>&copy; 2025 OceanLife. All rights reserved.</p>
       <a href="/page-editor/pageEditor_ST2.html" class="a page-editor">page-editor | student-2</a>
     </div>
   </footer>
+  <script src="js/homePage.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/globalFunctions.js"></script>
 </body>
-<script src="js/homePage.js"></script>
-<script src="js/navbar.js"></script>
-<script src="js/globalFunctions.js"></script>
 
 </html>

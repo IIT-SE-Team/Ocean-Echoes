@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="/css/userprofile.css">
+    <script defer src="/js/userprofile.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+  <header id="main-header">
+    <img src="/assets/img/logo.png" alt="logo" id="logo">
+    <nav id="navbar">
+      <ul>
+        <li><a aria-current="page" href="home.html">Home</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="profile.html">User</a></li>
+        <li><a href="table.html">Marine Data</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+    <div class="container" id="form-container">
+        <h2>Enter Your Details</h2>
+        <form id="user-form">
+            <input type="file" id="profile-pic" accept="image/*" required>
+            <input type="text" id="first-name" placeholder="First Name" required>
+            <input type="text" id="last-name" placeholder="Last Name" required>
+            <input type="text" id="role" placeholder="Your Role" required>
+            <textarea id="bio" placeholder="Short Bio" required></textarea>
+            <input type="text" id="interests" placeholder="Your Interests" required>
+            
+            <h3>Select Volunteering Activities</h3>
+            <label><input type="checkbox" name="volunteering" value="Tree Plantation Drives"> Tree Plantation Drives</label>
+            <label><input type="checkbox" name="volunteering" value="Ocean Cleanup Campaigns"> Ocean Cleanup Campaigns</label>
+            <label><input type="checkbox" name="volunteering" value="Eco-friendly Product Promotions"> Eco-friendly Product Promotions</label>
+            <label><input type="checkbox" name="volunteering" value="Wildlife Conservation"> Wildlife Conservation</label>
+            <label><input type="checkbox" name="volunteering" value="Community Recycling Initiatives"> Community Recycling Initiatives</label>
+            
+            <div class="buttons-container">
+                <button type="submit" class="small-button">Create Profile</button>
+                <button class="small-button" onclick="location.href='index.html'">
+                    <span>&#8962;</span> Home
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="container hidden" id="profile-container">
+        <div class="profile-header">
+            <img id="display-profile-pic" src="" alt="Profile Picture">
+            <div class="profile-info">
+                <h1 id="display-name"></h1>
+                <h2 id="display-role"></h2>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h3>Short Bio:</h3>
+            <p id="display-bio"></p>
+        </div>
+
+        <div class="content-box">
+            <h3>Interests:</h3>
+            <p id="display-interests"></p>
+        </div>
+        
+        <div class="content-box">
+            <h3>Volunteering Activities:</h3>
+            <ul id="display-volunteering"></ul>
+        </div>
+
+        <div class="buttons-container">
+            <button id="back-button" class="small-button">Back</button>
+            <button class="small-button" onclick="location.href='index.html'">
+                <span>&#8962;</span> Home
+            </button>
+        </div>
+    </div>
+</body>
+</html>

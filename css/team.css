@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+
+.team-wrapper {
+    height: 100px;
+    width: 80vw;
+    margin-top: 75px;
+    margin-left: 10vw; 
+    border-radius: 50px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    background-color: var(--blue-50);
+}
+
+.team-title{
+    margin-bottom: 0px;
+    font-size: 3rem;
+    background-color: var(--blue-50);
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+/* Team Container */
+.team-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Team Member Card */
+.team-member {
+    background: var(--blue-50);
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    width: 260px;
+    height: 300px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: height 1s ease-in-out, width 0.4s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+
+/* Border Glow Effect */
+.team-member::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 15px;
+    border: 4px solid transparent;
+    transition: border-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+/* Hover and Focus Effect */
+.team-member:hover,
+.team-member:focus {
+    height: 540px;
+    width: 320px;
+    z-index: 2;
+    opacity: 1 !important;
+}
+
+.team-container:hover .team-member{
+    opacity: 0.5;
+}
+
+.team-member:hover::before {
+    border-color: var(--blue-500);
+    border-width: 6px;
+    box-shadow: 0 0 15px rgba(0, 68, 204, 0.8);
+}
+
+
+/* Team Member Image */
+.team-img {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+.team-member-img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+/* Team Member Info */
+h3 {
+    background: var(--blue-50);
+    margin:10px 0 10px 0;
+    padding-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 550;
+}
+
+/* Remove default list styling */
+
+.details {
+    background: var(--blue-100);
+}
+.details ul {
+    padding: 10px;
+    margin: 0;
+}
+
+/* Styling for the main list items */
+.details > ul {
+    list-style-type: disc;
+    padding-left: 20px; 
+}
+.main-list > li {
+    font-size: 15px;
+    margin-top: 8px;
+    margin-left: 10px;
+    text-align: left; 
+}
+
+/* Styling for sub-items (nested list) */
+.sub-list {
+    list-style-type: circle; 
+    padding-left: 30px;
+}
+
+.sub-list li {
+    font-size: 14px;
+    padding: 5px;
+    text-align: left;
+}
+.background-img {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; 
+    object-fit: cover; 
+    z-index: -1; 
+}

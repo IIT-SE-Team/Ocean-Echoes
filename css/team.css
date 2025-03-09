@@ -103,8 +103,7 @@ h3 {
     list-style-type: disc; /* Adds bullet points */
     padding-left: 20px; /* Aligns content properly to the left */
 }
-
-.details > ul > li {
+.main-list > li {
     font-size: 15px;
     margin-top: 8px;
     margin-left: 10px;
@@ -112,12 +111,12 @@ h3 {
 }
 
 /* Styling for sub-items (nested list) */
-.details ul ul {
+.sub-list {
     list-style-type: circle; /* Adds sub-bullet points */
     padding-left: 30px; /* Proper indentation for sub-items */
 }
 
-.details ul ul li {
+.sub-list li {
     font-size: 14px;
     padding: 5px;
     text-align: left; /* Ensures text is left-aligned */

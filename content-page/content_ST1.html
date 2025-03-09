@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Editor - Ocean Echoes</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/global-styles.css" />
+    <link rel="stylesheet" href="css/page-editor.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/navBar.css" />
+    <link rel="stylesheet" href="../css/content-student1.css">
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header id="main-header">
+      <img src="/assets/img/logo.png" alt="logo" id="logo" />
+      <nav id="navbar">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="profile.html">User</a></li>
+          <li><a aria-current="page" href="page-editor.html">Editor</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <div class="editor-container">
+        <div class="editor-sidebar">
+          <h2>Page Editor</h2>
+          <div class="editor-menu">
+            <div class="menu-item active" data-section="splash-screen">
+              <i class="fas fa-water"></i>
+              <span>Splash Screen</span>
+            </div>
+            <div class="menu-item" data-section="volunteer-page">
+              <i class="fas fa-hands-helping"></i>
+              <span>Volunteer Page</span>
+            </div>
+          </div>
+          <div class="editor-info">
+            <h3>Student Information</h3>
+            <div class="info-item">
+              <label>Name:</label>
+              <span>Your Name</span>
+            </div>
+            <div class="info-item">
+              <label>Student ID:</label>
+              <span>ST1</span>
+            </div>
+            <div class="info-item">
+              <label>Role:</label>
+              <span>Splash Screen & Volunteer Page</span>
+            </div>
+          </div>
+          <button id="save-changes" class="btn primary">Save Changes</button>
+          <button id="preview-page" class="btn secondary">Preview Page</button>
+        </div>
+
+        <div class="editor-content">
+          <!-- Splash Screen Editor Section -->
+          <section id="splash-screen-editor" class="editor-section active">
+            <h2>Splash Screen Editor</h2>
+            <div class="editor-group">
+              <h3>Background Settings</h3>
+              <div class="control-group">
+                <label for="splash-bg-color">Background Color:</label>
+                <input type="color" id="splash-bg-color" value="#e6eff4">
+              </div>
+              <div class="control-group">
+                <label for="splash-duration">Animation Duration (ms):</label>
+                <input type="number" id="splash-duration" value="3000" min="1000" max="10000">
+              </div>
+              <div class="control-group">
+                <label for="splash-logo">Logo Image:</label>
+                <div class="file-input-wrapper">
+                  <input type="file" id="splash-logo" accept="image/*">
+                  <button class="btn file-select">Select File</button>
+                  <span class="file-name">No file selected</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="preview-container">
+              <h3>Splash Screen Preview</h3>
+              <div class="splash-preview">
+                <img src="/assets/img/logo.png" alt="Logo Preview" class="preview-logo">
+                <div class="ripple-effect"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Volunteer Page Editor Section -->
+          <section id="volunteer-page-editor" class="editor-section">
+            <h2>Volunteer Page Editor</h2>
+            
+            <!-- Topic Section Editor -->
+            <div class="editor-group">
+              <h3>Topic Section</h3>
+              <div class="control-group">
+                <label for="topic-title">Title:</label>
+                <input type="text" id="topic-title" value="Volunteer">
+              </div>
+              <div class="control-group">
+                <label for="topic-description">Description:</label>
+                <textarea id="topic-description">Volunteer to help us clean the ocean</textarea>
+              </div>
+              <div class="control-group">
+                <label>Diamond Gallery Images:</label>
+                <div class="image-gallery-editor">
+                  <div class="gallery-item">
+                    <div class="image-preview" style="background-image: url('https://images.pexels.com/photos/2422265/pexels-photo-2422265.jpeg')"></div>
+                    <div class="file-input-wrapper">
+                      <input type="file" accept="image/*">
+                      <button class="btn file-select">Change</button>
+                    </div>
+                  </div>
+                  <div class="gallery-item">
+                    <div class="image-preview" style="background-image: url('https://images.unsplash.com/photo-1557426272-fc759fdf7a8d')"></div>
+                    <div class="file-input-wrapper">
+                      <input type="file" accept="image/*">
+                      <button class="btn file-select">Change</button>
+                    </div>
+                  </div>
+                  <div class="gallery-item">
+                    <div class="image-preview" style="background-image: url('https://images.pexels.com/photos/6646877/pexels-photo-6646877.jpeg')"></div>
+                    <div class="file-input-wrapper">
+                      <input type="file" accept="image/*">
+                      <button class="btn file-select">Change</button>
+                    </div>
+                  </div>
+                  <div class="gallery-item">
+                    <div class="image-preview" style="background-image: url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca')"></div>
+                    <div class="file-input-wrapper">
+                      <input type="file" accept="image/*">
+                      <button class="btn file-select">Change</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Event Section Editor -->
+            <div class="editor-group">
+              <h3>Event Section</h3>
+              <div class="control-group">
+                <label for="event-title">Section Title:</label>
+                <input type="text" id="event-title" value="Volunteer Program">
+              </div>
+              <div class="control-group">
+                <label for="event-description">Description:</label>
+                <textarea id="event-description">Volunteering for SDG 14 (Life Below Water) involves actively participating in marine conservation efforts, such as beach cleanups, coral reef restoration, sea turtle protection, and promoting sustainable fishing practices. By becoming a volunteer, you can help protect ocean ecosystems, reduce pollution, and contribute to the sustainable use of marine resources, ensuring a healthier planet for future generations.</textarea>
+              </div>
+              <div class="control-group">
+                <h4>Event Cards</h4>
+                <button id="add-event" class="btn secondary"><i class="fas fa-plus"></i> Add Event</button>
+                <div class="event-cards-container">
+                  <div class="event-card-editor">
+                    <input type="text" placeholder="Event Title" value="Beach Cleanup">
+                    <textarea placeholder="Event Description">Join us for a beach cleanup initiative to remove plastic waste and debris from our beautiful coastlines.</textarea>
+                    <div class="event-date-time">
+                      <input type="date" value="2025-03-20">
+                      <input type="time" value="09:00">
+                    </div>
+                    <button class="btn danger remove-event"><i class="fas fa-trash"></i></button>
+                  </div>
+                  <div class="event-card-editor">
+                    <input type="text" placeholder="Event Title" value="Coral Restoration">
+                    <textarea placeholder="Event Description">Help restore damaged coral reefs by planting coral fragments and monitoring their growth.</textarea>
+                    <div class="event-date-time">
+                      <input type="date" value="2025-04-15">
+                      <input type="time" value="10:30">
+                    </div>
+                    <button class="btn danger remove-event"><i class="fas fa-trash"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review Section Editor -->
+            <div class="editor-group">
+              <h3>Review Section</h3>
+              <div class="control-group">
+                <label for="review-title">Section Title:</label>
+                <input type="text" id="review-title" value="Reviews">
+              </div>
+              <div class="control-group">
+                <label for="review-description">Description:</label>
+                <textarea id="review-description">Sustainable Development Goal 14 (Life Below Water) provides an in-depth analysis of efforts to conserve and sustainably use the oceans, seas, and marine resources. It evaluates progress on key targets, such as reducing marine pollution, protecting marine ecosystems, regulating fishing activities, and promoting sustainable ocean-based economies.</textarea>
+              </div>
+              <div class="control-group">
+                <h4>Recent Reviews</h4>
+                <button id="add-review" class="btn secondary"><i class="fas fa-plus"></i> Add Review</button>
+                <div class="reviews-container">
+                  <div class="review-editor">
+                    <input type="text" placeholder="Name" value="Sarah Johnson">
+                    <select class="rating-select">
+                      <option value="5">5 Stars</option>
+                      <option value="4">4 Stars</option>
+                      <option value="3">3 Stars</option>
+                      <option value="2">2 Stars</option>
+                      <option value="1">1 Star</option>
+                    </select>
+                    <textarea placeholder="Review text">The beach cleanup event was well organized and impactful. It was inspiring to see how much waste we collected in just a few hours!</textarea>
+                    <input type="date" value="2025-02-15">
+                    <button class="btn danger remove-review"><i class="fas fa-trash"></i></button>
+                  </div>
+                  <div class="review-editor">
+                    <input type="text" placeholder="Name" value="Michael Chen">
+                    <select class="rating-select">
+                      <option value="5" selected>5 Stars</option>
+                      <option value="4">4 Stars</option>
+                      <option value="3">3 Stars</option>
+                      <option value="2">2 Stars</option>
+                      <option value="1">1 Star</option>
+                    </select>
+                    <textarea placeholder="Review text">The coral restoration program gave me a hands-on experience in marine conservation. The team was knowledgeable and passionate about their work.</textarea>
+                    <input type="date" value="2025-01-30">
+                    <button class="btn danger remove-review"><i class="fas fa-trash"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feedback Form Editor -->
+            <div class="editor-group">
+              <h3>Feedback Form</h3>
+              <div class="control-group">
+                <label for="feedback-title">Form Title:</label>
+                <input type="text" id="feedback-title" value="Feedback">
+              </div>
+              <div class="control-group">
+                <label for="feedback-subtitle">Subtitle:</label>
+                <input type="text" id="feedback-subtitle" value="We will love your Feedback">
+              </div>
+              <div class="control-group">
+                <label for="feedback-bg-image">Background Image:</label>
+                <div class="file-input-wrapper">
+                  <input type="file" id="feedback-bg-image" accept="image/*">
+                  <button class="btn file-select">Select File</button>
+                  <span class="file-name">climate-change-concept-collage.jpg</span>
+                </div>
+              </div>
+              <div class="control-group">
+                <h4>Form Fields</h4>
+                <div class="form-fields-editor">
+                  <div class="form-field-item">
+                    <label>Name Field:</label>
+                    <input type="text" value="Enter your name..." placeholder="Placeholder text">
+                    <label class="checkbox-container">Required
+                      <input type="checkbox" checked>
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="form-field-item">
+                    <label>Email Field:</label>
+                    <input type="text" value="Enter your email..." placeholder="Placeholder text">
+                    <label class="checkbox-container">Required
+                      <input type="checkbox" checked>
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="form-field-item">
+                    <label>Feedback Field:</label>
+                    <input type="text" value="Enter your feedback here..." placeholder="Placeholder text">
+                    <label class="checkbox-container">Required
+                      <input type="checkbox" checked>
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="control-group">
+                <label>Submit Button Text:</label>
+                <input type="text" value="Submit">
+              </div>
+              <div class="control-group">
+                <label>Cancel Button Text:</label>
+                <input type="text" value="Cancel">
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 OceanLife. All rights reserved.</p>
+        <span class="page-editor">Page Editor | ST1</span>
+      </div>
+    </footer>
+
+    <script src="js/page-editor.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/globalFunctions.js"></script>
+  </body>
+</html>

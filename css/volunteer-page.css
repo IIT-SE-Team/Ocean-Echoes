@@ -201,7 +201,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: space-between;
+  justify-content: space-betwee;
   h3 {
     text-align: start;
   }

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor Report - Ocean Echoes</title>
+    <link rel="stylesheet" href="../css/pageEditor-ST1.css">
+    <link rel="stylesheet" href="../css/global-styles.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+</head>
+<body>
+    <header id="main-header">
+        <img src="/assets/img/logo.png" alt="logo" id="logo">
+        <nav id="navbar">
+          <ul>
+            <li><a aria-current="page" href="/home.html">Home</a></li>
+            <li><a href="/feedback.html">Feedback</a></li>
+            <li><a href="/team.html">Team</a></li>
+            <li><a href="/volunteer.html">Volunteer</a></li>
+            <li><a href="/profile.html">User</a></li>
+            <li><a href="/table.html">Marine Data</a></li>
+          </ul>
+        </nav>
+      </header>
+    <div class="report-container">
+        
+
+        
+        <h1>Ocean Echoes - Page Editor Report</h1>
+        <section class="section">
+            <h2>1. Name and Role</h2>
+            <p>Name: Sandun Sudara</p>
+            <p>Role: Implementation of splash screen and volunteer page</p>
+        </section>
+        
+        <section class="section">
+            <h2>2. Completed Tasks</h2>
+            <ul class="task-list">
+                <li>Designed and implemented the splash.html page with animated introduction</li>
+                <li>Developed volunteer.html page with multiple sections (events, reviews, feedback)</li>
+                <li>Created associated CSS stylesheets for both pages</li>
+                <li>Implemented responsive design elements for various screen sizes</li>
+                <li>Added dynamic content loading through JavaScript</li>
+            </ul>
+        </section>
+        
+        <section class="section">
+            <h2>3. Technical Description for Implemented Pages</h2>
+            
+            <div class="subsection">
+                <h3>3.1 Splash Screen (splash.html)</h3>
+                <p>The splash screen serves as the landing page for Ocean Echoes website, providing an immersive introduction to the project's purpose while displaying team information. The implementation follows these key principles:</p>
+                
+                <ul class="task-list">
+                    <li>HTML structure with semantic elements for proper content organization</li>
+                    <li>Video background with overlay for visual impact</li>
+                    <li>CSS animations for text fading and positioning effects</li>
+                    <li>Responsive design that works across different devices</li>
+                    <li>JavaScript-controlled timing for automatic transition to main site</li>
+                </ul>
+                
+                <div class="code-block">
+                    <p>Key HTML Structure:</p>
+                    &lt;div class="splash-container"&gt;
+                      &lt;div class="overlay"&gt;&lt;/div&gt;
+                      &lt;div class="splash"&gt;
+                        &lt;video autoplay muted loop playsinline&gt;
+                          &lt;source src="assets/video/splash-bg.mp4" type="video/mp4"&gt;
+                          Your browser does not support the video tag.
+                        &lt;/video&gt;
+                        &lt;div class="go-up"&gt;
+                          &lt;h1 class="fade-in"&gt;Welcome To Ocean Echoes&lt;/h1&gt;
+                          &lt;h3 class="fade-in"&gt;
+                            To conserve and sustainably use the oceans, seas, and marine resources
+                            for sustainable development.
+                          &lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;div class="team-members"&gt;
+                          &lt;h3&gt;Team Members&lt;/h3&gt;
+                          &lt;ul class="name-list"&gt;
+                            &lt;li&gt;Sandun Sudara&lt;/li&gt;
+                            &lt;li&gt;Ushalka Kapugamage&lt;/li&gt;
+                            &lt;li&gt;Githma Senivirathna&lt;/li&gt;
+                            &lt;li&gt;Shenal Amerasinghe&lt;/li&gt;
+                          &lt;/ul&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                </div>
+                
+                <p>The CSS implementation uses:</p>
+                <ul class="task-list">
+                    <li>Keyframe animations for fade-in and positioning effects</li>
+                    <li>Z-index management for proper layering of video and content</li>
+                    <li>Flex layout for team member listing</li>
+                    <li>Transform properties for centering content</li>
+                </ul>
+                
+                <div class="code-block">
+                    <p>Key CSS Animations:</p>
+                    @keyframes fadeIn {
+                      0% {
+                        opacity: 0;
+                      }
+                      100% {
+                        opacity: 1;
+                      }
+                    }
+
+                    @keyframes fadeOut {
+                      0% {
+                        opacity: 1;
+                      }
+                      100% {
+                        opacity: 0;
+                        visibility: hidden;
+                      }
+                    }
+
+                    @keyframes goUp {
+                      from {
+                        top: 60%;
+                      }
+                      to {
+                        top: 50%;
+                      }
+                    }
+                </div>
+            </div>
+            
+            <div class="subsection">
+                <h3>3.2 Volunteer Page (volunteer.html)</h3>
+                <p>The volunteer page provides information about Ocean Echoes' volunteer programs, displays upcoming events, showcases reviews, and allows users to submit feedback. This page was designed with the following approach:</p>
+                
+                <ul class="task-list">
+                    <li>Section-based layout for organized content presentation</li>
+                    <li>Grid and flexbox for complex layout requirements</li>
+                    <li>Responsive design elements that adapt to different screen sizes</li>
+                    <li>Interactive components for user engagement</li>
+                    <li>Background gradients for visual appeal and section differentiation</li>
+                </ul>
+                
+                <p>The page is divided into four main sections:</p>
+                <ol>
+                    <li><strong>Introduction Section:</strong> Diamond-shaped image gallery with navigation links</li>
+                    <li><strong>Event Section:</strong> Information about volunteer programs and upcoming events</li>
+                    <li><strong>Review Section:</strong> Display of user reviews with rating system</li>
+                    <li><strong>Feedback Section:</strong> Form for users to submit their feedback and ratings</li>
+                </ol>
+                
+                <div class="code-block">
+                    <p>Diamond-shaped Image Grid Implementation:</p>
+                    .img-content .container {
+                      display: grid;
+                      grid-template-columns: repeat(4, 12.5vw);
+                      grid-template-rows: repeat(4, 12.5vw);
+                    }
+
+                    .image:first-child {
+                      grid-column: 2/4;
+                    }
+
+                    .image:nth-child(2) {
+                      grid-column: 1/3;
+                      grid-row: 2/4;
+                    }
+
+                    .image:nth-child(3) {
+                      grid-column: 3/5;
+                      grid-row: 2/4;
+                    }
+
+                    .image:nth-child(4) {
+                      grid-column: 2/4;
+                      grid-row: 3/5;
+                    }
+
+                    .image {
+                      margin: 0;
+                      padding: 0;
+                      padding-top: 25vw;
+                      overflow: hidden;
+                      position: relative;
+                      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+                    }
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>4. HTML/CSS Techniques Used</h2>
+            
+            <div class="subsection">
+                <h3>4.1 HTML Techniques</h3>
+                <ul class="task-list">
+                    <li><strong>Semantic HTML:</strong> Used proper semantic elements like header, main, section, nav, and footer to improve accessibility and SEO</li>
+                    <li><strong>HTML5 Video:</strong> Implemented background video with appropriate attributes for autoplay, muting, and looping</li>
+                    <li><strong>Form Elements:</strong> Created user feedback form with various input types and validation attributes</li>
+                    <li><strong>Metadata:</strong> Included proper meta tags for character encoding and viewport settings</li>
+                    <li><strong>External Resource Links:</strong> Connected stylesheets and scripts efficiently</li>
+                </ul>
+                
+                <h3>4.2 CSS Techniques</h3>
+                <ul class="task-list">
+                    <li><strong>CSS Grid:</strong> Implemented complex diamond-shaped image layout using grid template areas</li>
+                    <li><strong>Flexbox:</strong> Used for flexible and responsive content alignment across sections</li>
+                    <li><strong>CSS Animations:</strong> Created keyframe animations for fade effects and content movement</li>
+                    <li><strong>CSS Variables:</strong> Used for consistent color theming across components</li>
+                    <li><strong>Linear Gradients:</strong> Applied background gradients for section transitions</li>
+                    <li><strong>CSS Transformations:</strong> Used for positioning and visual effects</li>
+                    <li><strong>Clip-path:</strong> Created diamond-shaped elements using polygon clip-path</li>
+                    <li><strong>Transitions:</strong> Applied smooth state changes for interactive elements</li>
+                </ul>
+                
+                <h3>4.3 Logic and Purpose</h3>
+                <ul class="task-list">
+                    <li><strong>Splash Screen Logic:</strong> Timed animations and transitions to create an engaging introduction before automatically proceeding to main content</li>
+                    <li><strong>Navigation Structure:</strong> Implemented anchor links to navigate between sections on the volunteer page</li>
+                    <li><strong>Interactive Rating System:</strong> Created star rating system with hover and selection states</li>
+                    <li><strong>Form Validation:</strong> Implemented required attributes and field validation for feedback submission</li>
+                    <li><strong>Visual Hierarchy:</strong> Used consistent color themes and spacing to establish importance and relationships between content sections</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>5. Links to Implemented Pages</h2>
+            <div class="link-section">
+                <p><strong>Splash Screen:</strong> <a href="splash.html" target="_blank">splash.html</a></p>
+                <p><strong>Volunteer Page:</strong> <a href="volunteer.html" target="_blank">volunteer.html</a></p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>6. Validation</h2>
+            <div class="link-section">
+                <p><strong>HTML Validation:</strong> <a href="https://validator.w3.org/nu/?doc=https://your-site-url.com/splash.html" target="_blank">W3C Validator Results for splash.html</a></p>
+                <p><strong>CSS Validation:</strong> <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://your-site-url.com/css/splash-screen.css" target="_blank">W3C CSS Validator Results</a></p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>7. Challenges and Lessons Learned</h2>
+            <p>Throughout the development of the splash screen and volunteer page, I encountered several challenges that provided valuable learning opportunities:</p>
+            
+            <ul class="task-list">
+                <li><strong>Video Background Implementation:</strong> Getting the video background to work properly across different browsers required testing and adjustments to ensure consistent behavior.</li>
+                <li><strong>Diamond Grid Layout:</strong> Creating the diamond-shaped image grid using CSS grid and clip-path required careful planning and mathematical calculations to achieve proper alignment.</li>
+                <li><strong>Animation Timing:</strong> Coordinating multiple animations on the splash screen to create a cohesive experience required fine-tuning of timing and sequence.</li>
+                <li><strong>Responsive Design Challenges:</strong> Ensuring the diamond grid layout and other complex elements responded well to different screen sizes required extensive testing and media query adjustments.</li>
+                <li><strong>Cross-Browser Compatibility:</strong> Addressing differences in browser rendering, especially for animations and clip-path, taught me the importance of progressive enhancement.</li>
+            </ul>
+            
+            <p>Key lessons learned:</p>
+            <ul class="task-list">
+                <li>The importance of planning complex layouts before implementation</li>
+                <li>The value of using modern CSS techniques like grid and flexbox for responsive designs</li>
+                <li>How to coordinate animations for a polished user experience</li>
+                <li>The need for thorough testing across different devices and browsers</li>
+            </ul>
+        </section>
+        
+        <section class="section">
+            <h2>8. Accessibility Implementation</h2>
+            <p>Ensuring accessibility was a key consideration in developing both the splash screen and volunteer page:</p>
+            
+            <ul class="task-list">
+                <li><strong>Semantic HTML:</strong> Used proper heading hierarchy and semantic elements to improve screen reader navigation</li>
+                <li><strong>Alternative Text:</strong> Provided descriptive alt text for all images to ensure content is accessible to visually impaired users</li>
+                <li><strong>Keyboard Navigation:</strong> Ensured all interactive elements are accessible via keyboard navigation</li>
+                <li><strong>Color Contrast:</strong> Maintained WCAG 2.1 AA-compliant color contrast ratios for text and interactive elements</li>
+                <li><strong>Form Labels:</strong> Implemented proper form labeling and validation feedback for assistive technologies</li>
+                <li><strong>Video Controls:</strong> Added fallback text for video content for users who cannot view videos</li>
+                <li><strong>ARIA Attributes:</strong> Used appropriate ARIA roles and attributes where native HTML semantics were insufficient</li>
+            </ul>
+            
+            <p>The implementation follows WCAG 2.1 guidelines for perceivable, operable, understandable, and robust content.</p>
+        </section>
+        
+        <section class="section">
+            <h2>9. Janet Regulations Compliance</h2>
+            <p>The developed pages comply with Janet regulations governing web page publication in the following ways:</p>
+            
+            <ul class="task-list">
+                <li><strong>Data Protection:</strong> Implemented feedback forms with clear purpose statements and no collection of unnecessary personal data</li>
+                <li><strong>Acceptable Use:</strong> Content adheres to acceptable use policies with appropriate educational purpose</li>
+                <li><strong>Copyright Compliance:</strong> Used properly licensed images and media resources</li>
+                <li><strong>Security Measures:</strong> Implemented input validation to prevent cross-site scripting and other vulnerabilities</li>
+                <li><strong>Accessibility Compliance:</strong> Followed WCAG 2.1 guidelines as required by Janet policies</li>
+                <li><strong>Responsive Design:</strong> Ensured content is accessible across different devices as per Janet recommendations</li>
+                <li><strong>Performance Optimization:</strong> Optimized media files and code to ensure efficient loading times</li>
+            </ul>
+            
+            <p>The implementation adheres to Janet's principles of ensuring educational resources are accessible, secure, and compliant with relevant legislation.</p>
+        </section>
+        
+        <section class="section">
+            <h2>10. Resources Consulted</h2>
+            <ul class="task-list">
+                <li>MDN Web Docs - <a href="https://developer.mozilla.org/en-US/" target="_blank">https://developer.mozilla.org/en-US/</a></li>
+                <li>CSS-Tricks Grid Guide - <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">https://css-tricks.com/snippets/css/complete-guide-grid/</a></li>
+                <li>W3C Web Accessibility Initiative - <a href="https://www.w3.org/WAI/" target="_blank">https://www.w3.org/WAI/</a></li>
+                <li>Janet Network Policies - <a href="https://community.jisc.ac.uk/library/janet-policies" target="_blank">https://community.jisc.ac.uk/library/janet-policies</a></li>
+                <li>Pexels (for royalty-free images) - <a href="https://www.pexels.com/" target="_blank">https://www.pexels.com/</a></li>
+                <li>Font Awesome Documentation - <a href="https://fontawesome.com/docs" target="_blank">https://fontawesome.com/docs</a></li>
+                <li>WCAG 2.1 Guidelines - <a href="https://www.w3.org/TR/WCAG21/" target="_blank">https://www.w3.org/TR/WCAG21/</a></li>
+            </ul>
+        </section>
+      
+    </div>
+    <footer>
+      <div class="container">
+        <p>Submitted by: Sandun Sudara | Date: March 10, 2025</p>
+      </div>
+    </footer>
+</body>
+</html>

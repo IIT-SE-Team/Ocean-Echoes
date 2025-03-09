@@ -1,46 +1,47 @@
-const openButton = document.getElementById('open-sidebar-button')
-const navbar = document.getElementById('navbar')
+// navbar.js
 
-const media = window.matchMedia("(width < 700px)")
+const currentUrl = window.location.pathname.split("/").pop();
 
-media.addEventListener('change', (e) => updateNavbar(e))
 
-function updateNavbar(e) {
-    const isMobile = e.matches
-    console.log(isMobile)
-    if (isMobile) {
-        navbar.setAttribute('inert', '')
+
+
+window.addEventListener('scroll', () => {
+  const header = document.getElementById('main-header');
+  const navLinks = document.querySelectorAll('#navbar a');
+  if (currentUrl === "home.html") {
+
+    if (window.scrollY > 700) {
+      header.style.background = '#005f92';
+      navLinks.forEach(link => {
+        link.style.color = '';
+      });
+    } else {
+      header.style.background = 'transparent';
+      navLinks.forEach(link => {
+        link.style.color = '#FBFFF4';
+      });
     }
-    else {
-        // desktop device
-        navbar.removeAttribute('inert')
-    }
-}
+  }
+});
 
-function openSidebar() {
-    navbar.classList.add('show')
-    openButton.setAttribute('aria-expanded', 'true')
-    navbar.removeAttribute('inert')
-}
-
-function closeSidebar() {
-    navbar.classList.remove('show')
-    openButton.setAttribute('aria-expanded', 'false')
-    navbar.setAttribute('inert', '')
-}
+window.addEventListener('DOMContentLoaded', () => {
+  if (currentUrl === "home.html") {
+    document.querySelectorAll('#navbar a').forEach(link => { link.style.color = '#FBFFF4'; });
+    document.getElementById('main-header').style.background = 'transparent';
+  }
+})
 
 
-updateNavbar(media)
 
 document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll("#navbar ul li a");
-    const currentUrl = window.location.pathname.split("/").pop(); // Get current page filename
-
-    navLinks.forEach(link => {
-      if (link.getAttribute("href") === currentUrl) {
-        link.classList.add("selected");
-      } else {
-        link.classList.remove("selected");
-      }
-    });
+  const navLinks = document.querySelectorAll("#navbar ul li a");
+  
+  navLinks.forEach(link => {
+    console.log(link.getAttribute("href").split,"sdkjhds",currentUrl);
+    if (link.getAttribute("href") === `/${currentUrl}`) {
+      link.classList.add("selected");
+    } else {
+      link.classList.remove("selected");
+    }
   });
+});

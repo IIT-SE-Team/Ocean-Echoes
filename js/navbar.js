@@ -35,9 +35,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll("#navbar ul li a");
-
+  
   navLinks.forEach(link => {
-    if (link.getAttribute("href") === currentUrl) {
+    console.log(link.getAttribute("href"),"sdkjhds",currentUrl);
+    if (link.getAttribute("href") === currentUrl || link.getAttribute("href") === "Marine Data") {
       link.classList.add("selected");
     } else {
       link.classList.remove("selected");

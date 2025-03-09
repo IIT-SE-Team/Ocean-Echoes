@@ -41,8 +41,10 @@
     position: relative;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: height 1s ease-in-out, width 0.4s ease-in-out;
+    transition: all 0.5s ease-in-out;
     cursor: pointer;
 }
+
 
 /* Border Glow Effect */
 .team-member::before {
@@ -57,13 +59,13 @@
     transition: border-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
-/* Hover Effect */
-.team-member:hover {
-    height: 550px;
+/* Hover and Focus Effect */
+.team-member:hover,
+.team-member:focus {
+    height: 540px;
     width: 320px;
     z-index: 2;
     opacity: 1 !important;
-
 }
 
 .team-container:hover .team-member{
@@ -84,7 +86,11 @@
     background-size: cover;
     background-position: center;
 }
-
+.team-member-img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
 /* Team Member Info */
 h3 {
     background: var(--blue-50);
@@ -113,19 +119,19 @@ h3 {
     font-size: 15px;
     margin-top: 8px;
     margin-left: 10px;
-    text-align: left; /* Ensures left alignment */
+    text-align: left; 
 }
 
 /* Styling for sub-items (nested list) */
 .sub-list {
-    list-style-type: circle; /* Adds sub-bullet points */
-    padding-left: 30px; /* Proper indentation for sub-items */
+    list-style-type: circle; 
+    padding-left: 30px;
 }
 
 .sub-list li {
     font-size: 14px;
     padding: 5px;
-    text-align: left; /* Ensures text is left-aligned */
+    text-align: left;
 }
 .background-img {
     position: fixed; 
@@ -134,5 +140,5 @@ h3 {
     width: 100vw;
     height: 100vh; 
     object-fit: cover; 
-    z-index: -1; /* Puts it behind everything else */
+    z-index: -1; 
 }

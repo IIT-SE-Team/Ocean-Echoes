@@ -1,5 +1,8 @@
 /* global-styles.css */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+
 
 
 :root {
@@ -33,6 +36,9 @@
   --blue-700:#003049;
   --blue-800:#001824;
   --blue-900:#000000;
+  
+  
+
 }
 
 .text-xs {
@@ -349,3 +355,4 @@ footer {
   background: var(--blue-700);
   border-radius: 10px;
 }
+

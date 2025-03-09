@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* background img */
+.background-img {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    object-fit: cover; 
+    z-index: -1; 
+}
+/* Feedback Container */
+.feedback-container {
+    max-width: 700px;
+    width: 100%;
+    margin: 100px 20px;
+    background: var(--blue-50);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.title{
+    margin-bottom: 0.5rem;
+}
+/* Header */
+.feedback-header {
+    font-size: 1.8rem;
+    font-weight: 600;
+    flex-direction: column; 
+    text-align: center;
+}
+.feedback-title-message{
+    color: var(--gray-800);
+    margin-bottom: 1.5rem;
+    font-size: 1rem; 
+    font-weight: 500;
+}
+/* Form Section Styling */
+.form-section {
+    border: 1px solid var(--gray-400);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background: var(--blue-50);
+}
+
+
+/* Form Inputs */
+.feedback-form .form-group {
+    margin-top: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: var(--gray-800);
+}
+
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--gray-300);
+    border-radius: 5px;
+}
+
+.form-textarea {
+    height: 75px;
+    resize: none;
+}
+#message {
+    height: 150px; 
+}
+
+.file-type-info {
+    display: flex;
+    justify-content: flex-end; 
+    font-size: 0.8rem; 
+    color: var(--gray-500); 
+    margin-top: 5px; 
+}
+
+.char-count-container {
+    text-align: right;
+    font-size: 0.8rem; 
+    color: var(--gray-500); 
+}
+
+/* Form Row */
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+
+.form-input:valid {
+    border: 1px solid green;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--blue-300);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #2980b9;
+}
+
+/* ⭐ Custom 5-Star Rating System */
+.rating {
+    direction: rtl; 
+    unicode-bidi: bidi-override;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    font-size: 35px;
+    color: var(--gray-600);
+    transition: color 0.3s ease-in-out;
+}
+
+.rating label:before {
+    content: '★';
+}
+
+/* Hover Effects */
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: #ff9e0b;
+}
+
+/* Click Selection */
+.rating > input:checked ~ label {
+    color: #ffa723;
+}
+
+/* Click + Hover Effects */
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #e58e09;
+}
+
+.feedback-title
+input[type="checkbox"],
+input[type="radio"] {
+    margin-left: 20px;
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+    .form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .char-count-container {
+        font-size: 0.8rem; 
+    }
+
+    #charCount::after {
+        content: attr(data-short); 
+    }
+}
+
+

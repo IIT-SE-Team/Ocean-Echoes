@@ -1,5 +1,9 @@
 /* Table-specific styles - these will complement the global style.css */
 
+main{
+    margin-top: 10px;
+}
+
 .table-section {
     padding: 2rem 0;
 }
@@ -46,11 +50,7 @@ th {
     position: relative;
 }
 
-th.with-icon, th.with-logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
+
 
 td {
     padding: 12px 15px;
@@ -167,51 +167,27 @@ tfoot {
     color: #ef8354;
 }
 
-/* Interactive elements */
-.initiative-link {
-    color: #0066a6;
-    text-decoration: none;
+
+
+/* Thumbnail styling */
+.thumbnail {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
     position: relative;
-    font-weight: 500;
 }
 
-.initiative-link::after {
-    content: '';
+/* Tooltip effect */
+.thumbnail:hover::after {
+    content: attr(title);
     position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: #0066a6;
-    transition: width 0.3s ease;
-}
-
-.initiative-link:hover::after {
-    width: 100%;
-}
-
-/* Tooltip styles */
-[title] {
-    position: relative;
-    cursor: help;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    th, td {
-        padding: 10px 8px;
-    }
-    
-    .table-icon, .icon {
-        display: none;
-    }
-    
-    th.with-icon, th.with-logo {
-        display: block;
-    }
-    
-    .status {
-        padding: 4px 6px;
-        font-size: 0.75rem;
-    }
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
 }

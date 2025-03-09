@@ -1,10 +1,7 @@
 /* home-page.css */
 
-html {
-  /* scroll-snap-type: y proximity; */
-  scroll-behavior: smooth;
-}
 
+/* ============ Title Styles ======== */
 
 .headline {
   color: #FBFFF4;
@@ -27,6 +24,18 @@ html {
   width: 100%;
 }
 
+
+
+
+/*============= Hero Section Styles ==========*/
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: calc(100vh - 80px);
+  gap: 4rem;
+}
+
 .hero {
   position: relative;
   height: 100vh;
@@ -42,40 +51,19 @@ html {
   object-fit: cover;
 }
 
-/* Footer */
-
-
-/* Hero Section Styles */
-.hero-container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: calc(100vh - 80px);
-  gap: 4rem;
-}
-
-#mission-content {
-  height: 50px;
-}
 
 
 
-/* Mission Section */
+/*============ Mission Section ==========*/
 .mission {
   padding: 4rem 0;
-  background-color: var(--bg-primary);
-  border: 1px solid var(--blue);
+  border: 1px solid var(--blue-400);
   border-radius: 2rem;
   margin-top: 2rem;
   scroll-snap-align: start;
 }
 
-.mission h2 {
-  color: #0077b6;
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
+
 
 .mission-text {
   font-size: 1.2rem;
@@ -86,7 +74,7 @@ html {
   color: #333;
 }
 
-/* Ocean Issues Cards */
+/* =========== Ocean Issues Cards =======*/
 .ocean-issues {
   padding: 4rem 0;
 }
@@ -132,6 +120,9 @@ html {
   color: #555;
   line-height: 1.6;
 }
+
+
+/*===== Content Page Carousel =====*/
 
 .carousel {
   display: flex;
@@ -229,8 +220,12 @@ html {
   padding-top: 5px;
 }
 
-.description h4 {
+.description a {
   text-transform: uppercase;
+}
+
+.description a:hover {
+  text-decoration: underline;
 }
 
 input {
@@ -265,23 +260,3 @@ input:checked+label .description {
 
 
 
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-
-  .mission h2,
-  .ocean-issues h2,
-  .impact-stats h2,
-  .get-involved h2 {
-    font-size: 2rem;
-  }
-
-  .mission-text,
-  .involved-text {
-    font-size: 1.1rem;
-  }
-
-  .stat-item h3 {
-    font-size: 2.5rem;
-  }
-}

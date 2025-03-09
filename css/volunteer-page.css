@@ -1,31 +1,18 @@
-#page-content {
-}
-
 ::-webkit-scrollbar {
   width: 0;
   height: 0;
   display: none;
 }
 
-/* Hide scrollbar in Firefox */
 * {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer & Edge */
-}
-html {
-  scroll-behavior: smooth;
-}
-body {
-  background-color: #c6d3db;
-  ::-webkit-scrollbar {
-    display: none;
-  }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 /* --- topic container --- */
 .topic-container {
   height: 100vh;
-  background: linear-gradient(to top, #c6d3db, #ffffff);
+  background: linear-gradient(to bottom, #ffffff, #e6eff4);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -40,8 +27,25 @@ body {
   margin: 3rem;
 }
 
+.topic ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 20px;
+  color: var(--blue-500);
+
+  li a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  li a:hover {
+    color: var(--blue-500);
+  }
+}
+
 /* --- image-container styles --- */
-img {
+.topic-container img {
   display: block;
   width: 100%;
   height: 100%;
@@ -117,13 +121,13 @@ img {
   color: var(--blue-400);
 }
 
-/* --- Event Continer --- */
-
+/* ====== Event Continer ====== */
 #event-section {
   height: 100vh;
-  background-color: white;
+  background: linear-gradient(to bottom, #e6eff4, #f7fafc);
 }
 
+/* top container in event section */
 #event-section .event-top-container {
   height: 50%;
 
@@ -157,6 +161,7 @@ img {
   }
 }
 
+/* bottom container in event section */
 #event-section .event-bottom-container {
   width: 100%;
   height: 50%;
@@ -171,6 +176,11 @@ img {
     scroll-behavior: smooth;
   }
 }
+
+.event-bottom-container .label {
+  padding-left: 1.5rem;
+}
+
 .card {
   position: relative;
   min-width: 300px;
@@ -180,9 +190,9 @@ img {
 }
 
 .card:hover {
-  border-color: #007bff; /* Change border color */
-  transform: scale(1.05); /* Slightly increase card size */
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  border-color: #007bff;
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .content {
@@ -219,8 +229,8 @@ img {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 10px;
-  width: 100%; /* Ensures both sections have the same width */
-  max-width: 260px; /* Optional: ensures the sections don't exceed the card width */
+  width: 100%; 
+  max-width: 260px; 
 }
 
 .date i,
@@ -245,11 +255,10 @@ label {
   border-radius: 0 0 8px 8px;
 }
 
-/* --- Reviews container --- */
-
+/* ====== Reviews container ====== */
 #review-section {
   height: 100vh;
-  background: linear-gradient(to top, #c6d3db, #ffffff);
+  background: linear-gradient(to bottom, #f7fafc, #f0f5f8);
 }
 
 .review-container {
@@ -257,6 +266,8 @@ label {
   height: 100%;
   flex-direction: row;
 }
+
+/* review container left side panel */
 .review-container .left-side {
   width: 50%;
   height: 100%;
@@ -273,7 +284,6 @@ label {
   p {
     margin-bottom: 20px;
   }
-
 
   .rating {
     color: var(--blue-500);
@@ -306,15 +316,16 @@ label {
   }
 }
 
+/* review container right side panel */
 .review-container .right-side {
   width: 50%;
-  height: 100%;
+  height: 95%;
   padding: 0.3rem;
-
   align-content: end;
 
   h1 {
     color: var(--blue-400);
+    margin-top: 5rem;
   }
 }
 
@@ -331,9 +342,10 @@ label {
 
 .review-container .right-side .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-template-columns: repeat(2, 1fr);
   height: 90%;
-  overflow: auto; /* Scroll if content overflows */
+  overflow-x: hidden;
+  overflow-y: auto;
   padding: 10px 0;
   position: relative;
   scroll-behavior: smooth;
@@ -358,11 +370,11 @@ label {
   }
 }
 
-/* --- Feedback container --- */
+/* ====== Feedback container ====== */
 #form-section {
   height: 100vh;
-  background-color: rgb(137, 134, 134);
   align-content: center;
+  background: linear-gradient(to bottom, #f0f5f8, #e8f1f5);
 }
 
 .feedback-card {
@@ -389,7 +401,20 @@ label {
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 3rem;
+}
+
+.feedback-card .right-side h1 {
+  font-size: 2rem;
+  color: var(--blue-500);
+  text-align: center;
+}
+
+.feedback-card .right-side p {
+  font-size: 1.5rem;
+  color: var(--blue-600);
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .feedback-card .right-side .field {
@@ -399,7 +424,7 @@ label {
   border-radius: 5px;
 }
 
-.feedback-card .right-side textarea   {
+.feedback-card .right-side textarea {
   height: 70%;
   resize: none;
 }
@@ -411,7 +436,7 @@ label {
 }
 
 .star {
-  font-size: 30px;
+  font-size: 25px;
   cursor: pointer;
   color: gray;
   transition: color 0.3s ease, transform 0.2s ease-in-out;
@@ -427,4 +452,34 @@ label {
   transform: scale(1.1);
 }
 
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+}
 
+.form-group .rating {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+.buttons-group {
+  display: flex;
+  justify-content: space-evenly; 
+  width: 100%;
+  padding: 10px 0; 
+  margin-top: 3rem;
+
+  button {
+    width: 200px; 
+  }
+
+  .cancel {
+    background-color: var(--gray-400);
+    color: white;
+  }
+}

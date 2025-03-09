@@ -32,7 +32,7 @@
       </nav>
     </header>
 
-    <main id="main">
+    <main id="main" style="padding: 0;">
 
        <!-- ============= Page Section ============= -->
       <section id="page-content">
@@ -41,9 +41,9 @@
             <h1>Volunteer</h1>
             <p>Volunteer to help us clean the ocean</p>
             <ul>
-              <li><a href="#event-section">Event</a></li>
-              <li><a href="#review-section">Reviews</a></li>
-              <li><a href="#apply-section">Apply for Volunteer</a></li>
+              <li><a class="text-base" href="#event-section">Event</a></li>
+              <li><a class="text-base" href="#review-section">Reviews</a></li>
+              <li><a class="text-base" href="#apply-section">FeedBack</a></li>
             </ul>
           </div>
           <div class="img-content">
@@ -77,6 +77,7 @@
         </div>
       </section>
 
+      <hr>
        <!-- ============= Event Section ============= -->
       <section id="event-section">
         <div class="event-top-container" style="display: flex">
@@ -112,7 +113,7 @@
         </div>
 
         <div class="event-bottom-container">
-          <h1>Events</h1>
+          <h1 class="headline-lg label">Events</h1>
           <div id="card-container"></div>
         </div>
       </section>
@@ -159,9 +160,11 @@
         <div class="feedback-card">
           <div class="left-side"></div>
           <div class="right-side">
-            <h2>We will love your Feedback</h2>
+            <h1>FeedBack</h1>
+            <p class="">We will love your Feedback</p>
             <form>
               <input
+              required
                 type="text"
                 id="name"
                 name="name"
@@ -171,6 +174,7 @@
 
               <br />
               <input
+              required
                 type="email"
                 id="email"
                 name="email"
@@ -180,6 +184,7 @@
               <br />
 
               <textarea
+              required
                 id="feedback"
                 name="feedback"
                 class="field"
@@ -187,17 +192,17 @@
               ></textarea>
 
               <div class="form-group">
-                <label class="text-base">Rating :</label>
+                <span class="text-base">Rating :</span>
                 <div class="rating">
-                  <span class="star" data-value="1">&#9733;</span>
-                  <span class="star" data-value="2">&#9733;</span>
-                  <span class="star" data-value="3">&#9733;</span>
-                  <span class="star" data-value="4">&#9733;</span>
-                  <span class="star" data-value="5">&#9733;</span>
+                  <i class="fa-solid fa-star star" data-value="1"></i>
+                  <i class="fa-solid fa-star star" data-value="2"></i>
+                  <i class="fa-solid fa-star star" data-value="3"></i>
+                  <i class="fa-solid fa-star star" data-value="4"></i>
+                  <i class="fa-solid fa-star star" data-value="5"></i>
                 </div>
               </div>
-              <input type="hidden" name="rating" id="ratingValue" />
-              <div class="form-group buttons">
+              <input required type="hidden" name="rating" id="ratingValue" />
+              <div class="buttons-group">
                 <button type="submit" class="btn submit">Submit</button>
                 <button type="button" class="btn cancel">Cancel</button>
               </div>
@@ -211,13 +216,13 @@
     <footer>
       <div class="container">
         <p>&copy; 2023 OceanLife. All rights reserved.</p>
-        <a href="/page-editor/pageEditor_ST2.html" class="a page-editor"
-          >page-editor | student-2</a
+        <a href="/page-editor/pageEditor_ST1.html" class="a page-editor"
+          >page-editor | student-1</a
         >
       </div>
     </footer>
   </body>
-  <script src="js/homePage.js"></script>
+  <script src="js/volunteerPage.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/globalFunctions.js"></script>
 </html>

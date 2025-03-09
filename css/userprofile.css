@@ -1,30 +1,22 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 html, body {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    color: white;
+    
     background: url('/assets/video/turtle\ 02.mp4') no-repeat center center/cover;
 }
 
 .container {
+    margin-left: 40vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
     width: 90%;
     max-width: 500px;
-    background: rgba(0, 0, 80, 0.8);
+    background: var(--blue-100);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    position: relative;
+    position: center;
 }
 
 input, textarea, button {
@@ -37,13 +29,13 @@ input, textarea, button {
 }
 
 input, textarea {
-    background: white;
+    background: var(--gray-100);
     color: black;
 }
 
 button {
     background: white;
-    color: blue;
+    color: var(--blue-900);
     cursor: pointer;
     font-weight: bold;
     display: inline-flex;
@@ -87,7 +79,7 @@ button:hover {
     margin: 0;
     font-size: 16px;
     font-weight: normal;
-    color: lightgray;
+    color: white;
 }
 
 .hidden {

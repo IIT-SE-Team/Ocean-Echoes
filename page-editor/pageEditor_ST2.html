@@ -3,492 +3,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Editor - Student 2</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Page Editor Specific Styling */
-        .page-editor-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .editor-section {
-            margin-bottom: 30px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 20px;
-        }
-
-        .editor-section:last-child {
-            border-bottom: none;
-        }
-
-        .task-description {
-            margin-bottom: 20px;
-        }
-
-        .page-link {
-            display: inline-block;
-            margin: 10px 0;
-            padding: 8px 15px;
-            background-color: #0078d4;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        .page-link:hover {
-            background-color: #005a9e;
-        }
-
-        .code-explanation {
-            background-color: #f8f8f8;
-            border-left: 4px solid #0078d4;
-            padding: 15px;
-            margin: 15px 0;
-        }
-
-        .validation-link {
-            color: #0078d4;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .validation-link:hover {
-            text-decoration: underline;
-        }
-
-        .highlight {
-            background-color: #ffffcc;
-            padding: 2px 4px;
-            border-radius: 2px;
-        }
-
-        /* Table for showing techniques */
-        .techniques-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        .techniques-table th, .techniques-table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-
-        .techniques-table th {
-            background-color: #f2f2f2;
-        }
-
-        /* Internal navigation */
-        .internal-nav {
-            background-color: #f8f8f8;
-            padding: 15px;
-            margin-bottom: 30px;
-            border-radius: 4px;
-        }
-
-        .internal-nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .internal-nav li a {
-            display: inline-block;
-            padding: 5px 10px;
-            text-decoration: none;
-            color: #0078d4;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            transition: all 0.3s;
-        }
-
-        .internal-nav li a:hover {
-            background-color: #0078d4;
-            color: white;
-        }
-
-        /* Go to top button */
-        .go-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: block;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            background-color: #0078d4;
-            color: white;
-            border-radius: 50%;
-            text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-
-        .go-to-top:hover {
-            background-color: #005a9e;
-        }
-    </style>
+    <title>Page Editor - Ocean Conservation</title>
+    <link rel="stylesheet" href="/css/pageEditor-ST2.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/global-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- This would come from the website template -->
-    <header>
-        <!-- Navigation would be here -->
-    </header>
+    <header id="main-header">
+        <img src="/assets/img/logo.png" alt="logo" id="logo">
+        <nav id="navbar">
+          <ul>
+            <li><a aria-current="page" href="/home.html">Home</a></li>
+            <li><a href="/feedback.html">Feedback</a></li>
+            <li><a href="/team.html">Team</a></li>
+            <li><a href="/volunteer.html">Volunteer</a></li>
+            <li><a href="/profile.html">User</a></li>
+            <li><a href="/table.html">Marine Data</a></li>
+          </ul>
+        </nav>
+      </header>
 
     <main>
-        <div class="page-editor-container">
-            <h1 id="top">Page Editor - Student 2</h1>
+        <div class="container">
+            <h1 class="title">Page Editor Report</h1>
             
-            <!-- Internal Navigation -->
-            <section class="internal-nav">
-                <h2>Navigation</h2>
-                <ul>
-                    <li><a href="#role">My Role</a></li>
-                    <li><a href="#website-style">Website Style & Navigation</a></li>
-                    <li><a href="#home-page">Home Page</a></li>
-                    <li><a href="#table-page">Table Page</a></li>
-                    <li><a href="#content-page">Content Page</a></li>
-                    <li><a href="#challenges">Challenges & Lessons</a></li>
-                    <li><a href="#accessibility">Accessibility</a></li>
-                    <li><a href="#compliance">Compliance</a></li>
-                    <li><a href="#references">References</a></li>
-                </ul>
+            <section class="editor-section">
+                <h2 class="headline-lg">Name and Role</h2>
+                <p><strong>Name:</strong> Ushalka Kapugamage</p>
+                <p><strong>Role:</strong> Student 2 - Responsible for Home Page (including template and navigation) and Table page</p>
             </section>
-
-            <!-- Role & Tasks Section -->
-            <section id="role" class="editor-section">
-                <h2>My Role and Completed Tasks</h2>
-                <p>As Student 2 in our group project focusing on UN Sustainable Development Goal [number], I was responsible for the following tasks:</p>
-                <ul>
-                    <li>Creating the global website style and template structure</li>
-                    <li>Developing the responsive navigation bar</li>
-                    <li>Implementing the Home Page</li>
-                    <li>Creating the Table Page</li>
-                    <li>Developing my personal Content Page</li>
-                </ul>
-                <p>These tasks formed the foundation of our website's structure and visual identity, ensuring consistency across all pages created by other team members.</p>
-            </section>
-
-            <!-- Website Style Section -->
-            <section id="website-style" class="editor-section">
-                <h2>Website Style & Navigation</h2>
-                <div class="task-description">
-                    <p>I created a consistent template and navigation structure that would be used throughout the website by all team members. This involved developing the global CSS file and establishing the main structural elements of the website.</p>
-                    <a href="home.html" class="page-link" target="_blank">View Home Page with Navigation</a>
-                    <a href="validation_ST2.html#style-validation" class="validation-link">View Validation Report</a>
-                </div>
-
-                <h3>Technical Implementation</h3>
-                <div class="code-explanation">
-                    <h4>HTML Structure</h4>
-                    <p>For the website template, I created a basic structure that includes:</p>
-                    <ul>
-                        <li><strong>Header</strong>: Contains the website logo/identity and navigation bar</li>
-                        <li><strong>Main content area</strong>: Serves as a container for page-specific content</li>
-                        <li><strong>Footer</strong>: Includes links to each team member's editor page and validation information</li>
-                        <li><strong>Wrapper</strong>: Used to center content and create margins for better readability</li>
-                    </ul>
-
-                    <p>Key HTML tags used in the template structure:</p>
-                    <ul>
-                        <li><span class="highlight">&lt;header&gt;</span>: Semantic tag for the page header section</li>
-                        <li><span class="highlight">&lt;nav&gt;</span>: Semantic tag for the navigation menu</li>
-                        <li><span class="highlight">&lt;main&gt;</span>: Primary content container</li>
-                        <li><span class="highlight">&lt;footer&gt;</span>: Semantic tag for the page footer</li>
-                        <li><span class="highlight">&lt;div class="wrapper"&gt;</span>: Container for centering content</li>
-                    </ul>
-                </div>
-
-                <div class="code-explanation">
-                    <h4>Navigation Bar</h4>
-                    <p>I implemented a responsive navigation bar using HTML and CSS, following these techniques:</p>
-                    <ul>
-                        <li>Used an unordered list <span class="highlight">&lt;ul&gt;</span> with list items <span class="highlight">&lt;li&gt;</span> for each navigation link</li>
-                        <li>Added hover effects using the <span class="highlight">:hover</span> pseudo-class to provide visual feedback</li>
-                        <li>Highlighted the active page using a <span class="highlight">.active</span> CSS class</li>
-                        <li>Implemented CSS transitions for smooth hover animations</li>
-                        <li>Made the navigation bar responsive using media queries to adapt to different screen sizes</li>
-                    </ul>
-                </div>
-
-                <div class="code-explanation">
-                    <h4>Global CSS</h4>
-                    <p>I created a global CSS file (style.css) that defines the following:</p>
-                    <ul>
-                        <li><strong>Typography</strong>: Font families, sizes, and weights for consistency</li>
-                        <li><strong>Color palette</strong>: Primary, secondary, and neutral colors aligned with our sustainability theme</li>
-                        <li><strong>Layout</strong>: Grid structure and responsive design principles</li>
-                        <li><strong>Component styles</strong>: Buttons, links, cards, and other reusable elements</li>
-                    </ul>
-
-                    <p>Key CSS properties and techniques used:</p>
-                    <ul>
-                        <li><span class="highlight">display: flex</span> and <span class="highlight">display: grid</span>: For creating flexible and responsive layouts</li>
-                        <li><span class="highlight">:root</span> selector: For declaring CSS variables to maintain consistent colors and spacing</li>
-                        <li><span class="highlight">@media queries</span>: For responsive design across different screen sizes</li>
-                        <li><span class="highlight">transition</span>: For smooth hover effects and animations</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Home Page Section -->
-            <section id="home-page" class="editor-section">
-                <h2>Home Page</h2>
-                <div class="task-description">
-                    <p>The Home Page serves as the central hub of our website, introducing our chosen UN Sustainable Development Goal and providing navigation to key content sections.</p>
-                    <a href="home.html" class="page-link" target="_blank">View Home Page</a>
-                    <a href="validation_ST2.html#home-validation" class="validation-link">View Validation Report</a>
-                </div>
-
-                <h3>Technical Implementation</h3>
-                <div class="code-explanation">
-                    <h4>Website Identity</h4>
-                    <p>I created a prominent section to establish our website's identity:</p>
-                    <ul>
-                        <li>Designed a logo using royalty-free resources (properly cited in the references section)</li>
-                        <li>Used the <span class="highlight">&lt;img&gt;</span> tag with appropriate <span class="highlight">alt</span> text for accessibility</li>
-                        <li>Created a mission statement explaining our chosen SDG using semantic HTML</li>
-                    </ul>
-                </div>
-
-                <div class="code-explanation">
-                    <h4>Interactive Content Tiles</h4>
-                    <p>For linking to the four content pages, I implemented interactive gallery tiles:</p>
-                    <ul>
-                        <li>Created a responsive grid layout using <span class="highlight">display: grid</span> and <span class="highlight">grid-template-columns</span></li>
-                        <li>Each tile uses <span class="highlight">&lt;article&gt;</span> elements with descriptive images and text</li>
-                        <li>Implemented hover effects using <span class="highlight">:hover</span> pseudo-class, including scaling transformations</li>
-                        <li>Added box-shadow effects to create depth and visual interest</li>
-                        <li>Ensured each tile links to the correct content page using relative paths</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Table Page Section -->
-            <section id="table-page" class="editor-section">
-                <h2>Table Page</h2>
-                <div class="task-description">
-                    <p>The Table Page presents organized, tabular data related to our sustainability theme, with interactive elements and visual styling to enhance user engagement.</p>
-                    <a href="table.html" class="page-link" target="_blank">View Table Page</a>
-                    <a href="validation_ST2.html#table-validation" class="validation-link">View Validation Report</a>
-                </div>
-
-                <h3>Technical Implementation</h3>
-                <div class="code-explanation">
-                    <h4>Table Structure</h4>
-                    <p>I created a comprehensive table using HTML table elements:</p>
-                    <ul>
-                        <li>Used <span class="highlight">&lt;table&gt;</span>, <span class="highlight">&lt;thead&gt;</span>, <span class="highlight">&lt;tbody&gt;</span>, and <span class="highlight">&lt;tfoot&gt;</span> for proper semantic structure</li>
-                        <li>Included the website logo within the table using <span class="highlight">&lt;img&gt;</span> tag with appropriate <span class="highlight">alt</span> text</li>
-                        <li>Used <span class="highlight">&lt;th&gt;</span> elements for heading cells with scope attributes for accessibility</li>
-                        <li>Implemented at least 8 rows and 4 columns of data related to our sustainability theme</li>
-                        <li>Used <span class="highlight">rowspan</span> and <span class="highlight">colspan</span> attributes to create complex layouts where needed</li>
-                    </ul>
-                </div>
-
-                <div class="code-explanation">
-                    <h4>Styling & Visual Elements</h4>
-                    <p>I enhanced the table with various styling techniques:</p>
-                    <ul>
-                        <li>Applied zebra striping using <span class="highlight">:nth-child(odd)</span> and <span class="highlight">:nth-child(even)</span> selectors</li>
-                        <li>Added border and shadow effects using <span class="highlight">border</span> and <span class="highlight">box-shadow</span> properties</li>
-                        <li>Included special characters for icons within cells using HTML entity codes</li>
-                        <li>Created thumbnail images in header cells with <span class="highlight">title</span> attributes for tooltip functionality</li>
-                        <li>Added hover effects to rows using <span class="highlight">:hover</span> pseudo-class for better user interaction</li>
-                    </ul>
-                </div>
-
-                <div class="code-explanation">
-                    <h4>Accessibility Features</h4>
-                    <p>I ensured the table is accessible by implementing:</p>
-                    <ul>
-                        <li><span class="highlight">aria-label</span> attributes to provide context for screen readers</li>
-                        <li><span class="highlight">scope</span> attributes on header cells to associate data cells with their headers</li>
-                        <li><span class="highlight">caption</span> element to provide a title for the table</li>
-                        <li>Sufficient color contrast for text and background elements</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Content Page Section -->
-            <section id="content-page" class="editor-section">
-                <h2>Content Page</h2>
-                <div class="task-description">
-                    <p>I created a content page focused on [specific aspect of the SDG], providing detailed information with proper navigation and structure.</p>
-                    <a href="content_ST2.html" class="page-link" target="_blank">View Content Page</a>
-                    <a href="validation_ST2.html#content-validation" class="validation-link">View Validation Report</a>
-                </div>
-
-                <h3>Technical Implementation</h3>
-                <div class="code-explanation">
-                    <h4>Page Structure & Navigation</h4>
-                    <p>I organized the content with clear structure and navigation:</p>
-                    <ul>
-                        <li>Used proper heading hierarchy (<span class="highlight">&lt;h1&gt;</span> through <span class="highlight">&lt;h6&gt;</span>) to structure the content logically</li>
-                        <li>Created internal links at the top of the page using anchor tags with <span class="highlight">href="#section-id"</span></li>
-                        <li>Implemented a fixed "Go to Top" button using <span class="highlight">position: fixed</span> CSS property</li>
-                        <li>Added meaningful <span class="highlight">id</span> attributes to section elements for internal linking</li>
-                    </ul>
-                </div>
-
-                <div class="code-explanation">
-                    <h4>Visual Elements</h4>
-                    <p>I enhanced the content with visual elements:</p>
-                    <ul>
-                        <li>Included at least four relevant images with appropriate <span class="highlight">alt</span> text</li>
-                        <li>Applied CSS styling to images, including borders and responsive sizing</li>
-                        <li>Used CSS to create visual separation between sections</li>
-                        <li>Implemented proper spacing and typography for readability</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Challenges Section -->
-            <section id="challenges" class="editor-section">
-                <h2>Challenges and Lessons Learned</h2>
-                
-                <h3>Challenges</h3>
-                <div class="task-description">
-                    <p>During the implementation of my assigned tasks, I encountered several challenges:</p>
-                    <ol>
-                        <li><strong>Responsive Navigation:</strong> Creating a navigation bar that worked well across all screen sizes required multiple iterations. I initially struggled with the mobile view collapsing incorrectly.</li>
-                        <li><strong>Table Complexity:</strong> Implementing merged cells while maintaining proper alignment and responsive behavior was challenging, especially when adding interactive elements.</li>
-                        <li><strong>Maintaining Design Consistency:</strong> Ensuring all team members correctly implemented the global styles required clear documentation and communication.</li>
-                    </ol>
-                </div>
-
-                <h3>Solutions & Lessons Learned</h3>
-                <div class="task-description">
-                    <p>To overcome these challenges, I implemented the following solutions:</p>
-                    <ol>
-                        <li>For the responsive navigation, I researched and implemented a mobile-first approach using CSS media queries and flexbox, resulting in a more reliable navigation system.</li>
-                        <li>I solved the table complexity issues by breaking down the problem into smaller components and testing each part individually before integration.</li>
-                        <li>To maintain design consistency, I created detailed documentation with examples for other team members and held regular check-ins to address implementation questions.</li>
-                    </ol>
-                    
-                    <p>Key lessons learned:</p>
-                    <ul>
-                        <li>Planning the CSS architecture before implementation saves significant time later</li>
-                        <li>Testing on multiple devices and browsers throughout development prevents major issues</li>
-                        <li>Clear communication about shared components is essential for team projects</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Accessibility Section -->
-            <section id="accessibility" class="editor-section">
-                <h2>Accessibility</h2>
-                <p>I implemented several accessibility features across the pages I developed:</p>
-                
-                <table class="techniques-table">
-                    <thead>
-                        <tr>
-                            <th>Accessibility Feature</th>
-                            <th>Implementation</th>
-                            <th>Benefit</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Semantic HTML</td>
-                            <td>Used proper tags like <span class="highlight">&lt;header&gt;</span>, <span class="highlight">&lt;nav&gt;</span>, <span class="highlight">&lt;main&gt;</span>, and <span class="highlight">&lt;footer&gt;</span></td>
-                            <td>Improves screen reader navigation and SEO</td>
-                        </tr>
-                        <tr>
-                            <td>Alternative Text</td>
-                            <td>Added descriptive <span class="highlight">alt</span> attributes to all images</td>
-                            <td>Makes content accessible to visually impaired users</td>
-                        </tr>
-                        <tr>
-                            <td>Keyboard Navigation</td>
-                            <td>Ensured all interactive elements are accessible via keyboard</td>
-                            <td>Supports users who cannot use a mouse</td>
-                        </tr>
-                        <tr>
-                            <td>Color Contrast</td>
-                            <td>Maintained sufficient contrast between text and background colors</td>
-                            <td>Improves readability for users with visual impairments</td>
-                        </tr>
-                        <tr>
-                            <td>Responsive Design</td>
-                            <td>Used media queries and flexible layouts</td>
-                            <td>Ensures usability across different devices and screen sizes</td>
-                        </tr>
-                        <tr>
-                            <td>ARIA Attributes</td>
-                            <td>Added <span class="highlight">aria-label</span> and other ARIA attributes where needed</td>
-                            <td>Provides additional context for screen readers</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <p>I tested my pages using the WAVE Web Accessibility Evaluation Tool to identify and fix potential accessibility issues, ensuring our website is usable by as many people as possible.</p>
-            </section>
-
-            <!-- Compliance Section -->
-            <section id="compliance" class="editor-section">
-                <h2>Compliance</h2>
-                <p>The pages I have created comply with the Janet regulations governing web page publication in the following ways:</p>
-                
-                <div class="code-explanation">
-                    <h4>Content Compliance</h4>
-                    <ul>
-                        <li>All content is appropriate for academic and educational purposes</li>
-                        <li>No offensive, discriminatory, or illegal material is included</li>
-                        <li>All external resources used (images, information) are properly credited</li>
-                        <li>Content is factually accurate and relevant to the educational purpose</li>
-                    </ul>
-                </div>
-                
-                <div class="code-explanation">
-                    <h4>Technical Compliance</h4>
-                    <ul>
-                        <li>All pages validate according to W3C standards</li>
-                        <li>Accessibility guidelines have been followed (WCAG 2.1)</li>
-                        <li>Proper file structure and organization has been maintained</li>
-                        <li>No excessive bandwidth usage through optimized images and resources</li>
-                    </ul>
-                </div>
-                
-                <div class="code-explanation">
-                    <h4>Intellectual Property Compliance</h4>
-                    <ul>
-                        <li>All third-party content (images, icons) is either royalty-free or properly licensed</li>
-                        <li>Sources are cited in the references section</li>
-                        <li>No copyright infringement in design or content</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- References Section -->
-            <section id="references" class="editor-section">
-                <h2>References</h2>
-                <ol>
-                    <li id="ref1">W3Schools. (2024). <em>HTML Tables</em>. Retrieved from <a href="https://www.w3schools.com/html/html_tables.asp" target="_blank">https://www.w3schools.com/html/html_tables.asp</a></li>
-                    <li id="ref2">MDN Web Docs. (2024). <em>CSS Flexible Box Layout</em>. Retrieved from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout" target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout</a></li>
-                    <li id="ref3">United Nations. (2024). <em>Sustainable Development Goals</em>. Retrieved from <a href="https://sdgs.un.org/goals" target="_blank">https://sdgs.un.org/goals</a></li>
-                    <li id="ref4">Economou, D. (2025). <em>Web Design and Development Lecture Notes</em>. University of Westminster.</li>
-                    <li id="ref5">iStockPhoto. (2024). <em>[Description of the specific image used]</em>. Retrieved from <a href="https://www.istockphoto.com/" target="_blank">https://www.istockphoto.com/</a></li>
-                    <li id="ref6">W3C. (2024). <em>Web Content Accessibility Guidelines (WCAG) 2.1</em>. Retrieved from <a href="https://www.w3.org/TR/WCAG21/" target="_blank">https://www.w3.org/TR/WCAG21/</a></li>
+            
+            <section class="editor-section">
+                <h2 class="headline-lg">Completed Tasks/Pages</h2>
+                <ol class="tasks-list">
+                    <li>Designed and implemented the Home Page (home.html) with layout and interactive elements</li>
+                    <li>Created the Table Page (table.html) with marine conservation data visualization</li>
+                    <li>Developed template components and navigation system used across the site</li>
+                    <li>Implemented custom CSS for both pages (home-page.css, table-page.css, navbar.css)</li>
+                    <li>Created global-styles.css for consistent styling across all site pages</li>
                 </ol>
+            </section>
+            
+            <section class="editor-section">
+                <h2 class="headline-lg">Technical Description for Implemented Pages</h2>
+                
+                <div class="page-description">
+                    <h3 class="headline-md">Home Page (home.html)</h3>
+                    <p>The Home Page serves as the main entry point for the website, focusing on ocean conservation awareness. The implementation approaches include:</p>
+                    <ul>
+                        <li><strong>Hero Section:</strong> Created a full-width video background with the "Life Below Water" headline overlay to create an immersive introduction to the site's theme.</li>
+                        <li><strong>Mission Statement:</strong> Implemented a centered text section with a clean, bordered design to introduce the site's purpose.</li>
+                        <li><strong>Issue Cards:</strong> Designed a grid layout of four cards highlighting critical ocean challenges using CSS Grid.</li>
+                        <li><strong>Interactive Carousel:</strong> Developed a custom image carousel using radio inputs and labels to create an interactive component that links to content pages by all team members.</li>
+                        <li><strong>Back to Top Button:</strong> Added a floating button that appears when scrolling to improve navigation on longer pages, styled using the global CSS variables.</li>
+                    </ul>
+                </div>
+                
+                <div class="page-description">
+                    <h3 class="headline-md">Table Page (table.html)</h3>
+                    <p>The Table Page presents structured marine conservation data using multiple tables. The implementation approaches include:</p>
+                    <ul>
+                        <li><strong>Table Containers:</strong> Created table containers to display data effectively.</li>
+                        <li><strong>Status Indicators:</strong> Implemented color-coded status labels (excellent, good, moderate, poor, critical) using the blue color palette from global-styles.css.</li>
+                        <li><strong>Alternating Row Colors:</strong> Applied alternating background colors to table rows for improved readability of dense data.</li>
+                        <li><strong>Hover Effects:</strong> Added subtle background color transitions when hovering over rows to enhance user interaction.</li>
+                        <li><strong>Semantic Table Structure:</strong> Used proper HTML5 table elements (thead, tbody, tfoot).</li>
+                        <li><strong>Tooltip Integration:</strong> Implemented title attributes for region names that appear on hover to provide additional context without cluttering the interface.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="editor-section">
+                <h2 class="headline-lg">Detail of HTML/CSS Techniques Used</h2>
+                
+                <div class="techniques">
+                    <h3 class="headline-md">HTML Techniques</h3>
+                    <ol>
+                        <li>
+                            <h4 class="headline-sm">Semantic HTML Structure:</h4>
+                            <ul>
+                                <li>Used semantic elements like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code> to provide clear document structure</li>
+                                <li>Implemented proper <code>&lt;table&gt;</code> structure with <code>&lt;caption&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code> elements</li>
+                                <li>Used <code>&lt;th scope="col"&gt;</code> to properly identify column headers</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4 class="headline-sm">Navigation Implementation:</h4>
+                            <ul>
+                                <li>Created an unordered list (<code>&lt;ul&gt;</code>) based navigation system with current page indicator</li>
+                                <li>Applied the custom hover effects using the <code>.a::after</code> pseudo-element from global-styles.css</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4 class="headline-sm">Media Integration:</h4>
+                            <ul>
+                                <li>Embedded background video with appropriate attributes (<code>autoplay</code>, <code>loop</code>, <code>muted</code>)</li>
+                                <li>Implemented image handling with descriptive alt text</li>
+                                <li>Used icons from Font Awesome to enhance visual communication</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4 class="headline-sm">Form Controls for Interaction:</h4>
+                            <ul>
+                                <li>Implemented radio button control system for the image carousel</li>
+                                <li>Created interactive buttons with clear visual feedback for carousel navigation using the <code>.btn</code> classes from global-styles.css</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                
+                <div class="techniques">
+                    <h3 class="headline-md">CSS Techniques</h3>
+                    <ol>
+                        <li>
+                            <h4 class="headline-sm">Layout Systems:</h4>
+                            <ul>
+                                <li>Used CSS Grid for the issue cards section</li>
+                                <li>Implemented Flexbox for navigation and alignment control using the helper classes from global-styles.css (<code>.center</code>, <code>.centerX</code>, <code>.centerY</code>)</li>
+                                <li>Created containers that maintain proper margins</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4 class="headline-sm">Interactive Elements:</h4>
+                            <ul>
+                                <li>Created hover effects for navigation links, cards, and table rows</li>
+                                <li>Implemented animated underlines for navigation using pseudo-elements defined in global-styles.css</li>
+                                <li>Designed interactive card expansion in the carousel using CSS transitions</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4 class="headline-sm">Visual Styling:</h4>
+                            <ul>
+                                <li>Used the consistent color scheme based on ocean-inspired blues from the global CSS variables (<code>--blue-50</code> through <code>--blue-900</code>)</li>
+                                <li>Implemented typography classes from global-styles.css (<code>.text-sm</code>, <code>.text-lg</code>, <code>.headline-md</code>, etc.)</li>
+                                <li>Created status indicators with appropriate color coding for data visualization using the blue color palette</li>
+                                <li>Applied box-shadow effects for depth and visual hierarchy</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                
+                <div class="techniques">
+                    <h3 class="headline-md">JavaScript Logic</h3>
+                    <ol>
+                        <li>
+                            <h4 class="headline-sm">Carousel Functionality:</h4>
+                            <ul>
+                                <li>Implemented navigation controls for the image carousel</li>
+                                <li>Created event listeners for the next/previous buttons that update selected radio inputs</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4 class="headline-sm">Navigation Enhancements:</h4>
+                            <ul>
+                                <li>Developed dynamic navigation highlighting based on current page</li>
+                                <li>Added scroll-to-top functionality with the back-to-top button, styled using the global CSS variables</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4 class="headline-sm">Table Interaction:</h4>
+                            <ul>
+                                <li>Added hover effects and tooltip functionality for enhanced data exploration</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+            
+            <section class="editor-section">
+                <h2 class="headline-lg">Global CSS Implementation</h2>
+                <p>The global-styles.css file provides a consistent foundation for the entire website with the following key features:</p>
+                
+                <ol class="global-css-features">
+                    <li>
+                        <h3 class="headline-sm">Color System:</h3>
+                        <ul>
+                            <li>Implemented a comprehensive blue color palette (<code>--blue-50</code> through <code>--blue-900</code>) to maintain ocean-themed visual consistency</li>
+                            <li>Created grayscale variables for neutral elements</li>
+                            <li>Defined primary and secondary background and text colors</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3 class="headline-sm">Typography Framework:</h3>
+                        <ul>
+                            <li>Imported and configured Poppins as the primary font family</li>
+                            <li>Created utility classes for text sizes (<code>.text-xs</code> through <code>.text-3xl</code>)</li>
+                            <li>Defined font weight classes (<code>.font-thin</code> through <code>.font-black</code>)</li>
+                            <li>Created headline styles with appropriate spacing (<code>.headline-xs</code> through <code>.headline-xl</code>)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3 class="headline-sm">Layout Utilities:</h3>
+                        <ul>
+                            <li>Implemented flexbox helper classes (<code>.center</code>, <code>.centerX</code>, <code>.centerY</code>)</li>
+                            <li>Created container and scroll-container elements for consistent spacing</li>
+                            <li>Defined standard spacing for main content areas</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3 class="headline-sm">Component Styling:</h3>
+                        <ul>
+                            <li>Developed button styles with size variations (<code>.btn</code>, <code>.btn-secondary</code>, <code>.btn-large</code>, <code>.btn-small</code>)</li>
+                            <li>Created link hover effects with animated underlines</li>
+                            <li>Styled the "Back to Top" button with appropriate colors and transitions</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3 class="headline-sm">Global Elements:</h3>
+                        <ul>
+                            <li>Custom styled scrollbars using the blue color palette</li>
+                            <li>Consistent header and footer styling</li>
+                            <li>Defined smooth scrolling behavior</li>
+                        </ul>
+                    </li>
+                </ol>
+            </section>
+            
+            <section class="editor-section">
+                <h2 class="headline-lg">Links to Implemented Pages</h2>
+                <ul class="links-list">
+                    <li><a href="/home.html" class="a">Home Page</a></li>
+                    <li><a href="/table.html" class="a">Table Page</a></li>
+                    <li><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fyour-site-url.com%2Fhome.html" class="a">Validation Page</a></li>
+                </ul>
+            </section>
+            
+            <section class="editor-section">
+                <h2 class="headline-lg">Reflection - Challenges and Lessons Learned</h2>
+                <ol class="reflection-list">
+                    <li>
+                        <h3 class="headline-sm">Video Background Implementation:</h3>
+                        <p>Initially, the background video caused performance issues. I learned to optimize the video format and implement proper control attributes.</p>
+                    </li>
+                    <li>
+                        <h3 class="headline-sm">Table Design:</h3>
+                        <p>Creating tables with effective data display was challenging due to the amount of data. I implemented styling that improves readability while maintaining the table structure, using the scrollbar styling from global-styles.css.</p>
+                    </li>
+                    <li>
+                        <h3 class="headline-sm">CSS Grid vs Flexbox:</h3>
+                        <p>I had to decide when to use Grid versus Flexbox for different layout sections. This helped me better understand the strengths of each approach - Grid for two-dimensional layouts (like the issue cards) and Flexbox for one-dimensional control (like navigation).</p>
+                    </li>
+                    <li>
+                        <h3 class="headline-sm">Carousel Implementation:</h3>
+                        <p>Creating a JavaScript-light carousel was challenging. I learned to use CSS radio buttons as state controllers, which improved performance while maintaining functionality.</p>
+                    </li>
+                    <li>
+                        <h3 class="headline-sm">Global CSS Integration:</h3>
+                        <p>Establishing a consistent design system through global-styles.css required careful planning of variables and utility classes. This approach significantly improved development efficiency and visual consistency across pages.</p>
+                    </li>
+                </ol>
+            </section>
+            
+            <section class="editor-section">
+                <h2 class="headline-lg">Resources Consulted</h2>
+                <ul class="resources-list">
+                    <li>MDN Web Docs for HTML and CSS references</li>
+                    <li>CSS-Tricks for flexbox and grid layout techniques</li>
+                    <li>Font Awesome for icon implementation</li>
+                    <li>W3C HTML and CSS validators for code validation</li>
+                </ul>
             </section>
         </div>
     </main>
-
-    <!-- Go to Top Button -->
-    <a href="#top" class="go-to-top">↑</a>
-
-    <!-- This would come from the website template -->
+    
+    <button id="backToTop" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
     <footer>
-        <!-- Footer content would be here -->
-    </footer>
+        <div class="container">
+          <p>&copy; 2023 OceanLife. All rights reserved.</p>
+          <a href="/page-editor/pageEditor_ST2.html" class="a page-editor">page-editor | student-2</a>
+        </div>
+      </footer>
+    
+    <script src="/js/pageEditor-ST2.js"></script>
+    <script src="js/navbar.js"></script>
+  <script src="js/globalFunctions.js"></script>
 </body>
 </html>

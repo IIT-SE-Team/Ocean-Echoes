@@ -192,15 +192,14 @@ img {
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   h3 {
     text-align: start;
   }
   p {
-    word-wrap: break-word; /* Breaks long words if necessary */
-    overflow-wrap: break-word; /* Ensures text wraps within the container */
+    font-size: small;
     white-space: normal;
-    text-align: justify; 
+    text-align: justify;
   }
 }
 
@@ -254,9 +253,221 @@ label {
   background: linear-gradient(to top, #c6d3db, #ffffff);
 }
 
+.review-container {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+}
+.review-container .left-side {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+
+  h2 {
+    font-size: 3rem;
+    color: var(--blue);
+    margin: 2rem 0;
+  }
+
+  p {
+    margin: 0.5rem;
+  }
+
+  .rating {
+    font-size: 24px;
+    color: gold;
+  }
+  .rating i {
+    border: 2px solid rgb(183, 183, 183);
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+  }
+}
+.review-container .left-side .card {
+  width: fit-content;
+  height: 30%;
+  text-align: center;
+  padding: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 2rem;
+  background-color: white;
+
+  .rating {
+    font-size: 2.5rem;
+  }
+
+  .reviews {
+    font-size: 1.5rem;
+  }
+}
+
+.review-container .right-side {
+  width: 50%;
+  height: 100%;
+  padding: 0.3rem;
+
+  align-content: end;
+
+  h1 {
+    margin-top: 2rem;
+  }
+}
+
+.review-container .right-side .card {
+  width: 350px;
+  min-height: fit-content;
+  padding: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 2rem;
+  background-color: white;
+  align-content: space-around;
+}
+
+.review-container .right-side .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  height: 90%;
+  overflow: auto; /* Scroll if content overflows */
+  padding: 10px 0;
+  position: relative;
+  scroll-behavior: smooth;
+
+  .stars {
+    color: #f4c150;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .author {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .date {
+    font-size: 12px;
+    border: 0;
+    padding: 0;
+    color: gray;
+  }
+}
+
+
+
 /* --- Apply container --- */
 
-#apply-section {
+.feedback-card{
+  height: 80%;
+  width: 80%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); 
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+
+.feedback-card .left-side{
+  width: 50%;
+  height: 100%;
+  background-image: url('/assets/img/climate-change-concept-collage.jpg');
+  border-radius: 10px 0 0 10px;
+  background-size: cover;
+}
+
+
+#form-section {
   height: 100vh;
-  background-color: white;
+  background-color: rgb(137, 134, 134);
+  align-content: center;
+  
+
+  .feedback-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.feedback-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 14px;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating .star {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.rating .star:hover,
+.rating .star.active {
+    color: #ffcc00;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.buttons .btn.submit {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.buttons .btn.submit:hover {
+    background-color: #218838;
+}
+
+.buttons .btn.cancel {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.buttons .btn.cancel:hover {
+    background-color: #c82333;
+}
 }

@@ -1,0 +1,72 @@
+[
+  {
+    "rating": "Excellent",
+    "stars": "⭐⭐⭐⭐⭐",
+    "review": "The website offers comprehensive information on marine conservation targets and indicators. It's a valuable resource for understanding global efforts to protect our oceans.",
+    "author": "Emily Waters",
+    "date": "2025-03-09"
+  },
+  {
+    "rating": "Good",
+    "stars": "⭐⭐⭐⭐",
+    "review": "Detailed content on various targets like reducing marine pollution and sustainable fishing. However, some sections could benefit from more interactive visuals.",
+    "author": "Michael Fisher",
+    "date": "2025-03-08"
+  },
+  {
+    "rating": "Average",
+    "stars": "⭐⭐⭐",
+    "review": "Informative site with extensive data on ocean health. The navigation is a bit complex, making it challenging to find specific information quickly.",
+    "author": "Sara Marine",
+    "date": "2025-03-07"
+  },
+  {
+    "rating": "Poor",
+    "stars": "⭐⭐",
+    "review": "The content is rich, but the website's design feels outdated. A modern layout would enhance user experience.",
+    "author": "David Ocean",
+    "date": "2025-03-06"
+  },
+  {
+    "rating": "Bad",
+    "stars": "⭐",
+    "review": "While the information is valuable, the lack of mobile optimization makes it hard to access on smartphones.",
+    "author": "Linda Reef",
+    "date": "2025-03-05"
+  },
+  {
+    "rating": "Excellent",
+    "stars": "⭐⭐⭐⭐⭐",
+    "review": "The user interface is smooth and intuitive. The content is well-organized, and I love the interactive elements that keep me engaged while learning about ocean conservation.",
+    "author": "James Ocean",
+    "date": "2025-03-10"
+  },
+  {
+    "rating": "Good",
+    "stars": "⭐⭐⭐⭐",
+    "review": "Great platform with lots of helpful information on marine life. It could benefit from more visual media like videos or animations to enhance the learning experience.",
+    "author": "Olivia Blue",
+    "date": "2025-03-11"
+  },
+  {
+    "rating": "Average",
+    "stars": "⭐⭐⭐",
+    "review": "The content is useful, but the design feels cluttered. A cleaner, more modern layout could make the website easier to navigate.",
+    "author": "Ethan Tide",
+    "date": "2025-03-12"
+  },
+  {
+    "rating": "Poor",
+    "stars": "⭐⭐",
+    "review": "The website offers decent information, but the search functionality is not very responsive. It could be more user-friendly, especially for people looking for specific topics.",
+    "author": "Ava Coral",
+    "date": "2025-03-13"
+  },
+  {
+    "rating": "Bad",
+    "stars": "⭐",
+    "review": "I had a hard time accessing the content on my mobile device. There are issues with the layout and responsiveness, making it frustrating to use on smaller screens.",
+    "author": "Liam Reef",
+    "date": "2025-03-14"
+  }
+]

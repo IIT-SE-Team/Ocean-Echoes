@@ -75,3 +75,53 @@ fetch('../assets/data/event.json')
   .catch(error => {
     console.error('Error fetching data:', error);
   });
+
+
+
+
+// Function to fetch and append the reviews
+function loadReviews() {
+  fetch('../assets/data/review.json')
+      .then(response => response.json())
+      .then(data => {
+          const grid = document.querySelector('.grid');
+          data.forEach(review => {
+              const card = document.createElement('div');
+              card.classList.add('card');
+              
+              // Create the inner content for the card
+              const rating = document.createElement('h3');
+              rating.textContent = review.rating;
+
+              const stars = document.createElement('div');
+              stars.classList.add('stars');
+              stars.textContent = review.stars;
+
+              const reviewText = document.createElement('p');
+              reviewText.textContent = `"${review.review}"`;
+
+              const author = document.createElement('p');
+              author.classList.add('author');
+              author.textContent = review.author;
+
+              const date = document.createElement('p');
+              date.classList.add('date');
+              date.textContent = review.date;
+
+              // Append all content to the card div
+              card.appendChild(rating);
+              card.appendChild(stars);
+              card.appendChild(reviewText);
+              card.appendChild(author);
+              card.appendChild(date);
+
+              // Append the card to the grid container
+              grid.appendChild(card);
+          });
+      })
+      .catch(error => {
+          console.error("Error loading reviews:", error);
+      });
+}
+
+document.addEventListener("DOMContentLoaded", loadReviews);

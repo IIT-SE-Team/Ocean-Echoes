@@ -21,6 +21,19 @@ h1 {
     margin-bottom: -100px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
+.sitemap-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+svg {
+    width: 60%;
+    height: auto;
+}
+
+       
+
 
 /* Sitemap Container */
 .sitemap-container {

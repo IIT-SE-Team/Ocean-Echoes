@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Adding interactive click animations
     document.querySelectorAll(".node").forEach(node => {
         node.addEventListener("click", function () {
-            node.style.fill = "#ffcc00";  // Change color on click
+            node.style.fill = "005f92";  // Change color on click
             setTimeout(() => node.style.fill = "#ffffff", 300);
         });
     });

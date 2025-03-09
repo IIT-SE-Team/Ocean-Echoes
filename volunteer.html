@@ -1,0 +1,228 @@
+<!-- Home-page.html -->
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ocean Echoes</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/global-styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/navBar.css" />
+<link rel="stylesheet" href="css/volunteer-page.css" />
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header id="main-header">
+      <img src="/assets/img/logo.png" alt="logo" id="logo" />
+      <nav id="navbar">
+        <ul>
+          <li><a aria-current="page" href="home.html">Home</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="profile.html">User</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" style="padding: 0;">
+
+       <!-- ============= Page Section ============= -->
+      <section id="page-content">
+        <div class="topic-container">
+          <div class="topic">
+            <h1>Volunteer</h1>
+            <p>Volunteer to help us clean the ocean</p>
+            <ul>
+              <li><a class="text-base" href="#event-section">Event</a></li>
+              <li><a class="text-base" href="#review-section">Reviews</a></li>
+              <li><a class="text-base" href="#apply-section">FeedBack</a></li>
+            </ul>
+          </div>
+          <div class="img-content">
+            <article class="container">
+              <figure class="image">
+                <img
+                  src="https://images.pexels.com/photos/2422265/pexels-photo-2422265.jpeg"
+                  alt=""
+                />
+              </figure>
+              <figure class="image">
+                <img
+                  src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d"
+                  alt=""
+                />
+              </figure>
+              <figure class="image">
+                <img
+                  src="https://images.pexels.com/photos/6646877/pexels-photo-6646877.jpeg"
+                  alt=""
+                />
+              </figure>
+              <figure class="image">
+                <img
+                  src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca"
+                  alt=""
+                />
+              </figure>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+       <!-- ============= Event Section ============= -->
+      <section id="event-section">
+        <div class="event-top-container" style="display: flex">
+          <div style="width: 50%" class="left-side">
+            <h2 class="headline-xl">Volunteer Program</h2>
+            <p>
+              Volunteering for SDG 14 (Life Below Water) involves actively
+              participating in marine conservation efforts, such as beach
+              cleanups, coral reef restoration, sea turtle protection, and
+              promoting sustainable fishing practices. By becoming a volunteer,
+              you can help protect ocean ecosystems, reduce pollution, and
+              contribute to the sustainable use of marine resources, ensuring a
+              healthier planet for future generations.
+            </p>
+          </div>
+          <div class="right-side">
+            <div
+              style="
+                width: 400px;
+                height: 400px;
+                background-color: blue;
+                border-radius: 0 0 50% 50%;
+                position: relative;
+                overflow: hidden;
+              "
+            >
+              <img
+                src="assets/img/Sandun_Sudara_Volunteering_for_SDG_14_(Life_Below_Water)_involve_d75f6c31-2532-4f74-aa4b-79dba7a4c5b4.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="event-bottom-container">
+          <h1 class="headline-lg label">Events</h1>
+          <div id="card-container"></div>
+        </div>
+      </section>
+
+      <section id="review-section" class="review-container">
+        <div class="left-side">
+          <h2>Reviews</h2>
+          <p class="text-base">
+            Sustainable Development Goal 14 (Life Below Water) provides an
+            in-depth analysis of efforts to conserve and sustainably use the
+            oceans, seas, and marine resources. It evaluates progress on key
+            targets, such as reducing marine pollution, protecting marine
+            ecosystems, regulating fishing activities, and promoting sustainable
+            ocean-based economies.
+          </p>
+          <p class="text-base">
+            This section highlights global challenges, including climate change
+            impacts, overfishing, and plastic pollution, while showcasing
+            international cooperation, policy developments, and innovative
+            solutions. Additionally, it features reports, data insights, and
+            best practices from governments, organizations, and stakeholders
+            working towards healthier marine environments.
+          </p>
+          <div class="card">
+            <p class="rating text-base">4.8/5</p>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="reviews">Based on 500+ Reviews</p>
+          </div>
+        </div>
+        <div class="right-side">
+          <h1 class="headline-lg">Recent reviews</h1>
+          <hr />
+          <div class="grid"></div>
+        </div>
+      </section>
+      <!-- ============= Feedback Section ============= -->
+      <section id="form-section" class="apply-container">
+        <div class="feedback-card">
+          <div class="left-side"></div>
+          <div class="right-side">
+            <h1>FeedBack</h1>
+            <p class="">We will love your Feedback</p>
+            <form>
+              <input
+              required
+                type="text"
+                id="name"
+                name="name"
+                class="field"
+                placeholder="Enter your name..."
+              />
+
+              <br />
+              <input
+              required
+                type="email"
+                id="email"
+                name="email"
+                class="field"
+                placeholder="Enter your email..."
+              />
+              <br />
+
+              <textarea
+              required
+                id="feedback"
+                name="feedback"
+                class="field"
+                placeholder="Enter your feedback here..."
+              ></textarea>
+
+              <div class="form-group">
+                <span class="text-base">Rating :</span>
+                <div class="rating">
+                  <i class="fa-solid fa-star star" data-value="1"></i>
+                  <i class="fa-solid fa-star star" data-value="2"></i>
+                  <i class="fa-solid fa-star star" data-value="3"></i>
+                  <i class="fa-solid fa-star star" data-value="4"></i>
+                  <i class="fa-solid fa-star star" data-value="5"></i>
+                </div>
+              </div>
+              <input required type="hidden" name="rating" id="ratingValue" />
+              <div class="buttons-group">
+                <button type="submit" class="btn submit">Submit</button>
+                <button type="button" class="btn cancel">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 OceanLife. All rights reserved.</p>
+        <a href="/page-editor/pageEditor_ST1.html" class="a page-editor"
+          >page-editor | student-1</a
+        >
+      </div>
+    </footer>
+  </body>
+  <script src="js/volunteerPage.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/globalFunctions.js"></script>
+</html>

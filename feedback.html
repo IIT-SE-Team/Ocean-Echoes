@@ -1,157 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Feedback Form</title>
-    <link rel="stylesheet" href="css/global-styles.css">
-    <link rel="stylesheet" href="css/feedback.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/global-styles.css" >
+    <link rel="stylesheet" href="css/navBar.css" >
+    <link rel="stylesheet" href="css/feedback.css" >
+  </head>
+  <body>
+    <img
+      src="/assets/img/feedback-page-background-img.jpg"
+      alt="background"
+      class="background-img"
+    >
+  <!-- Header Section -->
+  <header id="main-header">
+    <img src="/assets/img/logo.png" alt="logo" id="logo">
+    <nav id="navbar">
+      <ul>
+        <li><a aria-current="page" href="home.html">Home</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="profile.html">User</a></li>
+        <li><a href="table.html">Marine Data</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section class="feedback-container">
-    <header class="feedback-header">
-        <h1>Feedback Form</h1>
-    </header>
-    
-    <form class="feedback-form" id="feedbackForm" enctype="multipart/form-data">
+    <section class="feedback-container">
+      <header class="feedback-header">
+        <h1 class="title">Feedback Form</h1>
+        <p class="headline-xs feedback-title-message">
+          Your feedback matters—tell us what you think!
+        </p>
+      </header>
 
+      <form
+        class="feedback-form"
+        id="feedbackForm"
+        enctype="multipart/form-data"
+      >
         <!-- 1️ Personal Information Section -->
         <fieldset class="form-section">
-            <legend>Personal Information</legend>
+          <legend>Personal Information</legend>
+
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              class="form-input"
+              placeholder="Enter your full name"
+              maxlength="50"
+              required
+              title="Please enter your full name"
+              aria-label="Full Name"
+            >
+            <small class="error-message" id="fullNameError"></small>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                placeholder="Enter your email"
+                required
+                title="Enter a valid email address (e.g., example@email.com)"
+                aria-label="Email Address"
+              >
+              <small class="error-message" id="emailError"></small>
+            </div>
 
             <div class="form-group">
-                <label for="fullName">Full Name</label>
-                <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Enter your full name"
-                       maxlength="50" required title="Please enter your full name" aria-label="Full Name">
-                <small class="error-message" id="fullNameError"></small>
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="form-input"
+                placeholder="Enter phone number"
+                pattern="[0-9]{10,15}"
+                maxlength="15"
+                required
+                title="Enter a valid phone number (10-15 digits)"
+                aria-label="Phone Number"
+              >
+              <small class="error-message" id="phoneError"></small>
             </div>
+          </div>
 
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required 
-                           title="Enter a valid email address (e.g., example@email.com)" aria-label="Email Address">
-                    <small class="error-message" id="emailError"></small>
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter phone number"
-                           pattern="[0-9]{10,15}" maxlength="15" required title="Enter a valid phone number (10-15 digits)"
-                           aria-label="Phone Number">
-                    <small class="error-message" id="phoneError"></small>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="address">Address</label>
-                <textarea id="address" name="address" class="form-textarea" placeholder="Enter your address"
-                          maxlength="100" required title="Enter your full address" aria-label="Address"></textarea>
-                <small class="error-message" id="addressError"></small>
-            </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <textarea
+              id="address"
+              name="address"
+              class="form-textarea"
+              placeholder="Enter your address"
+              maxlength="100"
+              required
+              title="Enter your full address"
+              aria-label="Address"
+            ></textarea>
+            <small class="error-message" id="addressError"></small>
+          </div>
         </fieldset>
 
         <!-- 2️ Feedback Details Section -->
         <fieldset class="form-section">
-            <legend>Feedback Details</legend>
-        
-            <div class="form-group">
-                <label for="feedback-type">Type of Feedback</label>
-                <select id="feedback-type" name="feedbackType" class="form-input" required 
-                        title="Select the type of feedback you are submitting" aria-label="Type of Feedback">
-                        <option value="">Select an option</option>
-                        <option value="content-error">Content or Data Error</option>
-                        <option value="bug">Report a Bug</option>
-                        <option value="copyright">Copyright Claim</option>
-                        <option value="feature-request">Feature Request</option>
-                        <option value="user-thought">Your Thoughts</option>
-                        <option value="other">Other</option>
-                </select>
-                <small class="error-message" id="feedbackTypeError"></small>
-            </div>
-        
-            <div class="form-group">
-                <label for="browser">Where did you hear about us? (optional)</label>
-                <input list="sources" id="browser" name="source" class="form-input" placeholder="Select or type your answer"
-                       title="Enter where you heard about us" aria-label="Source of Awareness">
-                <datalist id="sources">
-                    <option value="Social Media"></option>
-                    <option value="Friend/Word of Mouth"></option>
-                    <option value="News/Articles"></option>
-                    <option value="From a Live Event"></option>
-                </datalist>
-            </div>
-        
-            <div class="form-group">
-                <label for="satisfied-yes">How would you like us to contact you?</label>
-                <label><input type="checkbox" id="contact-email" name="contactMethod" value="email" class="contact-option"
-                              title="Select if you prefer to be contacted via email" aria-label="Contact by Email"> Email</label>
-                <label><input type="checkbox" id="contact-text" name="contactMethod" value="text" class="contact-option"
-                              title="Select if you prefer to be contacted via text message" aria-label="Contact by Text Message"> Text</label>
-                <label><input type="checkbox" id="contact-call" name="contactMethod" value="call" class="contact-option"
-                              title="Select if you prefer to be contacted via phone call" aria-label="Contact by Phone Call"> Call</label>
-                <label><input type="checkbox" id="not-interested" name="contactMethod" value="no" checked
-                              title="Select if you do not wish to be contacted" aria-label="Do not contact me"> Prefer Not to be Contacted</label>
-            </div>
+          <legend>Feedback Details</legend>
 
-            <div class="form-group">
-                <label for="satisfied-yes">Are you satisfied with our service?</label>
-                <label><input type="radio" id="satisfied-yes" name="satisfaction" value="yes" 
-                              title="Select if you are satisfied with our service" aria-label="Satisfied"> Yes</label>
-                <label><input type="radio" id="satisfied-no" name="satisfaction" value="no"
-                              title="Select if you are not satisfied with our service" aria-label="Not Satisfied"> No</label>
-                <small class="error-message" id="satisfactionError"></small>
-            </div>
+          <div class="form-group">
+            <label for="feedback-type">Type of Feedback</label>
+            <select
+              id="feedback-type"
+              name="feedbackType"
+              class="form-input"
+              required
+              title="Select the type of feedback you are submitting"
+              aria-label="Type of Feedback"
+            >
+              <option value="">Select an option</option>
+              <option value="content-error">Content or Data Error</option>
+              <option value="bug">Report a Bug</option>
+              <option value="copyright">Copyright Claim</option>
+              <option value="feature-request">Feature Request</option>
+              <option value="user-thought">Your Thoughts</option>
+              <option value="other">Other</option>
+            </select>
+            <small class="error-message" id="feedbackTypeError"></small>
+          </div>
 
-            <div class="form-group">
-                <label for="attachment">Upload a Screenshot (optional)</label>
-                <input type="file" id="attachment" name="attachment" class="form-input" accept=".jpg, .png, .pdf" 
-                       title="Upload only JPG, PNG, or PDF files" aria-label="Upload Screenshot">
-                <div class="file-type-info">Accepted file types: JPG, PNG, PDF</div>
-            </div>
+          <div class="form-group">
+            <label for="browser">Where did you hear about us? (optional)</label>
+            <input
+              list="sources"
+              id="browser"
+              name="source"
+              class="form-input"
+              placeholder="Select or type your answer"
+              title="Enter where you heard about us"
+              aria-label="Source of Awareness"
+            >
+            <datalist id="sources">
+              <option value="Social Media"></option>
+              <option value="Friend/Word of Mouth"></option>
+              <option value="News/Articles"></option>
+              <option value="From a Live Event"></option>
+            </datalist>
+          </div>
 
-            <div class="form-group">
-                <label for="message">Comment or Message</label>
-                <textarea id="message" name="message" class="form-textarea" placeholder="Enter your feedback, ideas, or concerns about ocean protection"
-                          maxlength="500" required title="Enter your message here" aria-label="Comment or Message"></textarea>
-                <div class="char-count-container">
-                    <span id="charCount">0 / 500</span>
-                </div>
+          <div class="form-group">
+            <label for="satisfied-yes"
+              >How would you like us to contact you?</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                id="contact-email"
+                name="contactMethod"
+                value="email"
+                class="contact-option"
+                title="Select if you prefer to be contacted via email"
+                aria-label="Contact by Email"
+              >
+              Email</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                id="contact-text"
+                name="contactMethod"
+                value="text"
+                class="contact-option"
+                title="Select if you prefer to be contacted via text message"
+                aria-label="Contact by Text Message"
+              >
+              Text</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                id="contact-call"
+                name="contactMethod"
+                value="call"
+                class="contact-option"
+                title="Select if you prefer to be contacted via phone call"
+                aria-label="Contact by Phone Call"
+              >
+              Call</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                id="not-interested"
+                name="contactMethod"
+                value="no"
+                checked
+                title="Select if you do not wish to be contacted"
+                aria-label="Do not contact me"
+              >
+              Prefer Not to be Contacted</label
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="satisfied-yes"
+              >Are you satisfied with our service?</label
+            >
+            <label
+              ><input
+                type="radio"
+                id="satisfied-yes"
+                name="satisfaction"
+                value="yes"
+                title="Select if you are satisfied with our service"
+                aria-label="Satisfied"
+              >
+              Yes</label
+            >
+            <label
+              ><input
+                type="radio"
+                id="satisfied-no"
+                name="satisfaction"
+                value="no"
+                title="Select if you are not satisfied with our service"
+                aria-label="Not Satisfied"
+              >
+              No</label
+            >
+            <small class="error-message" id="satisfactionError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="attachment">Upload a Screenshot (optional)</label>
+            <input
+              type="file"
+              id="attachment"
+              name="attachment"
+              class="form-input"
+              accept=".jpg, .png, .pdf"
+              title="Upload only JPG, PNG, or PDF files"
+              aria-label="Upload Screenshot"
+            >
+            <div class="file-type-info">Accepted file types: JPG, PNG, PDF</div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Comment or Message</label>
+            <textarea
+              id="message"
+              name="message"
+              class="form-textarea"
+              placeholder="Enter your feedback, ideas, or concerns about ocean protection"
+              maxlength="500"
+              required
+              title="Enter your message here"
+              aria-label="Comment or Message"
+            ></textarea>
+            <div class="char-count-container">
+              <span id="charCount">0 / 500</span>
             </div>
+          </div>
         </fieldset>
-        
+
         <!-- 3️ Additional Inputs -->
         <fieldset class="form-section">
-            <legend>Additional Details</legend>
+          <legend>Additional Details</legend>
 
-            <div class="form-group">
-                <label for="feedback-date">Schedule Feedback Submission Date</label>
-                <input type="datetime-local" id="feedback-date" name="submissionDate" class="form-input" required 
-                       title="Select a future date and time for your feedback submission" aria-label="Feedback Submission Date">
-            </div>
+          <div class="form-group">
+            <label for="feedback-date">Schedule Feedback Submission Date</label>
+            <input
+              type="datetime-local"
+              id="feedback-date"
+              name="submissionDate"
+              class="form-input"
+              required
+              title="Select a future date and time for your feedback submission"
+              aria-label="Feedback Submission Date"
+            >
+          </div>
+          <br>
 
-            <div class="form-group">
-                <legend>Rate Your Experience</legend>
-                <div class="rating">
-                    <input value="5" name="rate" id="star5" type="radio" title="Rate as Excellent" aria-label="Rate 5 stars">
-                    <label title="Excellent" for="star5"></label>
-                    <input value="4" name="rate" id="star4" type="radio" title="Rate as Good" aria-label="Rate 4 stars">
-                    <label title="Good" for="star4"></label>
-                    <input value="3" name="rate" id="star3" type="radio" title="Rate as Average" aria-label="Rate 3 stars">
-                    <label title="Average" for="star3"></label>
-                    <input value="2" name="rate" id="star2" type="radio" title="Rate as Poor" aria-label="Rate 2 stars">
-                    <label title="Poor" for="star2"></label>
-                    <input value="1" name="rate" id="star1" type="radio" title="Rate as Terrible" aria-label="Rate 1 star">
-                    <label title="Terrible" for="star1"></label>
-                </div>
+          <div class="form-group">
+            <label for="star5">Rate Your Experience</label>
+            <div class="rating">
+              <input
+                value="5"
+                name="rate"
+                id="star5"
+                type="radio"
+                title="Rate as Excellent"
+                aria-label="Rate 5 stars"
+              >
+              <label title="Excellent" for="star5"></label>
+              <input
+                value="4"
+                name="rate"
+                id="star4"
+                type="radio"
+                title="Rate as Good"
+                aria-label="Rate 4 stars"
+              >
+              <label title="Good" for="star4"></label>
+              <input
+                value="3"
+                name="rate"
+                id="star3"
+                type="radio"
+                title="Rate as Average"
+                aria-label="Rate 3 stars"
+              >
+              <label title="Average" for="star3"></label>
+              <input
+                value="2"
+                name="rate"
+                id="star2"
+                type="radio"
+                title="Rate as Poor"
+                aria-label="Rate 2 stars"
+              >
+              <label title="Poor" for="star2"></label>
+              <input
+                value="1"
+                name="rate"
+                id="star1"
+                type="radio"
+                title="Rate as Terrible"
+                aria-label="Rate 1 star"
+              >
+              <label title="Terrible" for="star1"></label>
             </div>
+          </div>
         </fieldset>
 
-        <button type="submit" class="submit-btn" id="submit-btn" title="Submit your feedback form" aria-label="Submit Feedback">Submit</button>
-
-    </form>
-</section>
-<script src="js/feedback.js"></script>
-</body>
+        <button
+          type="submit"
+          class="submit-btn"
+          id="submit-btn"
+          title="Submit your feedback form"
+          aria-label="Submit Feedback"
+        >
+          Submit
+        </button>
+      </form>
+    </section>
+    <script src="js/feedback.js"></script>
+    <script src="js/navbar.js"></script>
+  </body>
 </html>

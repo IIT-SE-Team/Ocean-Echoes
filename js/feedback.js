@@ -80,9 +80,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Prevent form submission if validation fails
         if (!valid) {
-            event.preventDefault();// prevent from removing data 
+            // prevent from removing data 
+            event.preventDefault();
         } else {
-            event.preventDefault(); // prevent from removing data 
+            event.preventDefault();
             console.log("Form submitted successfully!");
             console.log("Form Data:", formData);
         }

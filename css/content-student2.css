@@ -43,9 +43,8 @@
     top: 0;
     height: 100vh;
     padding: 2rem;
-
-    width: 250px;
-    z-index: 1;
+padding-top: 80px;
+    width: 300px;
     background-color: var(--bg-primary);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.137);
 }

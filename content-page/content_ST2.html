@@ -13,37 +13,20 @@
 
 <body>
 
-    <div>
-        <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false"
-          aria-controls="navbar">
-          <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
-            <path
-              d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z" />
-          </svg>
-        </button>
-        <nav id="navbar">
-          <ul>
-            <li>
-              <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
-                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
-                  <path
-                    d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z" />
-                </svg>
-              </button>
-            </li>
-            <li><a aria-current="page" href="/home.html">Home</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="volunteer.html">Volunteer</a></li>
-            <li><a href="profile.html">User</a></li>
-            <li><a href="table.html" class="active">Marine Data</a></li>
-            <li>
-              <div class="theme"><button type="button" data-theme-toggle aria-label="Change theme">Theme</button></div>
-            </li>
-          </ul>
-        </nav>
-        <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
-      </div>
+    <!-- Header Section -->
+  <header id="main-header">
+    <img src="/assets/img/logo.png" alt="logo" id="logo">
+    <nav id="navbar">
+      <ul>
+        <li><a aria-current="page" href="home.html">Home</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="profile.html">User</a></li>
+        <li><a href="table.html">Marine Data</a></li>
+      </ul>
+    </nav>
+  </header>
 
     <!-- Main Content -->
     <div class="hero">
@@ -336,13 +319,15 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2023 OceanLife. All rights reserved.</p>
+          <p>&copy; 2023 OceanLife. All rights reserved.</p>
+          <a href="/page-editor/pageEditor_ST2.html" class="a page-editor">page-editor | student-2</a>
         </div>
-    </footer>
+      </footer>
 
 
     <script src="/js/contentStudent2.js"></script>
-    <script src="/js/navbar.js"></script>
+    <script src="js/navbar.js"></script>
+<script src="js/globalFunctions.js"></script>
 </body>
 
 </html>

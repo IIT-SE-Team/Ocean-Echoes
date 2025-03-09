@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
   navLinks.forEach(link => {
     console.log(link.getAttribute("href"),"sdkjhds",currentUrl);
-    if (link.getAttribute("href") === currentUrl || link.getAttribute("href") === "Marine Data") {
+    if (link.getAttribute("href") === currentUrl) {
       link.classList.add("selected");
     } else {
       link.classList.remove("selected");

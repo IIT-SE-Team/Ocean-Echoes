@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="css/feedback.css">
 </head>
 <body>
+    <img src="/assets/img/feedback-page-background-img.jpg" alt="background" class="background-img">
 
 <section class="feedback-container">
     <header class="feedback-header">
-        <h1>Feedback Form</h1>
+        <h1 class="title">Feedback Form</h1>
+        <p class="headline-xs feedback-title-message">Your feedback matters—tell us what you think!</p>
+
     </header>
     
     <form class="feedback-form" id="feedbackForm" enctype="multipart/form-data">
@@ -130,9 +133,10 @@
                 <input type="datetime-local" id="feedback-date" name="submissionDate" class="form-input" required 
                        title="Select a future date and time for your feedback submission" aria-label="Feedback Submission Date">
             </div>
+            <br>
 
             <div class="form-group">
-                <legend>Rate Your Experience</legend>
+                <label for="star5">Rate Your Experience</label>
                 <div class="rating">
                     <input value="5" name="rate" id="star5" type="radio" title="Rate as Excellent" aria-label="Rate 5 stars">
                     <label title="Excellent" for="star5"></label>

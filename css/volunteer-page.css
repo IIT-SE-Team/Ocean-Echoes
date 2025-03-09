@@ -114,7 +114,7 @@ img {
 .topic-container .topic h1 {
   font-size: 4rem;
   font-weight: 700;
-  color: #000000;
+  color: var(--blue-400);
 }
 
 /* --- Event Continer --- */
@@ -135,8 +135,7 @@ img {
   }
 
   .left-side h2 {
-    font-size: 3rem;
-    color: var(--blue);
+    color: var(--blue-500);
   }
 
   .left-side p {
@@ -267,20 +266,22 @@ label {
 
   h2 {
     font-size: 3rem;
-    color: var(--blue);
+    color: var(--blue-500);
     margin: 2rem 0;
   }
 
   p {
-    margin: 0.5rem;
+    margin-bottom: 20px;
   }
 
+
   .rating {
-    font-size: 24px;
-    color: gold;
+    color: var(--blue-500);
+    margin-bottom: 2rem;
   }
   .rating i {
-    border: 2px solid rgb(183, 183, 183);
+    border: 2px solid var(--blue-300);
+    color: var(--blue-300);
     padding: 5px;
     margin: 2px;
     border-radius: 5px;
@@ -313,7 +314,7 @@ label {
   align-content: end;
 
   h1 {
-    margin-top: 2rem;
+    color: var(--blue-400);
   }
 }
 
@@ -338,136 +339,92 @@ label {
   scroll-behavior: smooth;
 
   .stars {
-    color: #f4c150;
+    color: var(--blue-500);
     font-size: 18px;
+    margin-right: 8px;
     margin-bottom: 10px;
   }
-  
+
   .author {
     font-weight: bold;
     margin-top: 10px;
   }
-  
+
   .date {
     font-size: 12px;
     border: 0;
     padding: 0;
-    color: gray;
+    color: var(--gray-500);
   }
 }
 
+/* --- Feedback container --- */
+#form-section {
+  height: 100vh;
+  background-color: rgb(137, 134, 134);
+  align-content: center;
+}
 
-
-/* --- Apply container --- */
-
-.feedback-card{
+.feedback-card {
   height: 80%;
   width: 80%;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); 
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: row;
   margin: auto;
 }
 
-
-.feedback-card .left-side{
+.feedback-card .left-side {
   width: 50%;
   height: 100%;
-  background-image: url('/assets/img/climate-change-concept-collage.jpg');
+  background-image: url("/assets/img/climate-change-concept-collage.jpg");
   border-radius: 10px 0 0 10px;
   background-size: cover;
 }
 
-
-#form-section {
-  height: 100vh;
-  background-color: rgb(137, 134, 134);
-  align-content: center;
-  
-
-  .feedback-form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+.feedback-card .right-side {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
 }
 
-.feedback-form h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
+.feedback-card .right-side .field {
+  width: 100%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
 }
 
-.form-group {
-    margin-bottom: 15px;
+.feedback-card .right-side textarea   {
+  height: 70%;
+  resize: none;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
+.feedback-card .right-side .form-group {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem;
 }
 
-.form-group input[type="text"],
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-    font-size: 14px;
+.star {
+  font-size: 30px;
+  cursor: pointer;
+  color: gray;
+  transition: color 0.3s ease, transform 0.2s ease-in-out;
 }
 
-.rating {
-    display: flex;
-    justify-content: space-between;
+.star.selected {
+  color: gold;
+  transform: scale(1.2);
 }
 
-.rating .star {
-    font-size: 24px;
-    color: #ccc;
-    cursor: pointer;
-    transition: color 0.2s;
+.star:hover {
+  color: gold;
+  transform: scale(1.1);
 }
 
-.rating .star:hover,
-.rating .star.active {
-    color: #ffcc00;
-}
 
-.buttons {
-    display: flex;
-    justify-content: space-between;
-}
-
-.buttons .btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.2s;
-}
-
-.buttons .btn.submit {
-    background-color: #28a745;
-    color: #fff;
-}
-
-.buttons .btn.submit:hover {
-    background-color: #218838;
-}
-
-.buttons .btn.cancel {
-    background-color: #dc3545;
-    color: #fff;
-}
-
-.buttons .btn.cancel:hover {
-    background-color: #c82333;
-}
-}

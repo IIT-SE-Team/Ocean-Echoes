@@ -125,3 +125,34 @@ function loadReviews() {
 }
 
 document.addEventListener("DOMContentLoaded", loadReviews);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const stars = document.querySelectorAll(".star");
+  const ratingInput = document.getElementById("ratingValue");
+  const form = document.getElementById("ratingForm");
+
+  stars.forEach(star => {
+    star.addEventListener("click", function () {
+      const rating = this.getAttribute("data-value");
+      console.log(rating);
+      addClassforSelectedStar(rating);
+      ratingInput.value = rating;
+    });
+  });
+});
+
+function addClassforSelectedStar(count) {
+  const stars = document.querySelectorAll(".star");
+  
+  // Remove "selected" class from all stars
+  stars.forEach(star => star.classList.remove("selected"));
+
+  // Add "selected" class to all stars up to the selected one
+  stars.forEach((star , index) => {
+    if (parseInt(star.getAttribute("data-value")) <= count) {
+      setTimeout(() => {
+        star.classList.add("selected");
+      }, index * 80);
+    }
+  });
+}

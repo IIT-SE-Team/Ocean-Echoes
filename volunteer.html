@@ -123,7 +123,7 @@
     <section id="event-section">
       <div class="event-top-container" style="display: flex">
         <div style="width: 50%" class="left-side">
-          <h2>Volunteer Program</h2>
+          <h2 class="headline-xl">Volunteer Program</h2>
           <p>
             Volunteering for SDG 14 (Life Below Water) involves actively
             participating in marine conservation efforts, such as beach
@@ -162,7 +162,7 @@
     <section id="review-section" class="review-container">
       <div class="left-side">
         <h2>Reviews</h2>
-        <p>
+        <p class="text-base">
           Sustainable Development Goal 14 (Life Below Water) provides an
           in-depth analysis of efforts to conserve and sustainably use the
           oceans, seas, and marine resources. It evaluates progress on key
@@ -170,7 +170,7 @@
           ecosystems, regulating fishing activities, and promoting sustainable
           ocean-based economies.
         </p>
-        <p>
+        <p class="text-base">
           This section highlights global challenges, including climate change
           impacts, overfishing, and plastic pollution, while showcasing
           international cooperation, policy developments, and innovative
@@ -179,7 +179,7 @@
           towards healthier marine environments.
         </p>
         <div class="card">
-          <p class="rating">4.8/5</p>
+          <p class="rating text-base">4.8/5</p>
           <div class="rating">
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
@@ -191,54 +191,63 @@
         </div>
       </div>
       <div class="right-side">
-        <h1>Recent reviews</h1>
-        <hr>
-        <div class="grid">
-
-         
-        
-       
-      </div>
-        
+        <h1 class="headline-lg">Recent reviews</h1>
+        <hr />
+        <div class="grid"></div>
       </div>
     </section>
 
+
+    <!-- ============= Feedback Section ============= -->
     <section id="form-section" class="apply-container">
       <div class="feedback-card">
-        <div class="left-side">
-        </div>
+        <div class="left-side"></div>
         <div class="right-side">
           <h2>We will love your Feedback</h2>
-      <form>
+          <form>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="field"
+              placeholder="Enter your name..."
+            />
 
+            <br>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="field"
+              placeholder="Enter your email..."
+            />
+            <br>
 
-              <input type="text" id="name" name="name" placeholder="Enter your name...">
+            <textarea
+              id="feedback"
+              name="feedback"
+              class="field"
+              placeholder="Enter your feedback here..."
+            ></textarea>
 
-
-            <input type="text" id="name" name="name" placeholder="Enter your name...">
-
-
-
-              <textarea id="feedback" name="feedback" placeholder="Enter your feedback here..."></textarea>
-
-          <div class="form-group">
-              <label>Rating:</label>
+            <div class="form-group">
+              <label class="text-base">Rating :</label>
               <div class="rating">
-                  <span class="star" data-value="1">&#9733;</span>
-                  <span class="star" data-value="2">&#9733;</span>
-                  <span class="star" data-value="3">&#9733;</span>
-                  <span class="star" data-value="4">&#9733;</span>
-                  <span class="star" data-value="5">&#9733;</span>
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
               </div>
-          </div>
-          <div class="form-group buttons">
+            </div>
+            <input type="hidden" name="rating" id="ratingValue">
+            <div class="form-group buttons">
               <button type="submit" class="btn submit">Submit</button>
               <button type="button" class="btn cancel">Cancel</button>
-          </div>
-      </form>
+            </div>
+          </form>
         </div>
       </div>
-      
     </section>
   </body>
 </html>

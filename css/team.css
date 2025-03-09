@@ -4,6 +4,7 @@
 .team-wrapper {
     height: 100px;
     width: 80vw;
+    margin-top: 75px;
     margin-left: 10vw; 
     border-radius: 50px;
     display: flex;

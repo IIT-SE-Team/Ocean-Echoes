@@ -29,13 +29,13 @@ input, textarea, button {
 }
 
 input, textarea {
-    background: var(--gray-100);
+    background: white;
     color: black;
 }
 
 button {
     background: white;
-    color: var(--blue-900);
+    color: blue;
     cursor: pointer;
     font-weight: bold;
     display: inline-flex;

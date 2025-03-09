@@ -3,25 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 
-/* 
 
-[data-theme="light"] {
-  --bg-primary: #f7fdfd;
-  --text-primary: #1C1C1C;
-  --blue: #245282;
-  --blue-hover: #3979bd;
-  --white:#FBFFF4;
-}
-
-[data-theme="dark"] {
-  --bg-primary: #11121a;
-  --text-primary: #FBFFF4;
-  --border-color: #333344;
-  --blue: #245282;
-  --blue-hover: #3979bd;
-  --white : #11121a;
-
-} */
 
 :root {
   --bg-primary: #f5f5f5;   
@@ -31,7 +13,7 @@
   
 
   
-  --white: #FBFFF4; 
+  --white: #f5f5f5; 
   
   
   --gray-100: #f3f4f6;
@@ -249,7 +231,7 @@ footer {
 
 .a {
   text-decoration: none;
-  color: var(--white);
+  color: var(--text-primary);
   position: relative;
   display: inline-block;
 }
@@ -266,7 +248,7 @@ footer {
 }
 
 .a:hover {
-  color: var(--white);
+  color: var(--blue-600);
 }
 
 .a:hover::after {
@@ -304,6 +286,10 @@ footer {
 
 #backToTop:hover {
   background-color: #001824;
+}
+
+.page-editor:hover{
+  color: var(--blue-50) ;
 }
 
 
@@ -360,13 +346,13 @@ footer {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--text-primary);
-
-  border: 4px solid var(--bg-primary);
+  background: var(--gray-900);
+  border: 0 solid var(--bg-primary);
+  border-width: 0 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1a73e8;
+  background: var(--blue-700);
   border-radius: 10px;
 }
 

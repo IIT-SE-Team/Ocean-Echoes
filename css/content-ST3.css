@@ -1,0 +1,617 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.headline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--gray-100);
+    font-weight: 900;
+    width: 90%;
+    max-width: 800px;
+}
+
+.ocean-text {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.headline-btn {
+    margin-top: 2rem;
+}
+
+.main-content {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+.side-nav {
+    width: 250px;
+    background-color: var(--blue-500);
+    padding: 2rem 0;
+    position: sticky;
+    top: 60px;
+    height: calc(100vh - 60px);
+}
+
+.side-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-nav li {
+    margin-bottom: 1rem;
+}
+
+.side-nav a {
+    display: block;
+    padding: 0.75rem 2rem;
+    color: var(--white);
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.side-nav a:hover, .side-nav a.active {
+    background-color: var(--blue-600);
+    border-left: 4px solid var(--blue-300);
+}
+
+.main {
+    flex: 1;
+    padding: 2rem;
+}
+
+.section {
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s, transform 0.8s;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    color: #0077b6;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background-color: var(--blue-400);
+}
+.photo-credit{
+    text-align: center;
+}
+/* Cards for overview section */
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.overview-card {
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.overview-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.overview-card h3 {
+    color: var(--blue-600);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Cards for impacts section */
+.card-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-title {
+    color: var(--blue-600);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Timeline for solutions */
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--blue-400);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: var(--white);
+    border: 4px solid var(--blue-500);
+    border-radius: 50%;
+    top: 15px;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::after {
+    right: -13px;
+}
+
+.right::after {
+    left: -13px;
+}
+
+.timeline-content {
+    padding: 20px;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    color: var(--blue-600);
+    margin-bottom: 1rem;
+}
+
+/* Tables */
+.table-container {
+    margin-bottom: 3rem;
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background-color: var(--bg-secondary);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.data-table th, .data-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.data-table th {
+    background-color: var(--blue-500);
+    color: var(--white);
+}
+
+.data-table tr:hover {
+    background-color: var(--blue-50);
+}
+
+/* Animation classes */
+.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 {
+    transition-delay: 0.2s;
+}
+
+.delay-2 {
+    transition-delay: 0.4s;
+}
+
+.delay-3 {
+    transition-delay: 0.6s;
+}
+
+.delay-4 {
+    transition-delay: 0.8s;
+}
+
+/* Chart section styles */
+.chart-container {
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.chart-wrapper {
+    height: 400px;
+    margin-top: 2rem;
+}
+
+/* Two column layout for sources */
+.sources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.source-item {
+    background-color: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.source-item h4 {
+    color: var(--blue-600);
+    margin-bottom: 1rem;
+}
+
+/* Citation section */
+.citations {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--gray-200);
+    padding-top: 2rem;
+    margin-top: 3rem;
+}
+
+/* Call to action section */
+.cta-section {
+    background-color: var(--blue-50);
+    border-radius: 8px;
+    padding: 3rem;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.cta-section h2 {
+    color: var(--blue-700);
+    margin-bottom: 1.5rem;
+}
+
+.cta-section p {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .timeline::after {
+        left: 31px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-item::after {
+        left: 18px;
+    }
+
+    .left::after, .right::after {
+        left: 18px;
+    }
+
+    .right {
+        left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .side-nav {
+        width: 100%;
+        height: auto;
+        position: static;
+        padding: 1rem 0;
+    }
+
+    .side-nav ul {
+        display: flex;
+        overflow-x: auto;
+        padding: 0.5rem;
+    }
+
+    .side-nav li {
+        margin: 0 0.5rem;
+        white-space: nowrap;
+    }
+
+    .side-nav a {
+        padding: 0.5rem 1rem;
+    }
+
+    .ocean-text {
+        font-size: 2.5rem;
+    }
+}
+
+/* Circular progress indicators */
+.progress-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3rem 0;
+}
+
+.progress-item {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 1rem;
+    text-align: center;
+}
+
+.progress-circle {
+    transform: rotate(-90deg);
+    width: 180px;
+    height: 180px;
+}
+
+.progress-background {
+    fill: none;
+    stroke: var(--gray-200);
+    stroke-width: 15;
+}
+
+.progress-value {
+    fill: none;
+    stroke-width: 15;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s ease;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--blue-700);
+}
+
+.progress-label {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+/* Image comparison slider */
+.img-comparison-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.img-comparison-container img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    border-right: 3px solid var(--white);
+}
+
+.img-top img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-position: left;
+}
+
+.slider-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-color: var(--white);
+    border: 3px solid var(--blue-500);
+    border-radius: 50%;
+    cursor: ew-resize;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-handle::before, .slider-handle::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background-color: var(--blue-500);
+}
+
+.slider-handle::before {
+    transform: translateX(-5px);
+}
+
+.slider-handle::after {
+    transform: translateX(5px);
+}
+
+.img-comparison-label {
+    position: absolute;
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--white);
+    font-size: 0.9rem;
+    border-radius: 4px;
+}
+
+.img-comparison-label.before {
+    top: 20px;
+    left: 20px;
+}
+
+.img-comparison-label.after {
+    top: 20px;
+    right: 20px;
+}
+
+/* Plastic cycle diagram */
+.plastic-cycle {
+    max-width: 800px;
+    margin: 3rem auto;
+    position: relative;
+}
+
+.plastic-cycle svg {
+    width: 100%;
+    height: auto;
+}
+
+.cycle-node {
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.cycle-node:hover {
+    transform: scale(1.1);
+}
+
+.cycle-text {
+    font-size: 14px;
+    fill: var(--text-primary);
+}
+
+/* Action step cards */
+.action-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.action-card {
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.action-icon {
+    font-size: 3rem;
+    color: var(--blue-500);
+    margin-bottom: 1.5rem;
+}
+
+.action-card h3 {
+    color: var(--blue-600);
+    margin-bottom: 1rem;
+}

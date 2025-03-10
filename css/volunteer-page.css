@@ -106,13 +106,14 @@
   transform: rotate(45deg);
   transform-origin: center;
   box-sizing: border-box;
-  background-color: rgba(98, 189, 165, 0.5); /* Specific Green (#22B14C) */
-  transition: background-color 0.5s ease-in-out, filter 0.5s ease-in-out;
+  background: linear-gradient(rgba(0, 71, 109, 0.8), rgba(0, 24, 36, 0.9));
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 1;
 }
 
 .image:hover::after {
-  filter: sepia(0);
-  background-color: transparent;
+  opacity: 0;
+  transform: rotate(0deg) scale(1.2);
 }
 
 .topic-container .topic h1 {

@@ -1,0 +1,344 @@
+
+/* Background Image */
+.background-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.9) blur(3px);
+}
+
+/* Report Container */
+.report-container {
+    max-width: 1000px;
+    margin: 100px auto 50px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    color: var(--blue-600);
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--blue-300);
+}
+
+/* Section Styling */
+.section {
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section h2 {
+    color: var(--blue-500);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--blue-300);
+    position: relative;
+}
+
+.section h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 60px;
+    height: 3px;
+    background-color: var(--blue-600);
+}
+
+.section p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Subsection Styling */
+.subsection {
+    margin: 30px 0;
+    background-color: var(--blue-50);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.subsection h3 {
+    color: var(--blue-600);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* Task List Styling */
+.task-list {
+    list-style-type: none;
+    padding-left: 25px;
+}
+
+
+.techniques ul li {
+    margin-left: 15px;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.techniques ol > li {
+    margin-left: 15px;
+    counter-increment: technique-counter;
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 35px;
+}
+
+/* For better indentation in task lists */
+.task-list li {
+    margin-left: 15px;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.task-list li ul li {
+    margin-left: 20px;
+}
+
+.task-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--blue-500);
+    font-weight: bold;
+}
+
+
+/* Code Block Styling */
+.code-block {
+    background-color: var(--gray-800);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.code-block p {
+    color: var(--blue-300);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Link Section Styling */
+.link-section {
+    background-color: var(--blue-50);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.link-section p {
+    margin-bottom: 15px;
+}
+
+.link-section a {
+    color: var(--blue-500);
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 0.3s;
+}
+
+.link-section a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--blue-300);
+    transition: width 0.3s;
+}
+
+.link-section a:hover {
+    color: var(--blue-600);
+}
+
+.link-section a:hover::after {
+    width: 100%;
+}
+
+/* Back to top button */
+#backToTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--blue-600);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s, opacity 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+    z-index: 100;
+}
+
+#backToTop:hover {
+    background-color: var(--blue-700);
+    transform: translateY(0) scale(1.1);
+}
+
+#backToTop.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Print Styles */
+@media print {
+    .loader-wrapper,
+    #main-header,
+    .background-img,
+    footer,
+    #backToTop {
+        display: none !important;
+    }
+    
+    .report-container {
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        max-width: 100%;
+    }
+    
+    .section {
+        opacity: 1 !important;
+        transform: none !important;
+        page-break-inside: avoid;
+    }
+    
+    .code-block {
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+    
+    a {
+        text-decoration: underline;
+        color: #000;
+    }
+    
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .report-container {
+        padding: 20px;
+        margin: 80px 15px 30px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .subsection h3 {
+        font-size: 1.2rem;
+    }
+    
+    .code-block {
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Animation for subsections */
+.subsection {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition-delay: 0.2s;
+}
+
+.subsection.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Special link hover effects */
+a.special-link {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: var(--blue-400);
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+a.special-link:hover {
+    background-color: var(--blue-500);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.techniques ul li {
+    margin-left: 15px;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.techniques ol > li {
+    margin-left: 15px;
+    counter-increment: technique-counter;
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 35px;
+}
+
+/* For better indentation in task lists */
+.task-list li {
+    margin-left: 15px;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.task-list li ul li {
+    margin-left: 20px;
+}

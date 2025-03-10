@@ -1,3 +1,5 @@
+//Student 3 content page js
+
 // Intersection Observer for animations
 const sections = document.querySelectorAll('.section');
 const animatedElements = document.querySelectorAll('.animate');

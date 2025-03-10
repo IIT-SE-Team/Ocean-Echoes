@@ -1,3 +1,4 @@
+//team  page js 
 document.querySelectorAll(".team-member").forEach(member => {
     member.addEventListener("mouseover", () => {
         member.classList.add("expanded");

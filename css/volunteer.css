@@ -1,0 +1,486 @@
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* --- topic container --- */
+.topic-container {
+  height: 100vh;
+  background: linear-gradient(to bottom, #ffffff, #e6eff4);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.topic-container .topic,
+.topic-container .img-content {
+  width: fit-content;
+  height: fit-content;
+  margin: 3rem;
+}
+
+.topic ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 20px;
+  color: var(--blue-500);
+
+  li a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  li a:hover {
+    color: var(--blue-500);
+  }
+}
+
+/* --- image-container styles --- */
+.topic-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.img-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-content .container {
+  display: grid;
+  grid-template-columns: repeat(4, 12.5vw);
+  grid-template-rows: repeat(4, 12.5vw);
+}
+
+.image:first-child {
+  grid-column: 2/4;
+}
+
+.image:nth-child(2) {
+  grid-column: 1/3;
+  grid-row: 2/4;
+}
+
+.image:nth-child(3) {
+  grid-column: 3/5;
+  grid-row: 2/4;
+}
+
+.image:nth-child(4) {
+  grid-column: 2/4;
+  grid-row: 3/5;
+}
+
+.image {
+  margin: 0;
+  padding: 0;
+  padding-top: 25vw;
+  overflow: hidden;
+  position: relative;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.image::after {
+  content: "";
+  border: 0.5vw solid white;
+  height: 72%;
+  width: 72%;
+  top: 14%;
+  left: 14%;
+  position: absolute;
+  transform: rotate(45deg);
+  transform-origin: center;
+  box-sizing: border-box;
+  background: linear-gradient(rgba(0, 71, 109, 0.8), rgba(0, 24, 36, 0.9));
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.image:hover::after {
+  opacity: 0;
+  transform: rotate(0deg) scale(1.2);
+}
+
+.topic-container .topic h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--blue-400);
+}
+
+/* ====== Event Continer ====== */
+#event-section {
+  height: 100vh;
+  background: linear-gradient(to bottom, #e6eff4, #f7fafc);
+}
+
+/* top container in event section */
+#event-section .event-top-container {
+  height: 50%;
+
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+
+  .left-side h2 {
+    color: var(--blue-500);
+  }
+
+  .left-side p {
+    margin-top: 1rem;
+  }
+
+  .right-side {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .right-side img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+  }
+}
+
+/* bottom container in event section */
+#event-section .event-bottom-container {
+  width: 100%;
+  height: 50%;
+
+  #card-container {
+    display: flex;
+    width: 100%;
+    height: 90%;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px;
+    scroll-behavior: smooth;
+  }
+}
+
+.event-bottom-container .label {
+  padding-left: 1.5rem;
+}
+
+.card {
+  position: relative;
+  min-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: all 0.4s ease-in-out;
+}
+
+.card:hover {
+  border-color: #007bff;
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-betwee;
+  h3 {
+    text-align: start;
+  }
+  p {
+    font-size: small;
+    white-space: normal;
+    text-align: justify;
+  }
+}
+
+.date-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.date,
+.time {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 100%; 
+  max-width: 260px; 
+}
+
+.date i,
+.time i {
+  font-size: 18px;
+  color: #555;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.card-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 8px 8px;
+}
+
+/* ====== Reviews container ====== */
+#review-section {
+  height: 100vh;
+  background: linear-gradient(to bottom, #f7fafc, #f0f5f8);
+}
+
+.review-container {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+}
+
+/* review container left side panel */
+.review-container .left-side {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+
+  h2 {
+    font-size: 3rem;
+    color: var(--blue-500);
+    margin: 2rem 0;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  .rating {
+    color: var(--blue-500);
+    margin-bottom: 2rem;
+  }
+  .rating i {
+    border: 2px solid var(--blue-300);
+    color: var(--blue-300);
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+  }
+}
+.review-container .left-side .card {
+  width: fit-content;
+  height: 30%;
+  text-align: center;
+  padding: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 2rem;
+  background-color: white;
+
+  .rating {
+    font-size: 2.5rem;
+  }
+
+  .reviews {
+    font-size: 1.5rem;
+  }
+}
+
+/* review container right side panel */
+.review-container .right-side {
+  width: 50%;
+  height: 95%;
+  padding: 0.3rem;
+  align-content: end;
+
+  h1 {
+    color: var(--blue-400);
+    margin-top: 5rem;
+  }
+}
+
+.review-container .right-side .card {
+  width: 350px;
+  min-height: fit-content;
+  padding: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 2rem;
+  background-color: white;
+  align-content: space-around;
+}
+
+.review-container .right-side .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 90%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 10px 0;
+  position: relative;
+  scroll-behavior: smooth;
+
+  .stars {
+    color: var(--blue-500);
+    font-size: 18px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+  }
+
+  .author {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .date {
+    font-size: 12px;
+    border: 0;
+    padding: 0;
+    color: var(--gray-500);
+  }
+}
+
+/* ====== Feedback container ====== */
+#form-section {
+  height: 100vh;
+  align-content: center;
+  background: linear-gradient(to bottom, #f0f5f8, #e8f1f5);
+}
+
+.feedback-card {
+  height: 80%;
+  width: 80%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.feedback-card .left-side {
+  width: 50%;
+  height: 100%;
+  background-image: url("/assets/img/climate-change-concept-collage.jpg");
+  border-radius: 10px 0 0 10px;
+  background-size: cover;
+}
+
+.feedback-card .right-side {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.feedback-card .right-side h1 {
+  font-size: 2rem;
+  color: var(--blue-500);
+  text-align: center;
+}
+
+.feedback-card .right-side p {
+  font-size: 1.5rem;
+  color: var(--blue-600);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.feedback-card .right-side .field {
+  width: 100%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.feedback-card .right-side textarea {
+  height: 70%;
+  resize: none;
+}
+
+.feedback-card .right-side .form-group {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem;
+}
+
+.star {
+  font-size: 25px;
+  cursor: pointer;
+  color: gray;
+  transition: color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.star.selected {
+  color: gold;
+  transform: scale(1.2);
+}
+
+.star:hover {
+  color: gold;
+  transform: scale(1.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+}
+
+.form-group .rating {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+.buttons-group {
+  display: flex;
+  justify-content: space-evenly; 
+  width: 100%;
+  padding: 10px 0; 
+  margin-top: 3rem;
+
+  button {
+    width: 200px; 
+  }
+
+  .cancel {
+    background-color: var(--gray-400);
+    color: white;
+  }
+}

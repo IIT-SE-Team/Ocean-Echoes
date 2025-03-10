@@ -1,0 +1,164 @@
+<!-- Home-page.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocean Echoes</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/global-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="css/navBar.css">
+  <link rel="stylesheet" href="css/home-page.css">
+
+
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <header id="main-header">
+    <img src="/assets/img/logo.png" alt="logo" id="logo">
+    <nav id="navbar">
+      <ul>
+
+        <li><a aria-current="page" href="/home.html">Home</a></li>
+        <li><a href="/feedback.html">Feedback</a></li>
+        <li><a href="/team.html">Team</a></li>
+        <li><a href="/volunteer.html">Volunteer</a></li>
+        <li><a href="/userprofile.html">User Profile</a></li>
+        <li><a href="/sitemap.html">Site Map</a></li>
+        <li><a href="/table.html">Marine Data</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <video autoplay loop muted src="assets/video/17838421-uhd_3840_2160_60fps.mp4" class="hero-video"></video>
+    <div class="headline">
+      <h1 class="ocean-text">
+        Life Below Water
+      </h1>
+
+      <div class="headline-btn">
+        <a href="#mission-content" class="btn">Explore</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <div id="mission-content"></div>
+
+    <!-- Mission Section -->
+    <section class="mission">
+      <div class="container">
+        <h2 class="title">Our Ocean Mission</h2>
+        <p class="mission-text">
+          The oceans cover more than 70% of our planet's surface and are home to an incredible diversity of life...
+        </p>
+      </div>
+    </section>
+
+    <!-- Ocean Issues Section -->
+    <section class="ocean-issues">
+      <div class="container">
+        <h2>Critical Ocean Challenges</h2>
+        <div class="issue-cards">
+          <!-- Issue Cards -->
+          <div class="issue-card">
+            <div class="card-icon">🐟</div>
+            <h3>Overfishing</h3>
+            <p>33% of the world's fish stocks are being harvested at unsustainable levels...</p>
+          </div>
+          <div class="issue-card">
+            <div class="card-icon">🏝️</div>
+            <h3>Coral Bleaching</h3>
+            <p>Over 50% of the world's coral reefs have died in the last 30 years...</p>
+          </div>
+          <div class="issue-card">
+            <div class="card-icon">🥤</div>
+            <h3>Plastic Pollution</h3>
+            <p>Each year, 8 million metric tons of plastic enter our oceans...</p>
+          </div>
+          <div class="issue-card">
+            <div class="card-icon">🌡️</div>
+            <h3>Ocean Acidification</h3>
+            <p>The ocean absorbs 30% of CO₂ emissions...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Carousel Section -->
+    <div class="centerX">
+      <div class="carousel">
+        <div class="card-container">
+          <input type="radio" name="slide" id="c1" checked>
+          <label for="c1" class="card">
+            <span class="row">
+              <span class="icon">1</span>
+              <span class="description">
+                <a href="/content-page/content_ST1.html">Ocean Education and Awareness</a>
+              </span>
+            </span>
+          </label>
+
+          <input type="radio" name="slide" id="c2">
+          <label for="c2" class="card">
+            <span class="row">
+              <span class="icon">2</span>
+              <span class="description">
+                <a href="/content-page/content_ST2.html">Impact of Tourism on Marine Life</a>
+              </span>
+            </span>
+          </label>
+          <input type="radio" name="slide" id="c3">
+          <label for="c3" class="card">
+            <span class="row">
+              <span class="icon">3</span>
+              <span class="description">
+                <a href="/content-page/content_ST3.html">Plastic Pollution and Its Effect on Marine Ecosystems</a>
+              </span>
+            </span>
+          </label>
+          <input type="radio" name="slide" id="c4">
+          <label for="c4" class="card">
+            <span class="row">
+              <span class="icon">4</span>
+              <span class="description">
+                <a href="/content-page/content_ST4.html">Student 4</a>
+              </span>
+            </span>
+          </label>
+        </div>
+        <div class="nav-arrows">
+          <button id="carousel-prev-btn"><i class="fas fa-chevron-left"></i></button>
+          <button id="carousel-next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" onclick="scrollToTop()">
+      <i class="fas fa-arrow-up"></i>
+
+    </button>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 OceanLife. All rights reserved.</p>
+      <a href="/page-editor/pageEditor_ST2.html" class="a page-editor">page-editor | student-2</a>
+    </div>
+  </footer>
+  <script src="js/homePage.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/globalFunctions.js"></script>
+</body>
+
+</html>

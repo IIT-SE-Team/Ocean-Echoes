@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Sitemap</title>
     <link rel="stylesheet" href="css/global-styles.css">
-    <link rel="stylesheet" href="/css/SiteMap.css">
+    <link rel="stylesheet" href="./css/SiteMap.css">
     <link rel="stylesheet" href="css/navBar.css">
     
 </head>
@@ -28,45 +28,23 @@
   </header>
 
 
-    <h1 style="text-align: center;">Website Sitemap</h1>
-    <div class="sitemap-container">
-        <svg viewBox="0 0 600 400">
-            <!-- Links (Connecting five nodes to Home) -->
-            <line class="link" x1="300" y1="100" x2="150" y2="200"/>
-            <line class="link" x1="300" y1="100" x2="250" y2="200"/>
-            <line class="link" x1="300" y1="100" x2="350" y2="200"/>
-            <line class="link" x1="300" y1="100" x2="450" y2="200"/>
-            <line class="link" x1="300" y1="100" x2="550" y2="200"/>
-
-            <!-- Main Home Node -->
-            <a href="/home.html">
-                <rect class="node" x="250" y="70" width="100" height="50" rx="10"/>
-                <text class="text" x="300" y="100" text-anchor="middle">Home</text>
-            </a>
-
-            <!-- Five Nodes Connecting to Home -->
-            <a href="/feedback.html">
-                <rect class="node" x="100" y="200" width="100" height="50" rx="10"/>
-                <text class="text" x="150" y="230" text-anchor="middle">Feedback</text>
-            </a>
-            <a href="/team.html">
-                <rect class="node" x="200" y="200" width="100" height="50" rx="10"/>
-                <text class="text" x="250" y="230" text-anchor="middle">Team</text>
-            </a>
-            <a href="/volunteer.html">
-                <rect class="node" x="300" y="200" width="100" height="50" rx="10"/>
-                <text class="text" x="350" y="230" text-anchor="middle">Volunteer</text>
-            </a>
-            <a href="/profile.html">
-                <rect class="node" x="400" y="200" width="100" height="50" rx="10"/>
-                <text class="text" x="450" y="230" text-anchor="middle">Profile</text>
-            </a>
-            <a href="/table.html">
-                <rect class="node" x="500" y="200" width="100" height="50" rx="10"/>
-                <text class="text" x="550" y="230" text-anchor="middle">Marine Data</text>
-            </a>
-        </svg>
+  <div class="sitemap-container">
+    <h1 class="sitemap-title">Marine Conservation Organization</h1>
+    
+    <div class="sitemap">
+        <div class="main-node">Home</div>
+        
+        <div class="connections">
+            <div class="line-container"></div>
+            
+            <div class="sub-node">Feedback</div>
+            <div class="sub-node">Team</div>
+            <div class="sub-node">Volunteer</div>
+            <div class="sub-node">Profile</div>
+            <div class="sub-node">Marine Data</div>
+        </div>
     </div>
+</div>
 
     <footer>
         <div class="container">

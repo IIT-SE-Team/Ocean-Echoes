@@ -1,97 +1,132 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  background: url("/assets/img/siteMap.jpg") no-repeat center center/cover;
+  position: relative;
+}
+
+.sitemap-container {
+  height: 60vh;
+  margin:  15vh 15vh;
+  margin-left: 10vw;
+
+}
+
+.sitemap-title {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sitemap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-node {
+  background-color: #0c4a6e;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  min-width: 200px;
+  text-align: center;
+}
+
+.connections {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  position: relative;
+  width: 100%;
+}
+
+.connection-line {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 2px;
+  height: 30px;
+  background-color: white;
+}
+
+.sub-node {
+  background-color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  min-width: 150px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sub-node:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sub-node::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background-color: white;
+  transform: translateX(-50%);
+}
+
+.line-container {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: white;
+}
+
+.coral-decoration {
+  position: absolute;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .connections {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    overflow: hidden;
-    font-family: 'Poppins', sans-serif;
-    background: url('/assets/img/siteMap.jpg') no-repeat center center/cover;
-    position: relative;
-}
+    gap: 50px;
+  }
 
-/* Title */
-h1 {
-    color: #ffffff;
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: -100px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-.sitemap-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-}
-svg {
-    width: 60%;
-    height: auto;
-}
+  .sub-node {
+    width: 80%;
+  }
 
-       
+  .sub-node::before {
+    height: 30px;
+    top: -30px;
+  }
 
-
-/* Sitemap Container */
-.sitemap-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    max-width: 1200px;
-    height: auto;
-    position: relative;
-    z-index: 1;
-}
-
-/* SVG Styling */
-svg {
-    width: 100%;
-    height: auto;
-}
-
-/* Nodes */
-.node {
-    fill: #ffffff;
-    stroke: #0088cc;
-    stroke-width: 3;
-    cursor: pointer;
-    transition: fill 0.3s, transform 0.3s;
-}
-
-.node:hover, .node:focus {
-    fill: #80d4ff;
-    transform: scale(1.05);
-}
-
-/* Text */
-.text {
-    fill: #003366;
-    font-weight: bold;
-}
-
-/* Links */
-.link {
-    stroke: #ffffff;
-    stroke-width: 5;
-    stroke-linecap: round;
-}
-
-/* Floating Bubbles */
-.bubble {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    opacity: 0.8;
-    animation: floatUp 6s infinite ease-in;
-}
-
-@keyframes floatUp {
-    0% { transform: translateY(100vh); opacity: 1; }
-    100% { transform: translateY(-50px); opacity: 0; }
+  .line-container {
+    display: none;
+  }
 }
